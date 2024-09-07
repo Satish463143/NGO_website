@@ -1,0 +1,41 @@
+.workgrid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+.work_box li {
+    background-color: var(--pri_color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.work_box li i{
+    font-size: 20px;
+}
+.work_box{
+    padding: 20px;
+    background: var(--white);
+}
+.work_box h2 {
+    color: var(--pri_color);
+
+}
+.work_box p{
+    margin: 20px 0;
+
+}
+.work_box button{
+    background: none;
+    border: none;
+
+}
+.work_box button i{
+    font-size: 20px;
+    padding-left: 10px;
+}
