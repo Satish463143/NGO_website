@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const ContactUsSchema = new mongoose.Schema({
     name: {
@@ -17,4 +17,6 @@ const ContactUsSchema = new mongoose.Schema({
     { timestamps: true }
 );
 
-export default mongoose.model("ContactUs", ContactUsSchema);
+const ContactUs = mongoose.model("ContactUs", ContactUsSchema);
+
+module.exports = ContactUs;

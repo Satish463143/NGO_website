@@ -1,11 +1,14 @@
 const express = require("express");
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const mongoose = require("mongoose");
 const cors = require('cors');
 const dotenv = require("dotenv");
 
 dotenv.config();
 
 const app = express();
+
+const projectRoutes = require('./routes/ProjectRoutes');
+app.use('/api', projectRoutes);
 
 app.use(
     cors({
@@ -14,24 +17,14 @@ app.use(
     })
 );
 
-const client = new MongoClient(process.env.MONGO_URL, {
-    serverApi: {
-        version: ServerApiVersion.v1,
-        strict: true,
-        deprecationErrors: true,
-    }
-});
-
-async function run() {
-    try {
-        await client.connect();
-        await client.db("admin").command({ ping: 1 });
+mongoose
+    .connect(process.env.MONGO_URL)
+    .then(() => {
         console.log("Database connected!");
-    } finally {
-        await client.close();
-    }
-}
-run().catch(console.dir);
+    })
+    .catch((err) => {
+        console.error("Database connection error:", err);
+    });
 
 const port = process.env.PORT;
 

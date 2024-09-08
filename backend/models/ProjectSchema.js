@@ -1,18 +1,21 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-const ContactUsSchema = new mongoose.Schema({
+const ProjectSchema = new mongoose.Schema({
     title: {
         type: String,
     },
     description: {
         type: String,
     },
-    images: {
-        type: Array
-    }
-
+    images: [
+        {
+            imageURL: String,
+            imageCaption: String
+        }
+    ],
 },
     { timestamps: true }
 );
 
-export default mongoose.model("ContactUs", ContactUsSchema);
+const Project = mongoose.model("Project", ProjectSchema);
+module.exports = Project;

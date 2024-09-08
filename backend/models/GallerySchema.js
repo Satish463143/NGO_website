@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const GallerySchema = new mongoose.Schema({
     imagePath: {
@@ -8,4 +8,6 @@ const GallerySchema = new mongoose.Schema({
     { timestamps: true }
 );
 
-export default mongoose.model("Gallery", GallerySchema);
+const Gallery = mongoose.model("Gallery", GallerySchema);
+
+module.exports = Gallery;
