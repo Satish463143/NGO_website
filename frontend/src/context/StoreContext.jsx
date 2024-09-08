@@ -1,11 +1,12 @@
 import { createContext,useState } from "react";
-import { project } from "../assets/assets";
+import { projectList,partnerLit } from "../assets/assets";
 
 export const StoreContext = createContext(null)
 
 const StoreContextProvider = (props)=>{
     const contextValue ={
-        project,
+        projectList,
+        partnerLit,
     }
     return(
         <StoreContext.Provider value ={contextValue}>

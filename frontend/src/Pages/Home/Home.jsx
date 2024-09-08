@@ -4,6 +4,7 @@ import Work from '../../component/Work/Work'
 import ShortBanner from '../../component/ShortBanner/ShortBanner'
 import Mission from '../../component/Mission/Mission'
 import Project from '../../component/Project/Project'
+import Partners from '../../component/Partners/Partners'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <ShortBanner/>
         <Mission/>
         <Project/>
+        <Partners/>
     </div>
   )
 }

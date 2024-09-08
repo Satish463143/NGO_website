@@ -8,7 +8,7 @@ const Mission = () => {
          <div className="mission">
             <div className="mission_title">
                 <h1>Our Mission</h1>  
-                <p>You can use a few enticing words and flaunt your capabilities that will attract future donors and encourage them to donate right away.</p>  
+                <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px auto 0px auto',}}></div>
             </div>
             <div className="mission_grid">
                 <div className="mission_box">
