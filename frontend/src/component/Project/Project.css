@@ -1,0 +1,17 @@
+.project{
+    background-color: var(--sec_color);
+    width: 100%;
+
+}
+.project_title h2{
+    padding: 50px 0 20px 0;
+}
+.project_title p{
+    max-width: 50%;
+}
+.project_grid{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    gap: 20px;
+    width: 100%;
+}

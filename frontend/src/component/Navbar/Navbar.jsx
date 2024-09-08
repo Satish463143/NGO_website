@@ -40,13 +40,22 @@ const Navbar = () => {
                                 <li  onClick={()=> {toogleNav(); setMenu("");}} className={`${menu === ""?'activeMenu':''}`}>Our Partners</li>
                             </Link>
                             <Link>
+                                <li  onClick={()=> {toogleNav(); setMenu("");}} className={`${menu === ""?'activeMenu':''}`}>Our Initiative</li>
+                            </Link>                           
+                            <Link>
+                                <li  onClick={()=> {toogleNav(); setMenu("");}} className={`${menu === ""?'activeMenu':''}`}>Gallery</li>
+                            </Link>                           
+                            <Link>
                                 <li  onClick={()=> {toogleNav(); setMenu("");}} className={`${menu === ""?'activeMenu':''}`}>Contact Us</li>
                             </Link>
-                            <Link>
-                                <li  onClick={()=> {toogleNav(); setMenu("");}} className={`${menu === ""?'activeMenu':''}`}>Donate</li>
-                            </Link>                           
+                                                      
                         </ul>
                     </nav>
+                </div>
+                <div className='donate_btn'>
+                <Link>
+                    <li  onClick={()=> {toogleNav(); setMenu("");}} className={`donate ${menu === ""?'activeMenu':''}`}>Donate</li>
+                </Link> 
                 </div>
             </div>
         </div>

@@ -1,11 +1,12 @@
 .banner_box{
     width: 100%;
-    background-color: var(--sec_color);
-    height: 250px;
+    /* background-color: var(--sec_color); */
+    /* height: 250px; */
     position: relative;
     overflow: hidden;
     z-index: 9;
     margin-top: 50px;
+    border-radius: 20px;
 }
 .banner_svg{
     position: absolute;
@@ -15,12 +16,45 @@
     z-index: 99;
 }
 .banner_svg img {
-    width: 200px;
+    width: 600px;
     height: auto;
 }
 .ShortBanner_cont{
     display: grid;
     grid-template-columns: 40% 60%;
     justify-content: center;
-
+    width: 100%;
+}
+.ShortBanner_img{
+    width: 100%;
+    height: auto;
+    margin-left: 100px;
+    margin-bottom: -10px;
+}
+.ShortBanner_img img {
+    width: 400px;
+    height: auto;
+    margin-top: 50px;
+    z-index: 999;
+    position: relative;
+}
+.ShortBanner_details{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+.ShortBanner_details p {
+    margin: 20px 0;
+}
+.ShortBanner_details button{
+    background: none;
+    border: none;
+    text-decoration: underline;
+    font-size: 15px;
+    /* color: var(--pri_color); */
 }

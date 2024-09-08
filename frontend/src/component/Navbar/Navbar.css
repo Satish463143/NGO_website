@@ -4,22 +4,44 @@
     background: var(--white);
     width: 100%;
     z-index: 9999;
+    height: 90px;
+    padding-top: 20px;
 
+
+}
+.donate{
+    background:  var(--pri_color);
+    border-radius: 20px;
+    padding: 7px 35px !important;
+    margin-left: 10px;
+    display: inline-block;
 }
 .navbar_grid{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    justify-content: center;
     align-items: center;
-
+}
+.donate_btn{
+    text-align: end;
+}
+.donate_btn li{
+    list-style: none;
 }
 .logo_img img{
-    width: 100px;
+    width: 80px;
     height: auto;
 
 }
+.navs{
+    text-align: center;
+}
 .navs ul li{
     display: inline;
-    padding: 0 20px;
+    padding: 0 12px;
 }
 .activeMenu{
     color: var(--pri_color);

@@ -11,13 +11,14 @@ const Banner = () => {
           <div className='container'>
             <div className='banner_grid'>
               <div className='banner_left'>
-                <h1>They Need Us​</h1>
-                <p>You can use a few enticing words and flaunt your capabilities that will attract future donors and encourage them to donate right away.</p>
-                <a href="">Donate Now</a>
+                <h2>Together, we can create a brighter future​</h2>
+                <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px 0 0 0'}}></div>
+                <h1>Dedicated to transforming lives through initiatives in <span>Environment</span> , <span>Education</span> , & <span>Economy</span> .</h1>
+                <a href="">Read More</a>
               </div>
-              <div className='banner_right'>
+              {/* <div className='banner_right'>
                 <h1>Together We Can Make Difference!</h1>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
