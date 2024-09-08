@@ -1,0 +1,26 @@
+.banner_box{
+    width: 100%;
+    background-color: var(--sec_color);
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+    margin-top: 50px;
+}
+.banner_svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+.banner_svg img {
+    width: 200px;
+    height: auto;
+}
+.ShortBanner_cont{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+
+}
