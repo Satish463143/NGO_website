@@ -1,19 +1,13 @@
-export const  project=[
+export const project = [
     {
-        id:'',
-        title:'',
-        mainImage:'',
-        shortDesc:'',
-        long_Desc:'',
-        image2:'',
-        image2_desc:'',
-        image3:'',
-        image3_desc:'',
-        image4:'',
-        image4_desc:'',
-        image5:'',
-        image5_desc:'',
-        image6:'',
-        image6_desc:'',
+        id: '',
+        title: '',
+        description: '',
+        images: [
+            {
+                imageURL: '',
+                imageCaption: ''
+            }
+        ]
     }
 ]

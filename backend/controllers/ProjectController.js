@@ -11,7 +11,7 @@ exports.createProject = async (req, res) => {
     try {
         const { title, description, imageURL } = req.body;
 
-        //cloudinary upload with image path
+        //cloudinary upload with image_path
         // const cloudinary_res = await cloudinary.uploader.upload(
         //     file_path, {
         //     folder: "Hiraya",
