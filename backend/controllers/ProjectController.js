@@ -78,7 +78,7 @@ exports.deleteProject = async (req, res) => {
     const projectID = req.params.projectID;
 
     try {
-        await Project.findByIdAndDelete(id);
+        await Project.findByIdAndDelete(projectID);
 
         res.status(200).json({
             success: true,

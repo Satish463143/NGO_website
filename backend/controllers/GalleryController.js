@@ -72,7 +72,7 @@ exports.deleteImage = async (req, res) => {
     const imageID = req.params.imageID;
 
     try {
-        await Gallery.findByIdAndDelete(id);
+        await Gallery.findByIdAndDelete(imageID);
 
         res.status(200).json({
             success: true,

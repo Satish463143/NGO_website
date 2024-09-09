@@ -10,10 +10,11 @@ const app = express();
 
 const projectRoutes = require('./routes/ProjectRoutes');
 const galleryRoutes = require('./routes/GalleryRoutes');
+const contactUsRoutes = require('./routes/ContactUsRoutes');
 
-//needs change
 app.use('/api', projectRoutes);
 app.use('/api', galleryRoutes);
+app.use('/api', contactUsRoutes);
 
 app.use(
     cors({
