@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mayawear/public_html/hirayasamaj.org/
+    - export DEPLOYPATH=/home/mayawear/hirayasamaj.org/
     - /bin/cp -R NGO_website/frontend/* $DEPLOYPATH
