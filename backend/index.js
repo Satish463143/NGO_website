@@ -8,7 +8,11 @@ dotenv.config();
 const app = express();
 
 const projectRoutes = require('./routes/ProjectRoutes');
+const galleryRoutes = require('./routes/GalleryRoutes');
+
+//needs change
 app.use('/api', projectRoutes);
+app.use('/api', galleryRoutes);
 
 app.use(
     cors({
