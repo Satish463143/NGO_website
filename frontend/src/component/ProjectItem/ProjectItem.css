@@ -1,13 +1,13 @@
 .project_box{
     width: 100%;
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-    
+    /* box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     
 }
 .porject_img{
     width: 100%;
-    height: 300px;
+    height: 230px;
     border-radius: 15px;
     overflow: hidden;
     
@@ -26,15 +26,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 }
 .deatils_div button{
-    background: var(--pri_color);
+    background:none;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    /* padding: 10px 20px; */
+    /* border-radius: 20px; */
     font-weight: 600;
+    text-decoration: underline;
 }
 .project_box  p{
     margin: 20px 0;
+    font-size: 15px;
+
 
 }
