@@ -1,4 +1,4 @@
-const Project = require("../models/ProjectSchema");
+const Gallery = require("../models/GallerySchema");
 const cloudinary = require('cloudinary').v2;
 
 cloudinary.config({
@@ -7,7 +7,7 @@ cloudinary.config({
     api_secret: "UUJDDgPBGNA2ki8gq9tIrW0Er_0",
 });
 
-exports.createProject = async (req, res) => {
+exports.addImage = async (req, res) => {
     try {
         const { title, description, imageURL } = req.body;
 
@@ -19,6 +19,7 @@ exports.createProject = async (req, res) => {
         //     overwrite: false,
         // });
 
+        //image upload with buffer
         new Promise((resolve) => {
             cloudinary.uploader.upload_stream({
                 folder: "Hiraya",
@@ -28,22 +29,15 @@ exports.createProject = async (req, res) => {
                 return resolve(uploadResult);
             }).end(req.files[0].buffer); //change this
         }).then((uploadResult) => {
-            const newProject = new Project({
-                title: title,
-                description: description,
-                images: [
-                    {
-                        imageURL: uploadResult.secure_url,
-                        imageCaption: "test caption" //need to change this
-                    }
-                ]
+            const newImage = new Gallery({
+                imagePath: uploadResult.secure_url,
             });
-            newProject.save();
+            newImage.save();
         });
 
         res.status(200).json({
             success: true,
-            message: "New project added succesfully."
+            message: "New image added succesfully."
         });
     }
     catch (err) {
@@ -55,41 +49,41 @@ exports.createProject = async (req, res) => {
     }
 };
 
-exports.getAllProjects = async (req, res) => {
+exports.getAllImages = async (req, res) => {
     try {
-        const projects = await Project.find({});
+        const images = await Gallery.find({});
         res.status(200).json({
             success: true,
-            message: "Projects fetched successfully.",
-            data: projects
+            message: "Images fetched successfully.",
+            data: images
         });
     }
     catch (err) {
         console.error(err);
         res.status(500).json({
             success: false,
-            message: "Failed to fetch projects."
+            message: "Failed to fetch images."
         });
     }
 };
 
 //delete from cloudinary pending
-exports.deleteProject = async (req, res) => {
-    const projectID = req.params.projectID;
+exports.deleteImage = async (req, res) => {
+    const imageID = req.params.imageID;
 
     try {
-        await Project.findByIdAndDelete(projectID);
+        await Gallery.findByIdAndDelete(imageID);
 
         res.status(200).json({
             success: true,
-            message: "Projects delete successfully.",
+            message: "Images deleted successfully.",
         });
     }
     catch (err) {
         console.error(err);
         res.status(500).json({
             success: false,
-            message: "Failed to delete project."
+            message: "Failed to delete image."
         });
     }
 };
