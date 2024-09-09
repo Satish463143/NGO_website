@@ -4,8 +4,13 @@ import { Link } from 'react-router-dom'
 import { StoreContext } from '../../context/StoreContext'
 
 const Partners = () => {
-    const {partnerLit} = useContext(StoreContext)
+    const {partnerList} = useContext(StoreContext)
+    // const PartnerData  = partnerList[0]?.partners || [];
 
+    const sortedPartner = partnerList
+    .sort((a, b) => new Date(b.timeStamp) - new Date(a.timeStamp)) // Sort by timeStamp (newest first)
+    .slice(0, 6); 
+   
 
   return (
     <div className='container'>
@@ -15,7 +20,11 @@ const Partners = () => {
                 <Link style={{display:'flex',gap:'10px',alignItems:'center'}}><button>Become Our Partner</button> <i class="fa-solid fa-arrow-right-long"></i></Link>
             </div>
             <div className='partners'>
-
+                {sortedPartner.map((partner, index) => (
+                    <Link>
+                        <img key={index} src={partner?.logo} alt={`Partner ${index}`} />
+                    </Link>
+                ))}
             </div>
         </div>
     </div>

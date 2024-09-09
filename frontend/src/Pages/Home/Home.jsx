@@ -5,6 +5,7 @@ import ShortBanner from '../../component/ShortBanner/ShortBanner'
 import Mission from '../../component/Mission/Mission'
 import Project from '../../component/Project/Project'
 import Partners from '../../component/Partners/Partners'
+import Gallery from '../../component/Gallery/Gallery'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <Mission/>
         <Project/>
         <Partners/>
+        <Gallery/>
     </div>
   )
 }

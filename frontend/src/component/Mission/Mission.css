@@ -34,11 +34,12 @@
 }
 .explore_btn button{
     background-color: var(--pri_color);
-    color: var(--white);
+    /* color: var(--white);/ */
     font-weight: 600;
     padding: 15px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
+
     text-align: center;
 }
 .explore_btn{

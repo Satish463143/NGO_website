@@ -15,6 +15,8 @@ const Navbar = () => {
         const path = location.pathname;
         if(path === '/'){
             setMenu("Home")
+        }else if(path === '/project'){
+            setMenu("Our Initiative")
         }
     },[location]);
   return (
@@ -27,7 +29,7 @@ const Navbar = () => {
                 <div className='navs'>
                     <nav>
                         <ul>
-                            <Link>
+                            <Link to="/">
                                 <li onClick={()=> {toogleNav(); setMenu("Home");}} className={`${menu === "Home"?'activeMenu':''}`} >Home</li>
                             </Link>
                             <Link>
@@ -39,8 +41,8 @@ const Navbar = () => {
                             <Link>
                                 <li  onClick={()=> {toogleNav(); setMenu("");}} className={`${menu === ""?'activeMenu':''}`}>Our Partners</li>
                             </Link>
-                            <Link>
-                                <li  onClick={()=> {toogleNav(); setMenu("");}} className={`${menu === ""?'activeMenu':''}`}>Our Initiative</li>
+                            <Link to='/project'>
+                                <li  onClick={()=> {toogleNav(); setMenu("");}} className={`${menu === "Our Initiative"?'activeMenu':''}`}>Our Initiative</li>
                             </Link>                           
                             <Link>
                                 <li  onClick={()=> {toogleNav(); setMenu("");}} className={`${menu === ""?'activeMenu':''}`}>Gallery</li>
