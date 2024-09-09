@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=	/home/mayawear/repositories/NGO_website
+    - /bin/cp -R NGO_website/frontend $DEPLOYPATH
