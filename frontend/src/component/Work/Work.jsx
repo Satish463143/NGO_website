@@ -5,29 +5,27 @@ import {Link} from 'react-router-dom'
 const Work = () => {
   return (
     <div className='container'>
+        <h1 style={{textAlign:'center',marginTop:'50px'}}>What We Do</h1>
+        <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px auto 0 auto',}}></div>
         <div className="workgrid">
             <div className='work_box'>
-                <li>
-                <i class="fa-solid fa-shirt"></i>
-                </li>
-                <h2>Tristique Sceleris​</h2>
-                <p>This is a short description elaborating the service you have mentioned above.</p>
-                <Link style={{display:'flex',gap:'10px'}}><button>Host a Drive </button><i class="fa-solid fa-arrow-right-long"></i></Link>
+                <img src="../src/assets/images/enviroemnt.png" alt="" />
+                <h2>We Care for Our Environment</h2>
+                <p>We are committed to preserving our natural resources. Through initiatives like tree planting, river cleanups, and waste management, we actively contribute to environmental conservation and sustainability.</p>
+                <Link style={{display:'flex',gap:'10px'}}><button>Read More</button><i class="fa-solid fa-arrow-right-long"></i></Link>
             </div>
             <div className='work_box'>
-                <li>
-                <i class="fa-solid fa-hand"></i></li>
-                <h2>Tristique Sceleris​</h2>
-                <p>This is a short description elaborating the service you have mentioned above.</p>
-                <Link style={{display:'flex',gap:'10px'}}><button>Host a Drive </button><i class="fa-solid fa-arrow-right-long"></i></Link>
+                <img src="../src/assets/images/education.webp" alt="" />
+                <h2>We Educate &
+                Inspire</h2>
+                <p>We believe in the power of education to drive change. Through educational programs and awareness campaigns, we promote environmental conservation, sustainable practices, and social responsibility</p>
+                <Link style={{display:'flex',gap:'10px'}}><button>Read More</button><i class="fa-solid fa-arrow-right-long"></i></Link>
             </div>
             <div className='work_box'>
-                <li>
-                    <i class="fa-solid fa-water"></i>
-                </li>
-                <h2>Tristique Sceleris​</h2>
-                <p>This is a short description elaborating the service you have mentioned above.</p>
-                <Link style={{display:'flex',gap:'10px',alignItems:'center'}}><button>Host a Drive </button> <i class="fa-solid fa-arrow-right-long"></i></Link>
+                <img src="../src/assets/images/economy.webp" alt="" />
+                <h2>We Empower & Strengthen</h2>
+                <p>We invest in the development of individuals and communities by providing training, resources, and mentorship. By enhancing their skills and capacity, we empower them to achieve sustainable growth and development.</p>
+                <Link style={{display:'flex',gap:'10px',alignItems:'center'}}><button>Read More</button> <i class="fa-solid fa-arrow-right-long"></i></Link>
             </div>
         </div>        
     </div>

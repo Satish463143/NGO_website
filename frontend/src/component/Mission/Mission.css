@@ -1,0 +1,47 @@
+.mission_title{
+    width: 100%;
+}
+.mission{
+    margin-top: 50px;
+
+}
+.mission_title h1{
+    text-align: center;
+}
+.mission_title p{
+    text-align: center;
+    max-width: 700px;
+    margin:20px auto;
+
+}
+.mission_grid{
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+.mission_box{
+    text-align: center;
+    margin-top: 50px;
+}
+.mission_box h3{
+    margin: 20px;
+}
+.mission_box p{
+    width: 300px;
+    margin: auto;
+}
+.explore_btn button{
+    background-color: var(--pri_color);
+    color: var(--white);
+    font-weight: 600;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.explore_btn{
+    text-align: center;
+    margin: 50px 0;
+}
