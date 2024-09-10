@@ -1,0 +1,32 @@
+.bannersItem{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin-top: 90px;
+}
+.bnners_overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.bannersItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banners_content{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.banners_content h2{
+    color: var(--white);
+}

@@ -1,0 +1,17 @@
+.allpartner_grid{
+
+    display: grid;
+    grid-template-columns: 20% 80%;
+    justify-content: center;
+    width: 100%;
+}
+.partner_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.partner_logo  img {
+    width: 80%;
+    height: auto;
+}

@@ -85,17 +85,17 @@ export const projectList = [
 export const partnerList = [
     {
         id:'1',
-        name:'',
+        name:'satish',
         logo:'../src/assets/images/client-logo-1 (1).png',
-        title:'',
-        description:'',
+        title:'He is a hero',
+        description:'he is a developer',
     },
     {
         id:'2',
-        name:'',
+        name:'Rabin',
         logo:'../src/assets/images/client-logo-1 (2).png',
-        title:'',
-        description:'',
+        title:'He is hero ',
+        description:'He is content creater',
     },
     {
         id:'3',

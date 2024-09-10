@@ -19,11 +19,11 @@ const Gallery = () => {
                 
             </div>
             <div style={{textAlign:'center'}}>
-            <Link><button>See More <i class="fa-solid fa-arrow-right-long"></i></button></Link>
+            <Link to="/gallery"><button>See More <i class="fa-solid fa-arrow-right-long"></i></button></Link>
             </div>
         </div>
     </div>
   )
 }
 
-export default Gallery
+export default Gallery 
