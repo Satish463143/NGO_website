@@ -12,13 +12,17 @@ export const projectList = [
     },
     {
         id: '2',
-        title: 'Sodales Nonummy',
+        title: 'satish Nonummy',
         description: 'You can use a few enticing words and flaunt your capabilities that will attract future donors and encourage them to donate right away.',
         images: [
             {
                 imageURL: '../src/assets/images/project_1.png',
-                imageCaption: ''
-            }
+                imageCaption: 'this is a context'
+            },
+            {
+                imageURL: '../src/assets/images/project_1.png',
+                imageCaption: 'this is not  a context'
+            },
         ]
     },
     {
@@ -28,7 +32,7 @@ export const projectList = [
         images: [
             {
                 imageURL: '../src/assets/images/project_1.png',
-                imageCaption: ''
+                imageCaption: 'it is a context'
             }
         ]
     },
@@ -50,7 +54,7 @@ export const projectList = [
         images: [
             {
                 imageURL: '../src/assets/images/project_1.png',
-                imageCaption: ''
+                imageCaption: 'why this is a context?'
             }
         ]
     },
@@ -61,7 +65,7 @@ export const projectList = [
         images: [
             {
                 imageURL: '../src/assets/images/project_1.png',
-                imageCaption: ''
+                imageCaption: 'where si the context?'
             }
         ]
     },
@@ -72,7 +76,7 @@ export const projectList = [
         images: [
             {
                 imageURL: '../src/assets/images/project_1.png',
-                imageCaption: ''
+                imageCaption: 'why is the context?'
             }
         ]
     },

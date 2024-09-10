@@ -46,3 +46,8 @@
 .activeMenu{
     color: var(--pri_color);
 }
+@media (max-width:800px){
+    .navbar{
+        display: none;
+    }
+}

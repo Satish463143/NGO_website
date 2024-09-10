@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const ProjectItem = ({id,title,description,images,timeStamp}) => {
   return (
-    <Link>
+    <Link to={`/project/${id}`}>
       <div className='project_box'>
           <div className='porject_img'>
             <img src={images[0].imageURL} alt={title} />
