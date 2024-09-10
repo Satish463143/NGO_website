@@ -9,7 +9,7 @@ cloudinary.config({
 
 exports.addPartner = async (req, res) => {
     try {
-        const { name } = req.body;
+        const { name, description } = req.body;
 
         //image upload with buffer
         new Promise((resolve) => {
@@ -23,6 +23,7 @@ exports.addPartner = async (req, res) => {
         }).then((uploadResult) => {
             const newPartner = new Partners({
                 name: name,
+                description: description,
                 imagePath: uploadResult.secure_url,
             });
             newPartner.save();

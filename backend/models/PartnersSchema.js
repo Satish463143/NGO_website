@@ -4,6 +4,9 @@ const PartnersSchema = new mongoose.Schema({
     name: {
         type: String
     },
+    description: {
+        type: String
+    },
     imagePath: {
         type: String
     }
