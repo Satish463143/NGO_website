@@ -13,7 +13,7 @@ import Link from 'next/link';
 const Header = () => {
     return (
         <div className='flex items-center justify-between'>
-            <div className='text-3xl'>Hiarya Samaj - Admin Dashboard</div>
+            <div className='text-3xl'>Hiraya Samaj - Admin Dashboard</div>
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
