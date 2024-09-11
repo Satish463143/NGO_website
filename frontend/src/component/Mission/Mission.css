@@ -29,8 +29,9 @@
     margin: 20px;
 }
 .mission_box p{
-    width: 300px;
+    width: 350px;
     margin: auto;
+    font-size: 15px;
 }
 .explore_btn button{
     background-color: var(--pri_color);

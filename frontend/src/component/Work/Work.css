@@ -1,9 +1,10 @@
 .workgrid{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    margin: 50px 0 100px 0;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+   
+    justify-content: space-around;
+    margin: 50px auto 100px auto;
+    
 
 }
 .work_box img {
@@ -16,12 +17,15 @@
     align-items: center;
     margin-bottom: 20px;
     padding: 8px;
+    
 }
 .work_box{
     padding: 20px;
     background: var(--white);
     border-radius: 10px;
-    height: 350px;
+    height: 400px;
+    /* width: 30%; */
+
 
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
@@ -31,14 +35,15 @@
 } */
 .work_box p{
     margin: 20px 0;
-    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 .work_box button{
     background: none;
     border: none;
     text-decoration: underline;
-
 }
 .work_box button i{
     font-size: 20px;
