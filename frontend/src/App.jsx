@@ -8,7 +8,7 @@ import MobileNav from './component/MobileNav/MobileNav'
 import GalleryPage from './Pages/GalleryPage/GalleryPage'
 import OurInitiative from './Pages/OurInitiative/OurInitiative'
 import PartnerPage from './Pages/PartnerPage/PartnerPage'
-
+import Donate from './component/Donate/Donate'
 const App = () => {
   return (
     <div>
@@ -21,6 +21,7 @@ const App = () => {
         <Route path='/ourInitiative' element={<OurInitiative/>}/>
         <Route path='/Our-Partners' element={<PartnerPage/>}/>
       </Routes>
+      <Donate/>
       <Footer/>      
     </div>
   )

@@ -1,0 +1,15 @@
+ table button{
+    width: 100px;
+    height: 30px;
+    margin-bottom:10px ;
+    border-radius: 5px;
+    border: none;
+
+}
+ .edit_btn{
+    background: rgb(38, 230, 124);
+}
+ .delete_btn{
+    background: rgb(228, 64, 64);
+    color: var(--w);
+}

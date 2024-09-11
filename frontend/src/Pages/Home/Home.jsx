@@ -7,6 +7,7 @@ import Project from '../../component/Project/Project'
 import Partners from '../../component/Partners/Partners'
 import Gallery from '../../component/Gallery/Gallery'
 
+
 const Home = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ const Home = () => {
         <Project/>
         <Partners/>
         <Gallery/>
+        
     </div>
   )
 }

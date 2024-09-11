@@ -14,6 +14,8 @@ const Partners = () => {
 
   return (
     <div className='container'>
+        <h1 style={{textAlign:'center',marginTop:'40px'}}>Our Partners</h1>
+        <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px auto 20px auto',}}></div>
         <div className='partner_grid'>
             <div className='partner_desc'>
                 <h3>Because of our partners we are doing more good for more people!</h3>

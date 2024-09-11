@@ -1,6 +1,6 @@
 .workgrid{
     display: grid;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 31% 31% 31%;
    
     justify-content: space-around;
     margin: 50px auto 100px auto;
@@ -23,7 +23,7 @@
     padding: 20px;
     background: var(--white);
     border-radius: 10px;
-    height: 400px;
+    height: 350px;
     /* width: 30%; */
 
 
@@ -35,9 +35,10 @@
 } */
 .work_box p{
     margin: 20px 0;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    height: 150px;
 
 }
 .work_box button{

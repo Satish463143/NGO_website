@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200,300,400,500,600,700,800;1,200..800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --b:#000;
+  --w:#fff;
+  --p:#2B2D40;
+  --g:#42402D;
+  --gray:#c4c7c9;
+  --blue:rgb(40, 114, 224);
+}
+
+body {
+  background: #ecebeb;
+  font-family: "Karla", sans-serif;
+  scroll-behavior:smooth ;
+}
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+Link,a,button{
+  text-decoration: none !important;
+  cursor: pointer;
+  color: var(--b);
+}
+h1,h2,h3,h4,h5,p{
+  color: var(--b);
+}
+form input[type="submit"]{
+  cursor: pointer;
+}

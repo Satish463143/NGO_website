@@ -6,8 +6,10 @@ const AllGallery = () => {
     const {GalleryList} = useContext(StoreContext)
 
   return (
-    <div className='conatiner'>
+    <div className='container'>
       <div className="allgallery">
+        <p>We have gathered many beautiful moments during our journey</p><hr />
+        <div className='allgallery_grid'>
         { GalleryList.map((item,index)=>{
           return(
             <img key={index} src={item.imagePath} alt="" />
@@ -15,6 +17,7 @@ const AllGallery = () => {
         })
 
         }
+        </div>
       </div>
         
     </div>

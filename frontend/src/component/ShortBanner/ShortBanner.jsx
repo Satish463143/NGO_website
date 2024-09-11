@@ -1,6 +1,8 @@
 import React from 'react'
 import './ShortBanner.css'
 import {Link} from 'react-router-dom'
+import blob from '../../../src/assets/images/blob-1.svg';
+import photovolunteer from '../../../src/assets/images/photo-of-three-volunteer.png';
 
 const ShortBanner = () => {
   return (
@@ -8,12 +10,12 @@ const ShortBanner = () => {
     <div className='container'>
         <div className="banner_box">
             <div className='banner_svg'>
-                <img src="../src/assets/images/blob-1.svg" alt="" />
+                <img src={blob} alt="" />
                 
             </div>
             <div className='ShortBanner_cont'>
                 <div className='ShortBanner_img'>
-                    <img src="../src/assets/images/photo-of-three-volunteer.png" alt="" />
+                    <img src={photovolunteer} alt="" />
 
                 </div>
                 <div className='ShortBanner_details'>

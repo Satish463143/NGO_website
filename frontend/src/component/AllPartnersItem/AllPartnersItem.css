@@ -1,17 +1,25 @@
 .allpartner_grid{
 
     display: grid;
-    grid-template-columns: 20% 80%;
-    justify-content: center;
+    grid-template-columns: 20% 70%;
+    justify-content: space-between;
     width: 100%;
+    margin: 50px 0;
 }
 .partner_logo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    
 }
 .partner_logo  img {
     width: 80%;
     height: auto;
+    border: 2px solid gray;
+    padding: 30px 50px;
+
+}
+.partner_details h2{
+    margin: 20px 0;
 }

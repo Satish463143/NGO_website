@@ -1,0 +1,13 @@
+.allpartners p{
+    font-size: 45px;
+    max-width: 80%;
+    text-align: center;
+    margin:40px auto;
+  
+  }
+  .allpartners hr{
+    height: 3px;
+    background: #000;
+    width: 80%;
+    margin: auto;
+  }

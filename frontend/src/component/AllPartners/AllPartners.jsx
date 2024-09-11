@@ -7,6 +7,10 @@ const AllPartners = () => {
   const {partnerList} = useContext(StoreContext)
   return (
     <div className='container'>
+      <div className="allpartners">
+        <p>These Are the Heroes with the Passion to Transform Their Communities</p>
+        <hr />
+      </div>
       {partnerList.map((item,index)=>{
         return(
           <AllPartnersItem key={index} id={item.id} logo={item.logo} title={item.title} name={item.name} description={item.description}/>

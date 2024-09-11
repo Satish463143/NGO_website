@@ -1,0 +1,16 @@
+td {
+    padding: 10px;
+
+}
+.sold_btn{
+    background: brown;
+    color: var(--w);
+}
+.catergory_box select, .status_box select, .sellingType_box select{
+    width: 150px;
+    height: 40px;
+    border: 1px solid var(--gray);
+    background: none;
+    border-radius: 5px;
+    padding: 10px;
+}

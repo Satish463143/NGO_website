@@ -1,0 +1,93 @@
+.top_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--gray);
+}
+
+/* .top_nav .search_btn input{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;    
+}
+.top_nav .search_btn{
+    position: relative;
+}
+.top_nav .search_btn span svg{
+    width: 25px;
+    height: 25px;
+   
+}
+.top_nav .search_btn span{
+    position: absolute;
+    top: 2px;
+    right:5px;
+     */
+/* } */
+
+.top_nav_end ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 10px;
+}
+.message_number{
+    position: relative;
+}
+.messages_num{
+    position: absolute;
+    top: -5px;
+    right:5px;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.messages_num p{
+    color: var(--w);
+    font-size: 10px;
+}
+.welcome_message{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.welcome_message p{
+    font-weight: 600;
+    font-size: 18px;
+
+}
+.welcome_message .hamburg_menu{
+   cursor: pointer;
+   display: none;
+}
+.menu_1 , .menu_2, .menu_3{
+    width: 18px;
+    height: 2px;
+    background: var(--b);
+    margin: 5px;
+    transition: 0.2s ease;
+}
+
+.menuActive .menu_1{
+    transform: rotate(-45deg) translate(-0.3rem, 0.4rem);
+
+}
+.menuActive .menu_2{
+    opacity: 0;
+}
+.menuActive .menu_3{
+    transform: rotate(45deg) translate(-0.2rem, -0.3rem);
+}
+
+@media (max-width:1100px){
+    .welcome_message .hamburg_menu{
+        display: block;
+    }
+}
