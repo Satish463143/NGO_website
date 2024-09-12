@@ -1,0 +1,22 @@
+.youtubeGrid{
+    display: flex;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    justify-content: space-around;
+    gap: 20px;
+}
+.youtubeGrid iframe{
+    height: 228px;
+    border-radius: 20px;
+    width:400px !important;
+    object-fit: cover;
+    flex-shrink: 0; 
+}
+.youtube button {
+    background: var(--pri_color);
+    border: none;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 20px; 
+    font-weight: 600;   
+}

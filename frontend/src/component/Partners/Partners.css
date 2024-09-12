@@ -30,3 +30,11 @@
     align-items: center;
     width: 100%;
 }
+@media(max-width:900px){
+    .partners{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-around;
+    gap: 40px;
+    }
+}

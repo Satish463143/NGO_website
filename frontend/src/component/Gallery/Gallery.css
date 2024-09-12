@@ -1,6 +1,6 @@
 .gallery{
     width: 100%;
-    background-color: var(--sec_color);
+    /* background-color: var(--sec_color); */
     padding: 50px 0;
 }
 .gallery_grid {
@@ -12,7 +12,7 @@
 }
 
 .gallery_grid img {
-    width: calc(30% - 20px); /* 3 columns with a gap */
+    width: calc(22% - 20px); /* 3 columns with a gap */
     height: auto; /* Maintain the aspect ratio */
     margin-bottom: 20px; /* Space between rows */
     display: block;

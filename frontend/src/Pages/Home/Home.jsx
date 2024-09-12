@@ -6,6 +6,7 @@ import Mission from '../../component/Mission/Mission'
 import Project from '../../component/Project/Project'
 import Partners from '../../component/Partners/Partners'
 import Gallery from '../../component/Gallery/Gallery'
+import YoutubeVideo from '../../component/YoutubeVideo/YoutubeVideo'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
         <ShortBanner/>
         <Mission/>
         <Project/>
+        <YoutubeVideo/>
         <Partners/>
         <Gallery/>
         

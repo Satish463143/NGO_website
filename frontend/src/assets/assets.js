@@ -177,3 +177,31 @@ export const GalleryList =[
         imagePath:'../src/assets/images/photo-of-three-volunteer.png'
     },
 ]
+
+
+export const YoutubeLIst=[
+    {
+        id:'1',
+        link:'https://www.youtube.com/embed/MxNj4sQHWLs',
+    },
+    {
+        id:'2',
+        link:'https://www.youtube.com/embed/LwdR6gd-Mkk',
+    },
+    {
+        id:'3',
+        link:'https://www.youtube.com/embed/MxNj4sQHWLs',
+    },
+    {
+        id:'4',
+        link:'https://www.youtube.com/embed/LwdR6gd-Mkk',
+    },
+    {
+        id:'5',
+        link:'https://www.youtube.com/embed/MxNj4sQHWLs',
+    },
+    {
+        id:'6',
+        link:'https://www.youtube.com/embed/LwdR6gd-Mkk',
+    },
+]

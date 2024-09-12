@@ -47,3 +47,29 @@
     text-align: center;
     margin: 50px 0;
 }
+@media (max-width:900px){
+    .mission_grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+@media (max-width:600px){
+    .mission_grid{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 0px;
+    }
+    .mission_box p{
+        width: auto;
+    }
+    
+    .mission_box h3{
+       font-size: 15px;
+    }
+    .mission_box p{
+        font-size: 12px;
+    }
+    .mission_box span{
+        text-align: center;
+    }
+}

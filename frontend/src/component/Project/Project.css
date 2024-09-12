@@ -28,3 +28,39 @@
     border-radius: 20px; 
     font-weight: 600;   
 }
+@media(max-width:900px){
+
+    .project_grid{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        gap: 10px;
+    }
+
+}
+@media(max-width:700px){
+
+    .project_grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 10px;
+    }
+    .deatils_div{
+        display: flex;
+        flex-direction: column;
+        align-items:start !important;
+        gap: 10px;
+    }
+
+}
+@media(max-width:450px){
+    .project_grid{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .deatils_div{
+        display: flex;
+        flex-direction: row;
+        align-items:center !important;
+        gap: 10px;
+    }
+}

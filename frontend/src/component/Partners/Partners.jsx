@@ -13,8 +13,9 @@ const Partners = () => {
    
 
   return (
+    <div className="youtube_bg" style={{background:'var(--sec_color)',padding:'0px 0 40px 0'}}>
     <div className='container'>
-        <h1 style={{textAlign:'center',marginTop:'40px'}}>Our Partners</h1>
+        <h1 style={{textAlign:'center',paddingTop:'40px'}}>Our Partners</h1>
         <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px auto 20px auto',}}></div>
         <div className='partner_grid'>
             <div className='partner_desc'>
@@ -29,6 +30,7 @@ const Partners = () => {
                 ))}
             </div>
         </div>
+    </div>
     </div>
   )
 }

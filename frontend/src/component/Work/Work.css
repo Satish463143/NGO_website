@@ -1,7 +1,6 @@
 .workgrid{
     display: grid;
-    grid-template-columns: 31% 31% 31%;
-   
+    grid-template-columns: 31% 31% 31%;   
     justify-content: space-around;
     margin: 50px auto 100px auto;
     
@@ -50,11 +49,21 @@
     font-size: 20px;
     padding-left: 10px;
 }
+@media(max-width:800px){
+
+}
 @media(max-width:600px){
-    .workgrid{
-        flex-direction: column;
+    .workgrid{        
+    grid-template-columns: 100%; 
+    gap: 20px; 
     }
     .work_box{
+        height: auto;
+    }
+    .work_box{
+        height: auto;
+    }
+    .work_box p{
         height: auto;
     }
 }
