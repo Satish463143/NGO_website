@@ -23,8 +23,8 @@ const ContactUs = () => {
                     <h2>Send US a Messagae</h2>
                     <input type="text" name='name' placeholder='Name...' required /><br />
                     <input type="email" name='email' placeholder='Email...' required /><br />
-                    <input type="text" name='subject' placeholder='Subject...'  /><br />
-                    <textarea name="messaage" id="message" placeholder='Your Thouoghts...' ></textarea><br />
+                    <input type="number" name='number' placeholder='Contact...'  /><br />
+                    <textarea name="messaage" id="message" placeholder='Your Concern...' ></textarea><br />
                     <input type="submit" className='submit_btn' value="Submit" name='submit'  />
                 </form>
             </div>
