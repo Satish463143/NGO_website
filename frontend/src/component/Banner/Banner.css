@@ -67,9 +67,11 @@
     
         background:  var(--pri_color);
         border-radius: 20px;
-        padding: 7px 20px !important;
+        padding: 4px 15px !important;
         margin-left: 10px;
         display: inline-block;
+        text-decoration: underline;
+        color: var(--white);
 }
 .banner_right h1{
     font-size: 50px;

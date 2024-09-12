@@ -1,0 +1,62 @@
+.contact_grid{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 20% 60%;
+    width: 100%;margin: 50px;
+}
+.contact_grid h1{
+    font-size: 70px;
+}
+.contact_grid p span{
+    font-style: italic;
+    font-weight: 600;
+}
+.contact_form{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;      
+    
+}
+.contact_form form{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.contact_form form input ,.contact_form form textarea{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border:none ;
+    background: none;
+    border-bottom: 1px solid var(--pri_text);
+}
+.submit_btn{
+    width: 50% !important;
+    border-radius: 30px !important;
+    background: var(--pri_color) !important;
+    font-size: 15px;
+    border: none !important;
+
+}
+.map{
+    margin: 100px 0 50px 0;
+}
+.map h3{
+    color: var(--pri_color);
+
+}
+.map p{
+    margin: 15px 0;
+}
+.map iframe{
+    border: none !important;
+    width: 100%;
+    height: 300px;
+}
+.email_margin{
+    margin: 40px 0 0px 0;
+}

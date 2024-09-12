@@ -27,6 +27,9 @@ const Navbar = () => {
          else if (path.startsWith('/Our-Partners')) { 
             setMenu("Our Partners");
         }
+         else if (path.startsWith('/contact')) { 
+            setMenu("ContactUs");
+        }
     },[location]);
   
     return (
@@ -34,7 +37,9 @@ const Navbar = () => {
             <div className='container'>
                 <div className='navbar_grid'>
                     <div className='logo_img'>
+                    <   Link to="/">
                         <img src="/logo.png" alt="Logo" />
+                        </Link>
                     </div>
                     <div className='navs'>
                         <nav>
@@ -57,8 +62,8 @@ const Navbar = () => {
                                 <Link to="/gallery">
                                     <li onClick={() => { toogleNav(); setMenu("Gallery"); }} className={`${menu === "Gallery" ? 'activeMenu' : ''}`}>Gallery</li>
                                 </Link>
-                                <Link>
-                                    <li onClick={() => { toogleNav(); setMenu(""); }} className={`${menu === "" ? 'activeMenu' : ''}`}>Contact Us</li>
+                                <Link to="/contact">
+                                    <li onClick={() => { toogleNav(); setMenu("ContactUs"); }} className={`${menu === "ContactUs" ? 'activeMenu' : ''}`}>Contact Us</li>
                                 </Link>
 
                             </ul>

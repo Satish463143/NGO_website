@@ -1,5 +1,6 @@
 import React from 'react'
 import './Banner.css'
+import { Link } from 'react-router-dom';
 
 import nepalvillage from '../../../src/assets/images/nepal-village.jpg';
 
@@ -16,7 +17,7 @@ const Banner = () => {
               <h2>Together, we can create a brighter future​</h2>
               <div style={{ width: '100px', height: '5px', background: 'var(--pri_color)', margin: '20px 0 0 0' }}></div>
               <h1>Dedicated to transforming lives through initiatives in <span>Environment</span> , <span>Education</span> , & <span>Economy</span> .</h1>
-              <a href="">Read More</a>
+              <Link><a>Read More</a></Link>
             </div>
             {/* <div className='banner_right'>
                 <h1>Together We Can Make Difference!</h1>

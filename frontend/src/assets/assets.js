@@ -138,43 +138,43 @@ export const partnerList = [
 export const GalleryList =[
     {
         id:'1',
-        imagePath:'../src/assets/images/project_2.png'
+        imagePath:'../src/assets/images/one.jpg'
     },
     {
         id:'2',
-        imagePath:'../src/assets/images/project_2.png'
+        imagePath:'../src/assets/images/two.jpg'
     },
     {
         id:'3',
-        imagePath:'../src/assets/images/project_2.png'
+        imagePath:'../src/assets/images/three.jpg'
     },
     {
         id:'4',
-        imagePath:'../src/assets/images/project_2.png'
+        imagePath:'../src/assets/images/four.jpg'
     },
     {
         id:'5',
-        imagePath:'../src/assets/images/project_2.png'
+        imagePath:'../src/assets/images/five.jpg'
     },
     {
         id:'6',
-        imagePath:'../src/assets/images/photo-of-three-volunteer.png'
+        imagePath:'../src/assets/images/six.jpg'
     },
     {
         id:'7',
-        imagePath:'../src/assets/images/photo-of-three-volunteer.png'
+        imagePath:'../src/assets/images/seven.jpg'
     },
     {
         id:'8',
-        imagePath:'../src/assets/images/photo-of-three-volunteer.png'
+        imagePath:'../src/assets/images/eight.jpg'
     },
     {
         id:'9',
-        imagePath:'../src/assets/images/photo-of-three-volunteer.png'
+        imagePath:'../src/assets/images/nine.jpg'
     },
     {
         id:'10',
-        imagePath:'../src/assets/images/photo-of-three-volunteer.png'
+        imagePath:'../src/assets/images/eleven.jpg'
     },
 ]
 

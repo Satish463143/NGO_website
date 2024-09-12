@@ -9,6 +9,7 @@ import GalleryPage from './Pages/GalleryPage/GalleryPage'
 import OurInitiative from './Pages/OurInitiative/OurInitiative'
 import PartnerPage from './Pages/PartnerPage/PartnerPage'
 import Donate from './component/Donate/Donate'
+import ContactPage from './Pages/ContactPage/ContactPage'
 const App = () => {
   return (
     <div>
@@ -20,6 +21,8 @@ const App = () => {
         <Route path='/gallery' element={<GalleryPage/>}/>
         <Route path='/ourInitiative' element={<OurInitiative/>}/>
         <Route path='/Our-Partners' element={<PartnerPage/>}/>
+        <Route path='/contact' element={<ContactPage/>}/>
+
       </Routes>
       <Donate/>
       <Footer/>      
