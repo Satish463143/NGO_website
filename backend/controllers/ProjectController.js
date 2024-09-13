@@ -9,7 +9,7 @@ cloudinary.config({
 
 exports.createProject = async (req, res) => {
     try {
-        const { title, description, imageURL } = req.body;
+        const { title, description, description1, description2, description3, description4, description5, description6 } = req.body;
 
         //cloudinary upload with image_path
         // const cloudinary_res = await cloudinary.uploader.upload(
@@ -19,27 +19,41 @@ exports.createProject = async (req, res) => {
         //     overwrite: false,
         // });
 
-        new Promise((resolve) => {
-            cloudinary.uploader.upload_stream({
-                folder: "Hiraya",
-                unique_filename: true,
-                overwrite: false,
-            }, (error, uploadResult) => {
-                return resolve(uploadResult);
-            }).end(req.files[0].buffer); //change this
-        }).then((uploadResult) => {
-            const newProject = new Project({
-                title: title,
-                description: description,
-                images: [
-                    {
-                        imageURL: uploadResult.secure_url,
-                        imageCaption: "test caption" //need to change this
-                    }
-                ]
+        let imageURLs = ["", "", "", "", "", ""];
+
+        req.files.forEach((image, index) => {
+            new Promise((resolve) => {
+                cloudinary.uploader.upload_stream({
+                    folder: "Hiraya",
+                    unique_filename: true,
+                    overwrite: false,
+                }, (error, uploadResult) => {
+                    return resolve(uploadResult);
+                }).end(image.buffer); //change this
+            }).then((uploadResult) => {
+                imageURLs[index] = uploadResult.secure_url;
             });
-            newProject.save();
         });
+
+        const newProject = new Project({
+            title,
+            description,
+            image1: imageURLs[0],
+            image2: imageURLs[1],
+            image3: imageURLs[2],
+            image4: imageURLs[3],
+            image5: imageURLs[4],
+            image6: imageURLs[5],
+            description1,
+            description2,
+            description3,
+            description4,
+            description5,
+            description6,
+        });
+        newProject.save();
+
+        console.log(newProject);
 
         res.status(200).json({
             success: true,
