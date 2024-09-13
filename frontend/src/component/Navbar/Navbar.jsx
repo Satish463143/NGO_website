@@ -30,6 +30,12 @@ const Navbar = () => {
          else if (path.startsWith('/contact')) { 
             setMenu("ContactUs");
         }
+         else if (path.startsWith('/WhoWEAre')) { 
+            setMenu("Who We Are");
+        }
+         else if (path.startsWith('/WhatWeDo')) { 
+            setMenu("What We Do");
+        }
     },[location]);
   
     return (
@@ -47,11 +53,11 @@ const Navbar = () => {
                                 <Link to="/">
                                     <li onClick={() => { toogleNav(); setMenu("Home"); }} className={`${menu === "Home" ? 'activeMenu' : ''}`} >Home</li>
                                 </Link>
-                                <Link>
-                                    <li onClick={() => { toogleNav(); setMenu(""); }} className={`${menu === "" ? 'activeMenu' : ''}`}>Who We Are</li>
+                                <Link to="/WhoWEAre">
+                                    <li onClick={() => { toogleNav(); setMenu("Who We Are"); }} className={`${menu === "Who We Are" ? 'activeMenu' : ''}`}>Who We Are</li>
                                 </Link>
-                                <Link>
-                                    <li onClick={() => { toogleNav(); setMenu(""); }} className={`${menu === "" ? 'activeMenu' : ''}`}>What We Do</li>
+                                <Link to="/WhatWeDo">
+                                    <li onClick={() => { toogleNav(); setMenu("What We Do"); }} className={`${menu === "What We Do" ? 'activeMenu' : ''}`}>What We Do</li>
                                 </Link>
                                 <Link to="/Our-Partners">
                                     <li onClick={() => { toogleNav(); setMenu("Our Partners"); }} className={`${menu === "Our Partners" ? 'activeMenu' : ''}`}>Our Partners</li>

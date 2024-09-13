@@ -10,6 +10,8 @@ import OurInitiative from './Pages/OurInitiative/OurInitiative'
 import PartnerPage from './Pages/PartnerPage/PartnerPage'
 import Donate from './component/Donate/Donate'
 import ContactPage from './Pages/ContactPage/ContactPage'
+import WhoWwAre from './Pages/WhoWwAre/WhoWwAre'
+import WhatWeDo from './Pages/WhatWeDo/WhatWeDo'
 const App = () => {
   return (
     <div>
@@ -22,7 +24,8 @@ const App = () => {
         <Route path='/ourInitiative' element={<OurInitiative/>}/>
         <Route path='/Our-Partners' element={<PartnerPage/>}/>
         <Route path='/contact' element={<ContactPage/>}/>
-
+        <Route path='/WhoWEAre' element={<WhoWwAre/>}/>
+        <Route path='/WhatWeDo' element={<WhatWeDo/>}/>
       </Routes>
       <Donate/>
       <Footer/>      

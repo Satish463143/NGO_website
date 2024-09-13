@@ -30,7 +30,10 @@ const Work = () => {
                 <p>We invest in the development of individuals and communities by providing training, resources, and mentorship. By enhancing their skills and capacity, we empower them to achieve sustainable growth and development.</p>
                 <Link style={{display:'flex',gap:'10px',alignItems:'center'}}><button>Read More</button> <i class="fa-solid fa-arrow-right-long"></i></Link>
             </div>
-        </div>        
+        </div> 
+        <div className="explore_btn">
+                <Link><button>Explore What We Do</button></Link>
+            </div>       
     </div>
   )
 }

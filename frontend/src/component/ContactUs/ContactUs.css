@@ -1,15 +1,19 @@
 .contact_grid{
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 20% 60%;
+    grid-template-columns: 40% 45%;
     width: 100%;margin: 50px;
 }
 .contact_grid h1{
     font-size: 70px;
 }
 .contact_grid p span{
-    font-style: italic;
+    /* font-style: italic; */
     font-weight: 600;
+}
+.contact_grid p a{
+    font-weight: 600;
+    text-decoration: underline;
 }
 .contact_form{
     display: grid;
@@ -43,7 +47,7 @@
 
 }
 .map{
-    margin: 100px 0 50px 0;
+    margin: 0px 0 50px 0;
 }
 .map h3{
     color: var(--pri_color);

@@ -1,0 +1,31 @@
+.banner_2{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;    
+    align-items: center;
+    flex-direction: column;
+}
+.banner_2_grid{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+    width: 100%;
+}
+.banner_2_grid p{
+    color: var(--white);
+}
+.banner_2_grid p span{
+    font-weight: 700;
+}
+.banner_2_img{
+    width: 100%;
+    height: auto;
+}
+.banner_2_img img{
+    width: 100% ;
+    height: auto;
+    position: relative;
+}

@@ -1,0 +1,22 @@
+.idea_grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+    gap: 50px;
+}
+.idea_photo
+{
+    width: 100%;
+    height: auto;
+}
+.idea_photo img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.idea_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
