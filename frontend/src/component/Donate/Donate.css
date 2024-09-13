@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     height: 60vh;
+    min-height: 600px;
 
 }
 .donate_banner_overlay{

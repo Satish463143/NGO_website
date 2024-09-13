@@ -73,9 +73,7 @@ const Mission = () => {
                 </div>
             </div>
 
-            <div className="explore_btn">
-                <Link><button>Explore What We Do</button></Link>
-            </div>
+            
         </div>       
     </div>
   )
