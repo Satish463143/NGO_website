@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Navbar from './component/Navbar/Navbar'
 import Login from './pages/Login/Login'
@@ -41,8 +41,8 @@ const App = () => {
             <div className='body_grid'>
               {location.pathname !== '/' && <Navbar />}
               <div className='body_box'>
-                <TopNav isMenuActive={isMenuActive} toggleMenu={toggleMenu}/>
-                <MobileNavItem isMenuActive={isMenuActive} toggleMenu={toggleMenu}/>
+                <TopNav isMenuActive={isMenuActive} toggleMenu={toggleMenu} />
+                <MobileNavItem isMenuActive={isMenuActive} toggleMenu={toggleMenu} />
                 <Routes>
                   <Route path='/dashboard' element={<Dashboard />} />
                   <Route path='/banner' element={<Banner />} />

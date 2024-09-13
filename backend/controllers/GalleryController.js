@@ -9,30 +9,23 @@ cloudinary.config({
 
 exports.addImage = async (req, res) => {
     try {
-        const { title, description, imageURL } = req.body;
-
-        //cloudinary upload with image_path
-        // const cloudinary_res = await cloudinary.uploader.upload(
-        //     file_path, {
-        //     folder: "Hiraya",
-        //     unique_filename: true,
-        //     overwrite: false,
-        // });
-
         //image upload with buffer
-        new Promise((resolve) => {
-            cloudinary.uploader.upload_stream({
-                folder: "Hiraya",
-                unique_filename: true,
-                overwrite: false,
-            }, (error, uploadResult) => {
-                return resolve(uploadResult);
-            }).end(req.files[0].buffer); //change this
-        }).then((uploadResult) => {
-            const newImage = new Gallery({
-                imagePath: uploadResult.secure_url,
+        req.files.forEach(image => {
+            new Promise((resolve) => {
+                cloudinary.uploader.upload_stream({
+                    folder: "Hiraya",
+                    unique_filename: true,
+                    overwrite: false,
+                }, (error, uploadResult) => {
+                    return resolve(uploadResult);
+                }).end(image.buffer); //change this
+            }).then((uploadResult) => {
+                const newImage = new Gallery({
+                    imagePath: uploadResult.secure_url,
+                });
+                newImage.save();
+                console.log(newImage);
             });
-            newImage.save();
         });
 
         res.status(200).json({

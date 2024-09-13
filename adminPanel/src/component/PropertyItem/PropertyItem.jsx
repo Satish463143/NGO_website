@@ -66,7 +66,7 @@ const PropertyItem = () => {
     try {
       const response = await axios.patch(`http://localhost:4000/api/Property/${id}/sold`);
       if (response.status === 200) {
-        setProperties(properties.map(property => 
+        setProperties(properties.map(property =>
           property._id === id ? { ...property, status: 'sold' } : property
         ));
       }
@@ -75,7 +75,7 @@ const PropertyItem = () => {
       setError('Failed to mark property as sold.');
     }
   };
-  
+
 
   const filteredProperties = properties.filter((property) => {
     const categoryMatch = filters.category === 'All' || property.category === filters.category;
@@ -102,47 +102,47 @@ const PropertyItem = () => {
           </Link>
         </div>
         <div>
-                <div className='back_link'>
-                
-                </div> 
-                <hr style={{marginTop:'20px'}}/>
-                <div className='Dashboard_title'>
-                    
-                    <div style={{display:'flex',alignItems:'center',gap:'10px'}}>
-                        <div className='catergory_box'>
-                            <select name="category" id="category"  value={filters.category} onChange={handleFilterChange}>
-                                
-                                <option value="Hot Selling">Hot Selling</option>
-                                <option value="Featured">Featured</option>
-                                <option value="New Properties">New Properties</option>
-                                <option value="Premium Properties">Premium Properties</option>
-                                <option value="All">All</option>
-                            </select>
+          <div className='back_link'>
 
-                        </div>
-                        <div className='status_box'>
-                            <select name="status" id="status" value={filters.status} onChange={handleFilterChange}>
-                                
-                                <option value="Sold">Sold</option>
-                                <option value="Avialable">Avialable</option>
-                                <option value="All">All</option>
-                            </select>
-                        </div>
-                        <div className='sellingType_box'>
-                            <select name="sellingType_box" id="sellingType_box" value={filters.sellingType} onChange={handleFilterChange}>
-                                
-                                <option value="Rent">Rent</option>
-                                <option value="Sale">Sale</option>
-                                <option value="All">All</option>
-                            </select>
-                        </div>
-                        <button onClick={resetFilters}  style={{background:'green'}}>
-                            Clear All
-                        </button>
-                        
-                    </div>
-                </div>
+          </div>
+          <hr style={{ marginTop: '20px' }} />
+          <div className='Dashboard_title'>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div className='catergory_box'>
+                <select name="category" id="category" value={filters.category} onChange={handleFilterChange}>
+
+                  <option value="Hot Selling">Hot Selling</option>
+                  <option value="Featured">Featured</option>
+                  <option value="New Properties">New Properties</option>
+                  <option value="Premium Properties">Premium Properties</option>
+                  <option value="All">All</option>
+                </select>
+
+              </div>
+              <div className='status_box'>
+                <select name="status" id="status" value={filters.status} onChange={handleFilterChange}>
+
+                  <option value="Sold">Sold</option>
+                  <option value="Avialable">Avialable</option>
+                  <option value="All">All</option>
+                </select>
+              </div>
+              <div className='sellingType_box'>
+                <select name="sellingType_box" id="sellingType_box" value={filters.sellingType} onChange={handleFilterChange}>
+
+                  <option value="Rent">Rent</option>
+                  <option value="Sale">Sale</option>
+                  <option value="All">All</option>
+                </select>
+              </div>
+              <button onClick={resetFilters} style={{ background: 'green' }}>
+                Clear All
+              </button>
+
             </div>
+          </div>
+        </div>
       </div>
 
       {loading ? (
