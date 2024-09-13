@@ -39,6 +39,7 @@ const Partners = () => {
                         <h3>Because of our partners we are doing more good for more people!</h3>
                         <Link style={{ display: 'flex', gap: '10px', alignItems: 'center' }}><button>Become Our Partner</button> <i class="fa-solid fa-arrow-right-long"></i></Link>
                     </div>
+
                     <div className='partners'>
                         {sortedPartner.map((partner, index) => (
                             <Link>
