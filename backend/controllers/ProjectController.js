@@ -9,31 +9,25 @@ cloudinary.config({
 
 exports.createProject = async (req, res) => {
     try {
-        const { title, description, description1, description2, description3, description4, description5, description6 } = req.body;
+        let { title, description, description1, description2, description3, description4, description5, description6 } = req.body;
 
-        //cloudinary upload with image_path
-        // const cloudinary_res = await cloudinary.uploader.upload(
-        //     file_path, {
-        //     folder: "Hiraya",
-        //     unique_filename: true,
-        //     overwrite: false,
-        // });
+        let imageURLs = [];
 
-        let imageURLs = ["", "", "", "", "", ""];
-
-        req.files.forEach((image, index) => {
-            new Promise((resolve) => {
+        await Promise.all(req.files.map((image, index) => {
+            return new Promise((resolve, reject) => {
                 cloudinary.uploader.upload_stream({
                     folder: "Hiraya",
                     unique_filename: true,
                     overwrite: false,
                 }, (error, uploadResult) => {
-                    return resolve(uploadResult);
-                }).end(image.buffer); //change this
-            }).then((uploadResult) => {
-                imageURLs[index] = uploadResult.secure_url;
+                    if (error) {
+                        return reject(error); // Handle error during upload
+                    }
+                    imageURLs[index] = uploadResult.secure_url;
+                    resolve(uploadResult); // Resolve the promise with upload result
+                }).end(image.buffer); // Pass the image buffer for streaming upload
             });
-        });
+        }));
 
         const newProject = new Project({
             title,
@@ -51,23 +45,21 @@ exports.createProject = async (req, res) => {
             description5,
             description6,
         });
-        newProject.save();
-
-        console.log(newProject);
+        await newProject.save();
 
         res.status(200).json({
             success: true,
-            message: "New project added succesfully."
+            message: "New project added successfully.",
         });
-    }
-    catch (err) {
+    } catch (err) {
         console.error(err);
         res.status(500).json({
             success: false,
-            message: "Failed to add."
+            message: "Failed to add project.",
         });
     }
 };
+
 
 exports.getAllProjects = async (req, res) => {
     try {
