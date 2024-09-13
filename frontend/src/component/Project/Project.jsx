@@ -1,13 +1,31 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Project.css";
 import ProjectItem from "../ProjectItem/ProjectItem";
 import { StoreContext } from "../../context/StoreContext";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "../../../utils/api"
 
 const Project = () => {
-  const { projectList } = useContext(StoreContext);
+  // const { projectList } = useContext(StoreContext);
+
+  const [projectList, setProjectList] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${BASE_URL}/project/get-all-projects`);
+        const result = await response.json();
+
+        setProjectList(result.data);
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchData();
+  }, [projectList]);
+
   const sortedProjects = projectList
-    .sort((a, b) => new Date(b.timeStamp) - new Date(a.timeStamp)) // Sort by timeStamp (newest first)
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort by timeStamp (newest first)
     .slice(0, 6); // to display only six
 
   return (
@@ -29,11 +47,11 @@ const Project = () => {
             return (
               <ProjectItem
                 key={index}
-                id={item.id}
+                id={item._id}
                 title={item.title}
                 description={item.description}
-                images={item.images}
-                timeStamp={item.timeStamp}
+                images={item.image1}
+                timeStamp={item.createdAt}
               />
             );
           })}

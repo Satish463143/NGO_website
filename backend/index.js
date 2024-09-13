@@ -3,10 +3,16 @@ const mongoose = require("mongoose");
 const cors = require('cors');
 const dotenv = require("dotenv");
 
-
 dotenv.config();
 
 const app = express();
+
+app.use(
+    cors({
+        origin: '*',
+        methods: 'GET,PUT,PATCH,POST,DELETE',
+    })
+);
 
 const projectRoutes = require('./routes/ProjectRoutes');
 const galleryRoutes = require('./routes/GalleryRoutes');
@@ -17,13 +23,6 @@ app.use('/api', projectRoutes);
 app.use('/api', galleryRoutes);
 app.use('/api', contactUsRoutes);
 app.use('/api', partnerRoutes);
-
-app.use(
-    cors({
-        origin: '*',
-        methods: 'GET,PUT,PATCH,POST,DELETE',
-    })
-);
 
 mongoose
     .connect(process.env.MONGO_URL)
