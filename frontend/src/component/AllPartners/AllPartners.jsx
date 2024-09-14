@@ -15,7 +15,7 @@ const AllPartners = () => {
       </div>
       {partnerList.map((item, index) => {
         return (
-          <AllPartnersItem key={index} id={item.id} logo={item.logo} title={item.title} name={item.name} description={item.description} />
+          <AllPartnersItem key={index} id={item.id} logo={item.imagePath} title={item.title} name={item.name} description={item.description} />
         )
       })}
 

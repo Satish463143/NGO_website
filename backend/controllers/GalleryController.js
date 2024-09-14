@@ -24,7 +24,6 @@ exports.addImage = async (req, res) => {
                     imagePath: uploadResult.secure_url,
                 });
                 newImage.save();
-                console.log(newImage);
             });
         });
 
