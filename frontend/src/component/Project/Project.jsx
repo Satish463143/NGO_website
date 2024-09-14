@@ -4,25 +4,14 @@ import ProjectItem from "../ProjectItem/ProjectItem";
 import { StoreContext } from "../../context/StoreContext";
 import { Link } from "react-router-dom";
 import { BASE_URL } from "../../../utils/api"
+import { getAllProjects } from "../../api/ProjectApi";
 
 const Project = () => {
   // const { projectList } = useContext(StoreContext);
 
-  const [projectList, setProjectList] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${BASE_URL}/project/get-all-projects`);
-        const result = await response.json();
-
-        setProjectList(result.data);
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    fetchData();
-  }, [projectList]);
+  // const [projectList, setProjectList] = useState([]);
+  const { data: projectList, loading, error } = getAllProjects();
+  console.log(projectList);
 
   const sortedProjects = projectList
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort by timeStamp (newest first)

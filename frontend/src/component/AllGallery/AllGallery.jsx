@@ -1,23 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './AllGallery.css';
 import { BASE_URL } from "../../../utils/api";
+import { getAllImages } from '../../api/GalleryApi';
 
 const AllGallery = () => {
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${BASE_URL}/gallery/get-all-images`);
-        const result = await response.json();
-
-        setImages(result.data);
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    fetchData();
-  }, [images]);
+  const { data: images, loading, error } = getAllImages();
 
   return (
     <div className='container'>
