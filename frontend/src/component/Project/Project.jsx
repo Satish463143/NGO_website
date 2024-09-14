@@ -1,17 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Project.css";
 import ProjectItem from "../ProjectItem/ProjectItem";
-import { StoreContext } from "../../context/StoreContext";
 import { Link } from "react-router-dom";
-import { BASE_URL } from "../../../utils/api"
 import { getAllProjects } from "../../api/ProjectApi";
 
 const Project = () => {
-  // const { projectList } = useContext(StoreContext);
-
-  // const [projectList, setProjectList] = useState([]);
   const { data: projectList, loading, error } = getAllProjects();
-  console.log(projectList);
 
   const sortedProjects = projectList
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort by timeStamp (newest first)

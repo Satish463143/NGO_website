@@ -26,3 +26,44 @@ export const getAllImages = () => {
     }, []);
     return { data, loading, error };  // Return the data, loading, and error states
 };
+
+export const addNewImage = async (payload) => {
+    try {
+        const response = await fetch(`${BASE_URL}/gallery/add-image`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+        });
+        if (!response.ok) {
+            throw new Error("Failed to add image");
+        }
+
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+};
+
+export const deleteImage = async (payload) => {
+    try {
+        const response = await fetch(`${BASE_URL}/gallery/delete-image/${payload}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        if (!response.ok) {
+            throw new Error("Failed to delete image");
+        }
+
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+};

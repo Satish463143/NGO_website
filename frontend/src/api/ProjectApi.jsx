@@ -25,5 +25,46 @@ export const getAllProjects = () => {
         };
         fetchData();
     }, []);
-    return { data, loading, error };  // Return the data, loading, and error states
+    return { data, loading, error };
+};
+
+export const addProject = async (payload) => {
+    try {
+        const response = await fetch(`${BASE_URL}/project/create-project`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+        });
+        if (!response.ok) {
+            throw new Error("Failed to add project.");
+        }
+
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+};
+
+export const deleteProject = async (payload) => {
+    try {
+        const response = await fetch(`${BASE_URL}/project/delete-project/${payload}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        if (!response.ok) {
+            throw new Error("Failed to delete project");
+        }
+
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
 };

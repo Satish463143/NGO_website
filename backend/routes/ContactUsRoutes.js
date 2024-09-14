@@ -7,6 +7,6 @@ const { getAllContacts, deleteContact, addContact } = require('../controllers/Co
 
 router.route("/contact-us/get-all-contacts").get(upload.none(), getAllContacts);
 router.route("/contact-us/add-contact").post(upload.none(), addContact);
-router.route("/contact-us/delete-contact").delete(upload.none(), deleteContact);
+router.route("/contact-us/delete-contact/contactID").delete(upload.none(), deleteContact);
 
 module.exports = router;

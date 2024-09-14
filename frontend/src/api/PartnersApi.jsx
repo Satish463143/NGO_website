@@ -26,3 +26,44 @@ export const getAllPartners = () => {
     }, []);
     return { data, loading, error };
 };
+
+export const addNewInquiry = async (payload) => {
+    try {
+        const response = await fetch(`${BASE_URL}/our-partners/add-partner`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+        });
+        if (!response.ok) {
+            throw new Error("Failed to add partner");
+        }
+
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+};
+
+export const deletePartner = async (payload) => {
+    try {
+        const response = await fetch(`${BASE_URL}/our-partners/delete-partner/${payload}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        if (!response.ok) {
+            throw new Error("Failed to delete partner");
+        }
+
+        const result = await response.json();
+        return result;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+};
