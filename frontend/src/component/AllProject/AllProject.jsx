@@ -3,23 +3,10 @@ import './AllProject.css'
 import { StoreContext } from '../../context/StoreContext'
 import ProjectItem from '../ProjectItem/ProjectItem';
 import { BASE_URL } from '../../../utils/api';
+import { getAllProjects } from '../../api/ProjectApi';
 
 const AllProject = () => {
-  const [projectList, setProjectList] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${BASE_URL}/project/get-all-projects`);
-        const result = await response.json();
-
-        setProjectList(result.data);
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    fetchData();
-  }, [projectList]);
+  const { data: projectList, error, loading } = getAllProjects();
 
   const sortedProjects = projectList
     .sort((a, b) => new Date(b.timeStamp) - new Date(a.timeStamp))
