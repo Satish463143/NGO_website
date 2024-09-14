@@ -14,8 +14,45 @@ const WhoWeAreItem = () => {
                     <div className="who_we_are_img">
                         <img src={project_2} alt="" />
                     </div>
-                    <div className="who_we_are_title"></div>
-                    <div className="who_we_are_cont"></div>
+                    <div className="who_we_are_title">
+                        <h2>The Environment</h2>
+                    </div>
+                    <div className="who_we_are_cont">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia repellat sed iure, odio, voluptates nesciunt porro deleniti deserunt quasi nostrum magni, veniam harum ipsam autem expedita rerum soluta quisquam!
+                    </div>
+                </div>
+                <div className="who_we_are_box">
+                    <div className="who_we_are_img">
+                        <img src={project_2} alt="" />
+                    </div>
+                    <div className="who_we_are_title">
+                        <h2>Vulnerability Threat</h2>
+                    </div>
+                    <div className="who_we_are_cont">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia repellat sed iure, odio, voluptates nesciunt porro deleniti deserunt quasi nostrum magni, veniam harum ipsam autem expedita rerum soluta quisquam!
+                    </div>
+                </div>
+                <div className="who_we_are_box">
+                    <div className="who_we_are_img">
+                        <img src={project_2} alt="" />
+                    </div>
+                    <div className="who_we_are_title">
+                        <h2>Women Economic Status Status</h2>
+                    </div>
+                    <div className="who_we_are_cont">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia repellat sed iure, odio, voluptates nesciunt porro deleniti deserunt quasi nostrum magni, veniam harum ipsam autem expedita rerum soluta quisquam!
+                    </div>
+                </div>
+                <div className="who_we_are_box">
+                    <div className="who_we_are_img">
+                        <img src={project_2} alt="" />
+                    </div>
+                    <div className="who_we_are_title">
+                        <h2>Well-being</h2>
+                    </div>
+                    <div className="who_we_are_cont">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia repellat sed iure, odio, voluptates nesciunt porro deleniti deserunt quasi nostrum magni, veniam harum ipsam autem expedita rerum soluta quisquam!
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,18 +1,15 @@
 .banner_box{
     width: 100%;
-    /* background-color: var(--sec_color); */
-    /* height: 250px; */
     position: relative;
     overflow: hidden;
-    z-index: 9;
-    margin-top: 50px;
+    z-index: 9;    
     border-radius: 20px;
 }
 .banner_svg{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    /* width: 100%; */
     z-index: 99;
 }
 .banner_svg img {

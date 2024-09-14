@@ -8,9 +8,13 @@
     justify-content: space-between;
     width: 90%;
     margin: auto;
+    gap: 40px;
 }
 .who_we_are_box{
     width: 100%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding: 20px;
 
 }
 .who_we_are_img{
@@ -22,4 +26,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
+}
+.who_we_are_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+.who_we_are_cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }

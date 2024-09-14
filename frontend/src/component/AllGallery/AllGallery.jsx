@@ -10,6 +10,17 @@ const AllGallery = () => {
     <div className='container'>
       <div className="allgallery">
         <p>We have gathered many beautiful moments during our journey</p><hr />
+        <div className="project_title">
+          <h2>Our Photos</h2>
+          <div
+            style={{
+              width: "100px",
+              height: "5px",
+              background: "var(--pri_color)",
+              margin: "20px auto 50px auto",
+            }}
+          ></div>
+        </div>
         <div className='allgallery_grid'>
           {images.map((item, index) => {
             return (

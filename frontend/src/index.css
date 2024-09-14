@@ -23,6 +23,11 @@ h1,h2,h3,h4,h5,p{
 .container {
   max-width: 97%;
 }
+.bg{
+  background-color: var(--sec_color);
+  padding: 1px 0;
+  margin-top: 50px;
+}
 
 @media (min-width: 601px) and (max-width: 1300px) {
   .container {

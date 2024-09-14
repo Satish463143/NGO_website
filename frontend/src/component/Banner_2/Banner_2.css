@@ -12,7 +12,18 @@
     display: grid;
     grid-template-columns: 45% 45%;
     justify-content: space-between;
+    
     width: 100%;
+}
+.banner_2_grid button{
+    background: var(--pri_color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: underline;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 30px;
 }
 .banner_2_grid p{
     color: var(--white);
