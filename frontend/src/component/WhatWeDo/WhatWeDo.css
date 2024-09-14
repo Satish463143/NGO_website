@@ -1,0 +1,19 @@
+.whatwedo{
+    padding: 50px 0;
+}
+.what_we_do_grid{
+    display: grid;
+    grid-template-columns: 33% 25% 33%;
+    justify-content: space-between;
+    width: 100%;
+}
+.what_we_do_img,.what_we_do_title,.what_we_do_cont{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.what_we_do_img img{
+    width: 100%;
+    height: auto;
+}

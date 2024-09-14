@@ -1,0 +1,25 @@
+.who_we_are{
+    background-color: var(--sec_color);
+    padding: 50px 0;
+}
+.who_we_are_grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+.who_we_are_box{
+    width: 100%;
+
+}
+.who_we_are_img{
+    width: 100%;
+    height: 200px;
+
+}
+.who_we_are_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

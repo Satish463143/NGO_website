@@ -1,5 +1,5 @@
 import React from 'react'
-import EditBlogItem from '../../component/EditBlogItem/EditBlogItem'
+import EditBlogItem from '../EditBlogItem/EditBlogItem'
 
 const BlogEdit = () => {
   return (
