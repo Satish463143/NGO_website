@@ -8,7 +8,6 @@ cloudinary.config({
 });
 
 exports.addImage = async (req, res) => {
-    console.log(req.files);
     try {
         req.files.forEach(image => {
             new Promise((resolve) => {

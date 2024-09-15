@@ -14,7 +14,6 @@ import EditExperts from './pages/EditExperts/EditExperts'
 import Project from './pages/Project/Project'
 import AddProject from './pages/AddProject/AddProject'
 import EditProperty from './pages/EditProperty/EditProperty'
-import BlogEdit from './pages/BlogEdit/BlogEdit'
 import Inquery from './pages/Inquery/Inquery'
 import Contact from './pages/Contact/Contact'
 import MobileNavItem from './component/MobileNavItem/MobileNavItem'
@@ -48,7 +47,6 @@ const App = () => {
                   <Route path='/banner' element={<Banner />} />
                   <Route path='/gallery' element={<Gallery />} />
                   <Route path='/addImages' element={<AddImages />} />
-                  <Route path='/editblogs/:id' element={<BlogEdit />} />
                   <Route path='/userList' element={<UserList />} />
                   <Route path='/expertList' element={<Experts />} />
                   <Route path='/addExpert' element={<AddExperts />} />

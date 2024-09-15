@@ -5,6 +5,7 @@ import axios from 'axios';
 import { getAllProjects, deleteProject } from "../../../api/ProjectApi";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import parse from 'html-react-parser';
 
 const ProjectItem = () => {
   const [filters, setFilters] = useState({
@@ -145,12 +146,12 @@ const ProjectItem = () => {
                   <td>
                     <ul style={{ listStyle: 'none', flex: 'col', textAlign: 'justify', justifyContent: 'space-between' }}>
                       <li>{project.description}</li>
-                      <li>{project.description1 ? project.description1 : ""}</li>
-                      <li>{project.description2 ? project.description2 : ""}</li>
-                      <li>{project.description3 ? project.description3 : ""}</li>
-                      <li>{project.description4 ? project.description4 : ""}</li>
-                      <li>{project.description5 ? project.description5 : ""}</li>
-                      <li>{project.description6 ? project.description6 : ""}</li>
+                      {project.description1 ? <li>{parse(project.description1)}</li> : ""}
+                      {project.description2 ? <li>{parse(project.description2)} </li> : ""}
+                      {project.description3 ? <li>{parse(project.description3)} </li> : ""}
+                      {project.description4 ? <li>{parse(project.description4)} </li> : ""}
+                      {project.description5 ? <li>{parse(project.description5)} </li> : ""}
+                      {project.description6 ? <li>{parse(project.description6)} </li> : ""}
                     </ul>
                   </td>
                   <td className='table_img'>
