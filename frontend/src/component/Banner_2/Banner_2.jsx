@@ -30,7 +30,9 @@ const Banner_2 = () => {
                         important fields, which will ultimately advance the growth and welfare of Nepalese society. Hiraya 
                         Foundation Nepal keeps making major progress toward a more sustainable and better future for 
                         the nation through its coordinated efforts. </p>
+                        <Link to="/WhoWEAre"><button>Read More <i class="fa-solid fa-arrow-right-long"></i></button></Link>
                 </div>
+                
                 <div  className='banner_2_img'>
                     <img src={project_2} alt="" />
                 </div>

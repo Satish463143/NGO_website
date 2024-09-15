@@ -17,8 +17,6 @@ const Home = () => {
         <Banner_2/>
         <Mission/>
         <Work/>
-        
-        
         <Project/>
         <YoutubeVideo/>
         <Partners/>

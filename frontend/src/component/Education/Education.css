@@ -1,0 +1,27 @@
+.education_grid{
+    grid-template-columns: 45% 45%;
+    display: grid;
+    justify-content: space-around;
+    width: 100%;
+}
+.education_content,.education_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+.education_img img{
+    width: 95%;
+    height: auto;
+}
+.educaation_full_details h2{
+    margin: 20px 0;
+}
+.educaation_full_details p{
+    font-weight: 600;
+    
+}
+
+.educaation_full_details_cont{
+    margin: 20px;
+}

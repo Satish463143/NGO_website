@@ -1,0 +1,21 @@
+.allvideos{
+    background-color: var(--sec_color);
+}
+.videos_grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    width: 100%;
+    padding: 50px 0;
+    gap: 50px;
+    margin: auto;
+    
+}
+.videos_grid iframe{
+    width: 90% !important;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}

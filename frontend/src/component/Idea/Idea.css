@@ -18,5 +18,33 @@
 .idea_cont{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    flex-direction: column;
+}
+.idea_cont h1{
+    position: relative;
+    display: inline-block;
+}
+.idea_cont h1,.idea_cont span{
+    text-transform: uppercase;    
+}
+/* .idea_cont h1::before{
+    content: 'PRESIDent';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+
+} */
+.idea_cont span{
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 18px;
+    
+}
+.short_text{
+    width: 90%;
+    margin-left: 10%;
 }

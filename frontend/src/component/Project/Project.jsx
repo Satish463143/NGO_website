@@ -40,7 +40,7 @@ const Project = () => {
           })}
         </div>
         <div className="see_btn">
-          <Link>
+          <Link to='/ourInitiative'>
             <button>
               See More <i class="fa-solid fa-arrow-right-long"></i>
             </button>

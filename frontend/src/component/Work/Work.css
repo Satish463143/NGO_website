@@ -19,26 +19,19 @@
     
 }
 .work_box{
+    position: relative;
     padding: 20px;
     background: var(--white);
     border-radius: 10px;
-    height: 350px;
-    /* width: 30%; */
-
-
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
-/* .work_box h2 {
-    color: var(--pri_color);
-
-} */
+.we_are_title{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
 .work_box p{
     margin: 20px 0;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    height: 150px;
-
 }
 .work_box button{
     background: none;
@@ -48,6 +41,12 @@
 .work_box button i{
     font-size: 20px;
     padding-left: 10px;
+}
+.we_are_title_btn{
+position: absolute;
+bottom: 15px;
+
+left: 20px;
 }
 @media(max-width:800px){
 

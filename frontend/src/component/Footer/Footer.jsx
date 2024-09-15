@@ -17,13 +17,13 @@ const Footer = () => {
           </div>
           <div className='links link_li'>
             <ul><h3>Quick Links</h3>
-              <Link><li>Home</li></Link>
-              <Link><li>What We Do</li></Link>
-              <Link><li>Our Partners</li></Link>
-              <Link><li>Who We Are</li></Link>
+              <Link to="/"><li>Home</li></Link>
+              <Link to="/WhatWeDo"><li>What We Do</li></Link>
+              <Link to="/Our-Partners"><li>Our Partners</li></Link>
+              <Link to="/WhoWEAre"><li>Who We Are</li></Link>
               <Link><li>Our VIideos</li></Link>
-              <Link><li>Our Initiative</li></Link>
-              <Link><li>Gallery</li></Link>
+              <Link to="/ourInitiative"><li>Our Initiative</li></Link>
+              <Link to="/gallery"><li>Gallery</li></Link>
               <Link><li>Donate Us</li></Link>
             </ul>
           </div>
