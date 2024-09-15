@@ -1,8 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/mayawear/hirayasamaj.org/
-    - /bin/cp -R NGO_website/frontend/* $DEPLOYPATH
-    - npm i
-    - npm run build
-    - npm start

@@ -11,13 +11,13 @@ const Navbar = () => {
       setMenu('dashboard');
     } else if (path.startsWith('/banner')) {
       setMenu('banner');
-    } else if (path.startsWith('/blogs')) {
-      setMenu('blogs');
-    } else if (path.startsWith('/addblogs')) {
-      setMenu('blogs');
+    } else if (path.startsWith('/gallery')) {
+      setMenu('gallery');
+    } else if (path.startsWith('/addImages')) {
+      setMenu('gallery');
 
-    } else if (path.startsWith('/editblogs')) {
-      setMenu('blogs');
+    } else if (path.startsWith('/editgallery')) {
+      setMenu('gallery');
     }
     else if (path.startsWith('/userList')) {
       setMenu('userList');
@@ -31,14 +31,14 @@ const Navbar = () => {
     else if (path.startsWith('/editExpert')) {
       setMenu('expertList');
     }
-    else if (path.startsWith('/property')) {
-      setMenu('property');
+    else if (path.startsWith('/project')) {
+      setMenu('project');
     }
     else if (path.startsWith('/editProperty')) {
       setMenu('property');
     }
-    else if (path.startsWith('/addProperty')) {
-      setMenu('property');
+    else if (path.startsWith('/addProject')) {
+      setMenu('project');
     }
     else if (path.startsWith('/inquery')) {
       setMenu('inquery');
@@ -102,8 +102,8 @@ const Navbar = () => {
                 <p>Banner</p>
               </li>
             </Link>
-            <Link to='/property'>
-              <li onClick={() => setMenu("property")} className={menu === "property" ? "liActive" : ""}>
+            <Link to='/project'>
+              <li onClick={() => setMenu("project")} className={menu === "project" ? "liActive" : ""}>
                 <span>
                   <svg version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g class="st0" id="grid_system" /><g id="_icons"><g>
@@ -112,7 +112,7 @@ const Navbar = () => {
                     </g></g>
                   </svg>
                 </span>
-                <p>Property</p>
+                <p>Projects</p>
               </li>
             </Link>
             <Link to="/userList">
@@ -126,14 +126,14 @@ const Navbar = () => {
                 <p>User</p>
               </li>
             </Link>
-            <Link to="/blogs">
-              <li onClick={() => setMenu("blogs")} className={menu === "blogs" ? "liActive" : ""}>
+            <Link to="/gallery">
+              <li onClick={() => setMenu("gallery")} className={menu === "gallery" ? "liActive" : ""}>
                 <span>
                   <svg height="25" version="1.1" viewBox="0 0 96 96" width="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path d="M59.5 20h-23c-6.056 0-10.624 4.296-10.624 10s4.568 10 10.624 10h23c8.5 0 16.5 10.52 16.5 18.672v1.656c0 8.204-7.864 15.672-16.5 15.672h-23c-8.48 0-16.5-7.82-16.5-16.092v-49.72c0-5.904-4.204-10.188-10-10.188s-10 4.284-10 10.188v49.812c0 0.228 0.060 0.436 0.128 0.64-0.072 0.204-0.128 0.416-0.128 0.64 0 19.792 15.692 34.72 36.5 34.72h23c21.152 0 36.5-14.132 36.5-33.608v-3.172c0-20.892-17.056-39.22-36.5-39.22z" fill="#000000" />
                   </svg>
                 </span>
-                <p>Blogs</p>
+                <p>Gallery</p>
               </li>
             </Link>
             <Link to="/expertList">

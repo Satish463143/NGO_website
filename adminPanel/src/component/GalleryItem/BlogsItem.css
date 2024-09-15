@@ -1,0 +1,87 @@
+.blog_table{
+    width: 100%;
+    margin-top: 20px;
+}
+.blog_table table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid var(--gray);
+}
+.blog_table table thead th{
+    height: 40px;
+}
+.blog_table table .table_img ,.blog_table table .table_title,.blog_table table .table_category{
+    width: 18%;
+    height: auto;
+    padding: 10px;
+}
+.blog_table table .table_img img {
+    width: 100px;
+    height: auto;
+}
+.blog_table table .table_content{
+    padding:10px ;
+    
+}
+.table_sn{
+    width: 40px;
+    text-align: center;
+}
+
+.blog_images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 200px; /* Set a max width for each image */
+    margin-bottom: 20px;
+}
+
+.blog-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 8px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.back_link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Dashboard_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
