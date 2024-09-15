@@ -33,8 +33,6 @@ const AddImagesItem = () => {
         const formData = new FormData();
         files.forEach(file => formData.append('files', file));
 
-        console.log(formData);
-
         try {
             addNewImages(formData);
             toast.success('Images uploaded successfully!');

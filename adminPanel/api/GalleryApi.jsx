@@ -28,7 +28,6 @@ export const getAllImages = () => {
 };
 
 export const addNewImages = async (payload) => {
-    console.log(payload)
     try {
         const response = await fetch(`${BASE_URL}/gallery/add-image`, {
             method: "POST",
