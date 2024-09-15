@@ -24,7 +24,7 @@ export const getAllImages = () => {
         };
         fetchData();
     }, []);
-    return { data, loading, error };  // Return the data, loading, and error states
+    return { data, loading, error };
 };
 
 export const addNewImages = async (payload) => {
