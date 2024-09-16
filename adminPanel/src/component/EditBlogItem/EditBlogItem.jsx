@@ -17,7 +17,6 @@ const EditBlogItem = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        console.log('Fetching blog data for ID:', id);
         const response = await axios.get(`http://localhost:4000/api/blogs/${id}`);
         const { title, category, content, image } = response.data;
         console.log('Fetched blog data:', response.data);
@@ -87,7 +86,7 @@ const EditBlogItem = () => {
         <Link to='/blogs'><h4> Blogs</h4></Link>
         <h4>/</h4>
         <h4>Edit Blogs</h4>
-      </div> 
+      </div>
       <hr />
       <div className='Dashboard_title'>
         <h1>Edit Blogs</h1>
@@ -104,7 +103,7 @@ const EditBlogItem = () => {
           )}
           <br />
           <input type="file" name='image' onChange={handleImageChange} /><br />
-          
+
           <label htmlFor="title">Title</label><br />
           <input
             type="text"
@@ -113,7 +112,7 @@ const EditBlogItem = () => {
             onChange={(e) => setTitle(e.target.value)}
             required
           /><br />
-          
+
           {/* <label htmlFor="category">Category</label><br />
           <select
             name="category"
@@ -127,7 +126,7 @@ const EditBlogItem = () => {
             <option value="LifeStyle">LifeStyle</option>
             <option value="Finance">Finance</option>
           </select><br /> */}
-          
+
           <label htmlFor="content">Content</label><br />
           <textarea
             name="content"
@@ -136,14 +135,14 @@ const EditBlogItem = () => {
             onChange={(e) => setContent(e.target.value)}
             required
           ></textarea><br />
-          
-          <div style={{display:'flex', justifyContent:'center'}}>
+
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
             <input type="submit" value='Update Blog' />
           </div>
         </form>
         {message && <p className="success-message">{message}</p>}
         {error && <p className="error-message">{error}</p>}
-      </div>       
+      </div>
     </div>
   );
 }
