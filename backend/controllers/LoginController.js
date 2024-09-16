@@ -13,7 +13,6 @@ exports.login = async (req, res) => {
 
     try {
         const user = await Admin.findOne({ email });
-        console.log(req.body)
 
         if (user && (await bcrypt.compare(password, user.password))) {
             res.status(200).json({
