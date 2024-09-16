@@ -46,6 +46,7 @@ exports.getAllContacts = async (req, res) => {
 
 exports.deleteContact = async (req, res) => {
     const contactID = req.params.contactID;
+    console.log(contactID)
 
     try {
         await ContactUs.findByIdAndDelete(contactID);
