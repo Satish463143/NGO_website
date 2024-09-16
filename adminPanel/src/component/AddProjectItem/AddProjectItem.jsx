@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './AddPropertyItem.css';
 import axios from 'axios';
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css'; // For React-Quill styles
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { addProject } from '../../../api/ProjectApi';
