@@ -18,6 +18,7 @@ import Inquery from './pages/Inquery/Inquery'
 import Contact from './pages/Contact/Contact'
 import MobileNavItem from './component/MobileNavItem/MobileNavItem'
 import Gallery from './pages/Blogs/Gallery'
+import ProtectedRoute from '../utils/ProtectedRoute';
 
 const App = () => {
   const location = useLocation();
@@ -43,19 +44,19 @@ const App = () => {
                 <TopNav isMenuActive={isMenuActive} toggleMenu={toggleMenu} />
                 <MobileNavItem isMenuActive={isMenuActive} toggleMenu={toggleMenu} />
                 <Routes>
-                  <Route path='/dashboard' element={<Dashboard />} />
-                  <Route path='/banner' element={<Banner />} />
-                  <Route path='/gallery' element={<Gallery />} />
-                  <Route path='/addImages' element={<AddImages />} />
-                  <Route path='/userList' element={<UserList />} />
-                  <Route path='/partnerList' element={<Experts />} />
-                  <Route path='/addPartner' element={<AddPartner />} />
-                  <Route path='/editPartner/:id' element={<EditExperts />} />
-                  <Route path='/project' element={<Project />} />
-                  <Route path='/addProject' element={<AddProject />} />
-                  <Route path='/editProperty' element={<EditProperty />} />
-                  <Route path='/inquery' element={<Inquery />} />
-                  <Route path='/contact' element={<Contact />} />
+                  <Route path='/dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+                  <Route path='/banner' element={<ProtectedRoute><Banner /></ProtectedRoute>} />
+                  <Route path='/gallery' element={<ProtectedRoute><Gallery /></ProtectedRoute>} />
+                  <Route path='/addImages' element={<ProtectedRoute><AddImages /></ProtectedRoute>} />
+                  <Route path='/userList' element={<ProtectedRoute><UserList /></ProtectedRoute>} />
+                  <Route path='/partnerList' element={<ProtectedRoute><Experts /></ProtectedRoute>} />
+                  <Route path='/addPartner' element={<ProtectedRoute><AddPartner /></ProtectedRoute>} />
+                  <Route path='/editPartner/:id' element={<ProtectedRoute><EditExperts /></ProtectedRoute>} />
+                  <Route path='/project' element={<ProtectedRoute><Project /></ProtectedRoute>} />
+                  <Route path='/addProject' element={<ProtectedRoute><AddProject /></ProtectedRoute>} />
+                  <Route path='/editProperty' element={<ProtectedRoute><EditProperty /></ProtectedRoute>} />
+                  <Route path='/inquery' element={<ProtectedRoute><Inquery /></ProtectedRoute>} />
+                  <Route path='/contact' element={<ProtectedRoute><Contact /></ProtectedRoute>} />
                 </Routes>
               </div>
             </div>
