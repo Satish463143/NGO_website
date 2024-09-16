@@ -13,25 +13,6 @@ const EditBlogItem = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  // Fetch the blog's current data from the backend
-  useEffect(() => {
-    const fetchBlog = async () => {
-      try {
-        const response = await axios.get(`http://localhost:4000/api/blogs/${id}`);
-        const { title, category, content, image } = response.data;
-        console.log('Fetched blog data:', response.data);
-        setTitle(title);
-        setCategory(category);
-        setContent(content);
-        setCurrentImage(image);
-      } catch (error) {
-        console.error('Error fetching blog data:', error);
-        setError('Failed to fetch blog data.');
-      }
-    };
-    fetchBlog();
-  }, [id]);
-
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
     console.log('Selected image file:', e.target.files[0]);
