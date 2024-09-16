@@ -66,7 +66,10 @@ const InqueryItem = () => {
                                         <td>{inquiry.number || 'N/A'}</td>
                                         <td>{inquiry.message || 'N/A'}</td>
                                         <td style={{ textAlign: 'center' }}>
-                                            <a href={`mailto:${inquiry.email}`} target='_blank'><button className='edit_btn'>Response</button></a>
+                                            {inquiry.email && <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${inquiry.email}`} target='_blank' rel='noopener noreferrer'>
+                                                <button className='edit_btn'>Respond</button>
+                                            </a>}
+
                                             <button className='delete_btn' onClick={() => handleDelete(inquiry._id)}>Delete</button>
                                         </td>
                                     </tr>
