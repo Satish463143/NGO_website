@@ -5,6 +5,7 @@ import atish from '../../../src/assets/images/atish.jpg';
 import sneha from '../../../src/assets/images/sneha.jpg';
 const OurTeam = () => {
   return (
+    <div className="my_team">
     <div className='container'>
         <div className='team_title'>
             <h1>Meet Our Team</h1>
@@ -49,6 +50,7 @@ const OurTeam = () => {
                 
             
         </div>
+    </div>
     </div>
   )
 }
