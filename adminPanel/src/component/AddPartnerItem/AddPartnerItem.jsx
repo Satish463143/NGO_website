@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { addNewPartner } from '../../../api/PartnersApi';
 
-const AddExpertItem = () => {
+const AddPartnerItem = () => {
   const [name, setName] = useState('');
   const [content, setContent] = useState('');
   const [image, setImage] = useState(null);
@@ -20,56 +23,49 @@ const AddExpertItem = () => {
 
     const formData = new FormData();
     formData.append('name', name);
-    formData.append('content', content);
-    formData.append('image', image);
+    formData.append('description', content);
+    formData.append('file', image);
 
     try {
-      const response = await axios.post('http://localhost:4000/api/ourexpertise/add', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      });
-      if (response.data.success) {
-        setMessage(response.data.message);
-        setTimeout(() => {
-          navigate('/expertList');
-        }, 2000); // Redirect after 2 seconds
-      } else {
-        setError('Failed to add expert.');
-      }
+      addNewPartner(formData);
+      setName('');
+      setContent('');
+      setImage(null);
+      toast.success("Partner added.");
     } catch (error) {
-      setError('Error occurred while adding expert.');
+      toast.error('Error occurred while adding partner.');
       console.error('Error:', error);
     }
   };
 
   return (
     <div className='banner_box'>
+      <ToastContainer />
       <div className='back_link'>
         <h4> &gt;&gt; </h4>
         <Link to='/dashboard'><h4>Dashboard </h4></Link>
         <h4>/</h4>
-        <Link to='/expertList'><h4> Experts</h4></Link>
+        <Link to='/partnerList'><h4> Partners</h4></Link>
         <h4>/</h4>
-        <h4>Add Experts</h4>
+        <h4>Add Partner</h4>
       </div>
       <hr />
       <div className='Dashboard_title'>
-        <h1>Add Experts</h1>
+        <h1>Add Partner</h1>
       </div>
       <div className='banner_form'>
         <form onSubmit={handleSubmit} method='post'>
           <label htmlFor="image">Select Image</label><br />
           <input type="file" name='image' onChange={handleImageChange} required /><br />
-          
+
           <label htmlFor="name">Name</label><br />
           <input type="text" name='name' value={name} onChange={(e) => setName(e.target.value)} required /><br />
-          
-          <label htmlFor="content">Content</label><br />
+
+          <label htmlFor="content">Description</label><br />
           <textarea name="content" id="content" value={content} onChange={(e) => setContent(e.target.value)} required></textarea><br />
-          
-          <div style={{display:'flex', justifyContent:'center'}}>
-            <input type="submit" value='Add Experts' name='addExperts' />
+
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <input type="submit" value='Add Partner' name='addPartners' />
           </div>
         </form>
         {message && <p className="success-message">{message}</p>}
@@ -79,4 +75,4 @@ const AddExpertItem = () => {
   )
 }
 
-export default AddExpertItem;
+export default AddPartnerItem;

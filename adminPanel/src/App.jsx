@@ -8,8 +8,8 @@ import './App.css'
 import Banner from './pages/Banner/Banner'
 import AddImages from './pages/AddImages/AddImages';
 import UserList from './pages/UserList/UserList'
-import Experts from './pages/Experts/Experts'
-import AddExperts from './pages/AddExperts/AddExperts'
+import Experts from './pages/Partners/Partners'
+import AddPartner from './pages/AddPartner/AddPartner';
 import EditExperts from './pages/EditExperts/EditExperts'
 import Project from './pages/Project/Project'
 import AddProject from './pages/AddProject/AddProject'
@@ -48,9 +48,9 @@ const App = () => {
                   <Route path='/gallery' element={<Gallery />} />
                   <Route path='/addImages' element={<AddImages />} />
                   <Route path='/userList' element={<UserList />} />
-                  <Route path='/expertList' element={<Experts />} />
-                  <Route path='/addExpert' element={<AddExperts />} />
-                  <Route path='/editExpert/:id' element={<EditExperts />} />
+                  <Route path='/partnerList' element={<Experts />} />
+                  <Route path='/addPartner' element={<AddPartner />} />
+                  <Route path='/editPartner/:id' element={<EditExperts />} />
                   <Route path='/project' element={<Project />} />
                   <Route path='/addProject' element={<AddProject />} />
                   <Route path='/editProperty' element={<EditProperty />} />

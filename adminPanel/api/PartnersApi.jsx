@@ -27,14 +27,11 @@ export const getAllPartners = () => {
     return { data, loading, error };
 };
 
-export const addNewInquiry = async (payload) => {
+export const addNewPartner = async (payload) => {
     try {
         const response = await fetch(`${BASE_URL}/our-partners/add-partner`, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
+            body: payload
         });
         if (!response.ok) {
             throw new Error("Failed to add partner");

@@ -22,14 +22,14 @@ const Navbar = () => {
     else if (path.startsWith('/userList')) {
       setMenu('userList');
     }
-    else if (path.startsWith('/expertList')) {
-      setMenu('expertList');
+    else if (path.startsWith('/partnerList')) {
+      setMenu('partnerList');
     }
-    else if (path.startsWith('/addExpert')) {
-      setMenu('expertList');
+    else if (path.startsWith('/addPartner')) {
+      setMenu('partnerList');
     }
-    else if (path.startsWith('/editExpert')) {
-      setMenu('expertList');
+    else if (path.startsWith('/editPartner')) {
+      setMenu('partnerList');
     }
     else if (path.startsWith('/project')) {
       setMenu('project');
@@ -136,8 +136,8 @@ const Navbar = () => {
                 <p>Gallery</p>
               </li>
             </Link>
-            <Link to="/expertList">
-              <li onClick={() => setMenu("expertList")} className={menu === "expertList" ? "liActive" : ""}>
+            <Link to="/partnerList">
+              <li onClick={() => setMenu("partnerList")} className={menu === "partnerList" ? "liActive" : ""}>
                 <span>
                   <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="128" cy="120" fill="none" r="40" stroke="#000" stroke-miterlimit="10" stroke-width="16" />
@@ -152,7 +152,7 @@ const Navbar = () => {
                     <path d="M223.3,116.5A87.7,87.7,0,0,1,224,128a96,96,0,1,1-96-96,87,87,0,0,1,8.9.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
                   </svg>
                 </span>
-                <p>Experts</p>
+                <p>Partners</p>
               </li>
             </Link>
             <Link to="/inquery">
