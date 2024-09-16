@@ -1,1 +1,1 @@
-export const BASE_URL = "https://hiraya.onrender.com/";
+export const BASE_URL = "https://hiraya.onrender.com";
