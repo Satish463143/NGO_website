@@ -1,5 +1,5 @@
-import React from 'react'
-import {HashRouter as Router, Routes, Route} from 'react-router-dom'
+import React,{useEffect} from 'react'
+import {HashRouter as Router, Routes, Route,useLocation} from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import Navbar from './component/Navbar/Navbar'
 import Footer from './component/Footer/Footer'
@@ -13,10 +13,47 @@ import ContactPage from './Pages/ContactPage/ContactPage'
 import WhoWwAre from './Pages/WhoWwAre/WhoWwAre'
 import WhatWeDo from './Pages/WhatWeDo/WhatWeDo'
 const App = () => {
+  const ScrollToSection = () => {
+    const { hash, pathname } = useLocation();
+  
+    useEffect(() => {
+      if (hash) {
+        const sectionId = hash.replace('#', '');
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else if (pathname === '/' && !hash) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      else if (pathname === '/gallery' && !hash) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      else if (pathname === '/ourInitiative' && !hash) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      else if (pathname === '/Our-Partners' && !hash) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      else if (pathname === '/contact' && !hash) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      else if (pathname === '/WhoWEAre' && !hash) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      else if (pathname === '/WhatWeDo' && !hash) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, [hash, pathname]);
+  
+    return null; // This component is only used for the side-effect (scrolling)
+  };
   return (
     <div>
+      
       <Navbar/>
-      <MobileNav/>
+      <MobileNav/>   
+      <ScrollToSection/>   
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/project/:id' element={<ProjectPage/>}/>

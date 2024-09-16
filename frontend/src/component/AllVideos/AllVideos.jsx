@@ -4,10 +4,10 @@ import { StoreContext } from '../../context/StoreContext'
 const AllVideos = () => {
     const {YoutubeLIst} = useContext(StoreContext)
   return (
-    <div className="allvideos">
+    <div  className="allvideos">
     <div className='container'>
-        <div className="project_title">
-          <h2> Our Videos</h2>
+        <div id='allvideos' className="project_title">
+          <h2 > Our Videos</h2>
           <div
             style={{
               width: "100px",

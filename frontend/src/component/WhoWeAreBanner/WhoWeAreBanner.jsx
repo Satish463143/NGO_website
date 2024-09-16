@@ -9,11 +9,12 @@ const WhoWeAreBanner = () => {
       <div className='banner_content'>
         <div className='container'>
           <div className='banner_grid'>
-            <div className='banner_left'>
-              <h2>Leading, Learning and Greening.​</h2>
-              <div style={{ width: '100px', height: '5px', background: 'var(--pri_color)', margin: '20px 0 0 0' }}></div>
-              <h1>Who We Are ?</h1>              
-            </div>
+          <div className=' font_size'>
+            <h2>Leading, Learning and Greening.​</h2>
+            <div style={{ width: '100px', height: '5px', background: 'var(--pri_color)', margin: '20px 0 0 0' }}></div>
+            <p>Dedicated to Positive Change</p>
+            <h1>Who We Are</h1>            
+          </div>
           </div>
         </div>
       </div>

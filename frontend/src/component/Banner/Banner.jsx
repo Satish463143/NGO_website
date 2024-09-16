@@ -6,7 +6,7 @@ import nepalvillage from '../../../src/assets/images/nepal-village.jpg';
 
 const Banner = () => {
   return (
-    <div className='banner'>
+    <div id='#banner' className='banner'>
       <img className="desktopImg" src={nepalvillage} alt="" />
       <img className="mobileImg" src={nepalvillage} alt="" />
       <div className='bananere_ovelay'></div>

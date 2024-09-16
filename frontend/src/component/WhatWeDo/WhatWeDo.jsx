@@ -4,6 +4,7 @@ import project_2 from '../../../src/assets/images/project_2.png';
 
 const WhatWeDo = () => {
   return (
+    <div style={{background:'var(--sec_color)'}}>
     <div className='container'>
       <div className='whatwedo'>
         <div className="mission_title">
@@ -79,6 +80,7 @@ const WhatWeDo = () => {
             </div> 
         </div>
       </div>
+    </div>
     </div>
   )
 }

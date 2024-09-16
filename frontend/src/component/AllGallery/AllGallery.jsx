@@ -7,7 +7,7 @@ const AllGallery = () => {
   const { data: images, loading, error } = getAllImages();
 
   return (
-    <div className='container'>
+    <div id='allgallery' className='container'>
       <div className="allgallery">
         <p>We have gathered many beautiful moments during our journey</p><hr />
         <div className="project_title">

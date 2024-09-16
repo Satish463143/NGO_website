@@ -1,8 +1,9 @@
 .contact_grid{
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 40% 45%;
-    width: 100%;margin: 50px;
+    grid-template-columns: 40% 40%;
+    width: 100%;
+    margin-top: 50px;
 }
 .contact_grid h1{
     font-size: 70px;

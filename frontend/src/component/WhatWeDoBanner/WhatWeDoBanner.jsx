@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Banner/Banner.css'
 import nepalvillage from '../../../src/assets/images/nepal-village.jpg';
 
 const WhatWeDoBanner = () => {
@@ -10,11 +11,11 @@ const WhatWeDoBanner = () => {
     <div className='banner_content'>
       <div className='container'>
         <div className='banner_grid'>
-          <div className='banner_left'>
+          <div className=' font_size'>
             <h2>Leading, Learning and Greening.​</h2>
             <div style={{ width: '100px', height: '5px', background: 'var(--pri_color)', margin: '20px 0 0 0' }}></div>
-            <h1>What We Do ?</h1>
-            
+            <p>Sustanable Community  Empowement</p>
+            <h1>What We Do </h1>            
           </div>
         </div>
       </div>

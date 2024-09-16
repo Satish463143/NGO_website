@@ -3,10 +3,10 @@ import project_2 from '../../../src/assets/images/project_2.png';
 
 const Environment = () => {
   return (
-    <div className="education" style={{background:'var(--sec_color)', padding:'10px 0'}}>
+    <div  className="education" style={{ padding:'10px 0'}}>
         <div className='container'>
-            <div className="mission_title" style={{margin:'40px'}}>
-                <h1>Environment</h1>  
+            <div className="mission_title" style={{margin:'40px 0'}}>
+                <h1 id='environment'>Environment</h1>  
                 <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px auto 20px auto',}}></div>
             </div>
             <div className='education_grid'>

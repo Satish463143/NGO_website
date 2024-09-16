@@ -43,7 +43,7 @@ const Navbar = () => {
             <div className='container'>
                 <div className='navbar_grid'>
                     <div className='logo_img'>
-                    <   Link to="/">
+                    <Link to="/#banner">
                         <img src="/logo.png" alt="Logo" />
                         </Link>
                     </div>

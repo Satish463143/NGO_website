@@ -56,6 +56,18 @@
     line-height: 1.2;
 
 }
+.font_size h1, .font_size p, .font_size h2{
+    color: var(--white);
+}
+.font_size p{
+    margin-top: 50px;
+    font-size: 20px;
+}
+.font_size h1{
+    font-size: 75px;
+    margin: 0 !important;
+    line-height: 1;
+}
 .banner_left h1 span{
     text-decoration: underline;
 }

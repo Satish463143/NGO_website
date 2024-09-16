@@ -149,7 +149,7 @@ const Navbar = () => {
 
       </div>
 
-      <Link to="#">
+      <Link >
         <div className='admin_box'>
           <div>
             <span>

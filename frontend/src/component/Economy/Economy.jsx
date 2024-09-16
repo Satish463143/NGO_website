@@ -2,16 +2,16 @@ import React from 'react'
 import project_2 from '../../../src/assets/images/project_2.png';
 const Economy = () => {
   return (
-    <div className="education" style={{background:'var(--sec_color)', padding:'10px 0'}}>
+    <div className="education" style={{ padding:'10px 0'}}>
         <div className='container'>
             <div className="mission_title" style={{margin:'40px'}}>
-                <h1>Economy</h1>  
+                <h1 id='economy'>Economy</h1>  
                 <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px auto 20px auto',}}></div>
             </div>
             <div className='education_grid'>
                 <div className="education_content">
                     <p>
-                                            For rural communities in Nepal to be empowered to manage their resources wisely and make wise 
+                        For rural communities in Nepal to be empowered to manage their resources wisely and make wise 
                         decisions, financial literacy is essential. For those without formal education, developing their skills 
                         is crucial to raising their employability and standard of living. Furthermore, digital media training 
                         and its application to employment development present creative chances for economic expansion 

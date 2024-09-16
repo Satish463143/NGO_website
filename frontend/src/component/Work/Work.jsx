@@ -20,7 +20,7 @@ const Work = () => {
                     <p>We are committed to preserving our natural resources. Through initiatives like tree planting, river cleanups, and waste management, we actively contribute to environmental conservation and sustainability.</p>
                 </div>
                 <div className='we_are_title_btn'>
-                <Link style={{display:'flex',gap:'10px'}}><button>Read More</button><i class="fa-solid fa-arrow-right-long"></i></Link></div>
+                <Link to='/WhatWeDo#environment'><button>Read More <i class="fa-solid fa-arrow-right-long"></i></button></Link></div>
             </div>
             <div className='work_box'>
                 <img src={education} alt="" />
@@ -30,7 +30,8 @@ const Work = () => {
                     <p>We believe in the power of education to drive change. Through educational programs and awareness campaigns, we promote environmental conservation, sustainable practices, and social responsibility</p>
                 </div>
                 <div className='we_are_title_btn'>
-                <Link style={{display:'flex',gap:'10px'}}><button>Read More</button><i class="fa-solid fa-arrow-right-long"></i></Link></div>
+                    <Link to='/WhatWeDo#education'><button>Read More <i class="fa-solid fa-arrow-right-long"></i></button></Link>
+                </div>
             </div>
             <div className='work_box'>
                 <img src={economy} alt="" />
@@ -41,7 +42,7 @@ const Work = () => {
                     <p>We invest in the development of individuals and communities by providing training, resources, and mentorship. By enhancing their skills and capacity, we empower them to achieve sustainable growth and development.</p>
                 </div>
                 <div className='we_are_title_btn'>
-                    <Link style={{display:'flex',gap:'10px',alignItems:'center'}}><button>Read More</button> <i class="fa-solid fa-arrow-right-long"></i></Link>
+                    <Link to='/WhatWeDo#economy'><button>Read More <i class="fa-solid fa-arrow-right-long"></i></button> </Link>
                 </div>
             </div>
         </div> 
