@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
+import logo from "../../assets/images/logo.png";
+
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   const location = useLocation();
@@ -53,7 +55,7 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className='logo'>
-        <img src="../src/assets/images/logo.png" alt="" />
+        <img src={logo} alt="" />
       </div>
       <div className='admin_box'>
         <div>
@@ -91,17 +93,6 @@ const Navbar = () => {
                 <p>Dashboard</p>
               </li>
             </Link>
-            <Link to='/banner'>
-              <li onClick={() => setMenu("banner")} className={menu === "banner" ? "liActive" : ""}>
-                <span>
-                  <svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M38 14h-16v12h16v-12zm4-8h-36c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 3.96 4 3.96h36c2.21 0 4-1.76 4-3.96v-28c0-2.21-1.79-4-4-4zm0 32.03h-36v-28.06h36v28.06z" />
-                    <path d="M0 0h48v48h-48z" fill="none" />
-                  </svg>
-                </span>
-                <p>Banner</p>
-              </li>
-            </Link>
             <Link to='/project'>
               <li onClick={() => setMenu("project")} className={menu === "project" ? "liActive" : ""}>
                 <span>
@@ -113,17 +104,6 @@ const Navbar = () => {
                   </svg>
                 </span>
                 <p>Projects</p>
-              </li>
-            </Link>
-            <Link to="/userList">
-              <li onClick={() => setMenu("userList")} className={menu === "userList" ? "liActive" : ""}>
-                <span>
-                  <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><title />
-                    <path d="M24,21A10,10,0,1,1,34,11,10,10,0,0,1,24,21ZM24,5a6,6,0,1,0,6,6A6,6,0,0,0,24,5Z" />
-                    <path d="M42,47H6a2,2,0,0,1-2-2V39A16,16,0,0,1,20,23h8A16,16,0,0,1,44,39v6A2,2,0,0,1,42,47ZM8,43H40V39A12,12,0,0,0,28,27H20A12,12,0,0,0,8,39Z" />
-                  </svg>
-                </span>
-                <p>User</p>
               </li>
             </Link>
             <Link to="/gallery">
