@@ -6,6 +6,7 @@ import ReactQuill from 'react-quill';
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { addProject } from '../../../api/ProjectApi';
+import 'react-quill/dist/quill.snow.css';
 
 const AddProjectItem = () => {
   const [formData, setFormData] = useState({
