@@ -9,7 +9,6 @@ cloudinary.config({
 
 exports.addImage = async (req, res) => {
     try {
-        //image upload with buffer
         req.files.forEach(image => {
             new Promise((resolve) => {
                 cloudinary.uploader.upload_stream({

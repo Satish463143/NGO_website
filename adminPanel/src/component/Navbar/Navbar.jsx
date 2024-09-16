@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
+import logo from "../../assets/images/logo.png";
+
 const Navbar = () => {
   const [menu, setMenu] = useState("Home");
   const location = useLocation();
@@ -11,34 +13,34 @@ const Navbar = () => {
       setMenu('dashboard');
     } else if (path.startsWith('/banner')) {
       setMenu('banner');
-    } else if (path.startsWith('/blogs')) {
-      setMenu('blogs');
-    } else if (path.startsWith('/addblogs')) {
-      setMenu('blogs');
+    } else if (path.startsWith('/gallery')) {
+      setMenu('gallery');
+    } else if (path.startsWith('/addImages')) {
+      setMenu('gallery');
 
-    } else if (path.startsWith('/editblogs')) {
-      setMenu('blogs');
+    } else if (path.startsWith('/editgallery')) {
+      setMenu('gallery');
     }
     else if (path.startsWith('/userList')) {
       setMenu('userList');
     }
-    else if (path.startsWith('/expertList')) {
-      setMenu('expertList');
+    else if (path.startsWith('/partnerList')) {
+      setMenu('partnerList');
     }
-    else if (path.startsWith('/addExpert')) {
-      setMenu('expertList');
+    else if (path.startsWith('/addPartner')) {
+      setMenu('partnerList');
     }
-    else if (path.startsWith('/editExpert')) {
-      setMenu('expertList');
+    else if (path.startsWith('/editPartner')) {
+      setMenu('partnerList');
     }
-    else if (path.startsWith('/property')) {
-      setMenu('property');
+    else if (path.startsWith('/project')) {
+      setMenu('project');
     }
     else if (path.startsWith('/editProperty')) {
       setMenu('property');
     }
-    else if (path.startsWith('/addProperty')) {
-      setMenu('property');
+    else if (path.startsWith('/addProject')) {
+      setMenu('project');
     }
     else if (path.startsWith('/inquery')) {
       setMenu('inquery');
@@ -53,7 +55,7 @@ const Navbar = () => {
   return (
     <div className='navbar'>
       <div className='logo'>
-        <img src="../src/assets/images/logo.png" alt="" />
+        <img src={logo} alt="" />
       </div>
       <div className='admin_box'>
         <div>
@@ -91,19 +93,8 @@ const Navbar = () => {
                 <p>Dashboard</p>
               </li>
             </Link>
-            <Link to='/banner'>
-              <li onClick={() => setMenu("banner")} className={menu === "banner" ? "liActive" : ""}>
-                <span>
-                  <svg height="25" viewBox="0 0 48 48" width="25" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M38 14h-16v12h16v-12zm4-8h-36c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 3.96 4 3.96h36c2.21 0 4-1.76 4-3.96v-28c0-2.21-1.79-4-4-4zm0 32.03h-36v-28.06h36v28.06z" />
-                    <path d="M0 0h48v48h-48z" fill="none" />
-                  </svg>
-                </span>
-                <p>Banner</p>
-              </li>
-            </Link>
-            <Link to='/property'>
-              <li onClick={() => setMenu("property")} className={menu === "property" ? "liActive" : ""}>
+            <Link to='/project'>
+              <li onClick={() => setMenu("project")} className={menu === "project" ? "liActive" : ""}>
                 <span>
                   <svg version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g class="st0" id="grid_system" /><g id="_icons"><g>
@@ -112,32 +103,21 @@ const Navbar = () => {
                     </g></g>
                   </svg>
                 </span>
-                <p>Property</p>
+                <p>Projects</p>
               </li>
             </Link>
-            <Link to="/userList">
-              <li onClick={() => setMenu("userList")} className={menu === "userList" ? "liActive" : ""}>
-                <span>
-                  <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><title />
-                    <path d="M24,21A10,10,0,1,1,34,11,10,10,0,0,1,24,21ZM24,5a6,6,0,1,0,6,6A6,6,0,0,0,24,5Z" />
-                    <path d="M42,47H6a2,2,0,0,1-2-2V39A16,16,0,0,1,20,23h8A16,16,0,0,1,44,39v6A2,2,0,0,1,42,47ZM8,43H40V39A12,12,0,0,0,28,27H20A12,12,0,0,0,8,39Z" />
-                  </svg>
-                </span>
-                <p>User</p>
-              </li>
-            </Link>
-            <Link to="/blogs">
-              <li onClick={() => setMenu("blogs")} className={menu === "blogs" ? "liActive" : ""}>
+            <Link to="/gallery">
+              <li onClick={() => setMenu("gallery")} className={menu === "gallery" ? "liActive" : ""}>
                 <span>
                   <svg height="25" version="1.1" viewBox="0 0 96 96" width="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path d="M59.5 20h-23c-6.056 0-10.624 4.296-10.624 10s4.568 10 10.624 10h23c8.5 0 16.5 10.52 16.5 18.672v1.656c0 8.204-7.864 15.672-16.5 15.672h-23c-8.48 0-16.5-7.82-16.5-16.092v-49.72c0-5.904-4.204-10.188-10-10.188s-10 4.284-10 10.188v49.812c0 0.228 0.060 0.436 0.128 0.64-0.072 0.204-0.128 0.416-0.128 0.64 0 19.792 15.692 34.72 36.5 34.72h23c21.152 0 36.5-14.132 36.5-33.608v-3.172c0-20.892-17.056-39.22-36.5-39.22z" fill="#000000" />
                   </svg>
                 </span>
-                <p>Blogs</p>
+                <p>Gallery</p>
               </li>
             </Link>
-            <Link to="/expertList">
-              <li onClick={() => setMenu("expertList")} className={menu === "expertList" ? "liActive" : ""}>
+            <Link to="/partnerList">
+              <li onClick={() => setMenu("partnerList")} className={menu === "partnerList" ? "liActive" : ""}>
                 <span>
                   <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="128" cy="120" fill="none" r="40" stroke="#000" stroke-miterlimit="10" stroke-width="16" />
@@ -152,7 +132,7 @@ const Navbar = () => {
                     <path d="M223.3,116.5A87.7,87.7,0,0,1,224,128a96,96,0,1,1-96-96,87,87,0,0,1,8.9.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
                   </svg>
                 </span>
-                <p>Experts</p>
+                <p>Partners</p>
               </li>
             </Link>
             <Link to="/inquery">
