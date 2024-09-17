@@ -42,7 +42,7 @@ exports.addImage = async (req, res) => {
 
 exports.getAllImages = async (req, res) => {
     try {
-        const images = await Gallery.find({});
+        const images = await Gallery.find({}).sort({ "createdAt": -1 }); // 1 for asc and -1 for desc
         res.status(200).json({
             success: true,
             message: "Images fetched successfully.",
