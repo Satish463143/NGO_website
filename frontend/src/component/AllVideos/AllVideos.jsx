@@ -1,11 +1,19 @@
-import React,{useContext} from 'react'
+import React, { useContext } from 'react'
 import './AllVideos.css'
 import { StoreContext } from '../../context/StoreContext'
+import { getAllVideos } from '../../api/YouTubeApi'
+
 const AllVideos = () => {
-    const {YoutubeLIst} = useContext(StoreContext)
+  const { data: YoutubeList, error, loading } = getAllVideos();
+
+  const formatSrc = (videoId) => {
+    const ytUrl = `https://www.youtube.com/embed/${videoId}`;
+    return ytUrl;
+  };
+
   return (
-    <div  className="allvideos">
-    <div className='container'>
+    <div className="allvideos">
+      <div className='container'>
         <div id='allvideos' className="project_title">
           <h2 > Our Videos</h2>
           <div
@@ -15,24 +23,24 @@ const AllVideos = () => {
               background: "var(--pri_color)",
               margin: "20px auto 0px auto",
             }}
-          >            
+          >
           </div>
         </div>
 
         <div className='videos_grid'>
-        { YoutubeLIst.map((item,index)=>{
+          {YoutubeList.map((item, index) => {
             return (
-                <iframe key={index}
-                        src={item.link}
-                        frameborder="0" allowfullscreen>
-                </iframe>
+              <iframe key={index}
+                src={formatSrc(item.snippet.resourceId.videoId)}
+                frameborder="0" allowFullScreen>
+              </iframe>
             )
-        })
-        }
+          })
+          }
         </div>
 
-        
-    </div>
+
+      </div>
     </div>
   )
 }
