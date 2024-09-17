@@ -29,7 +29,6 @@ const ProjectDetails = () => {
                 {project.description}
 
                 <ul style={{ listStyle: 'none', flex: 'col', textAlign: 'justify', justifyContent: 'space-between' }}>
-
                     {project.description1 ? <li>{parse(project.description1)}</li> : ""}
                     {project.image1 ? <li><img src={project.image1} /></li> : ""}
 
@@ -47,7 +46,6 @@ const ProjectDetails = () => {
 
                     {project.description6 ? <li>{parse(project.description6)} </li> : ""}
                     {project.image6 ? <li><img src={project.image6} /></li> : ""}
-
                 </ul>
 
             </div>
