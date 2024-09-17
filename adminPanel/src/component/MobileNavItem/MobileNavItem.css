@@ -1,15 +1,16 @@
-.moobile_nav{
+.moobile_nav {
     position: fixed;
     top: 0;
     left: -100%;
-    /* display: none; */
     width: 100%;
     height: 100vh;
     border-right: 1px solid var(--gray);
     padding: 10px;
     background: var(--w);
     transition: 0.5s;
+    z-index: 1000; /* Add this to ensure it stays on top */
 }
+
 .menuLeft{
     left: -100% !important;
 }
