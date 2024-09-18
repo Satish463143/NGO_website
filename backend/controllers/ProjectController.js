@@ -63,7 +63,7 @@ exports.createProject = async (req, res) => {
 
 exports.getAllProjects = async (req, res) => {
     try {
-        const projects = await Project.find({});
+        const projects = await Project.find({}).sort({ "createdAt": -1 });
         res.status(200).json({
             success: true,
             message: "Projects fetched successfully.",

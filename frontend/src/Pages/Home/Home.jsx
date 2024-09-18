@@ -9,19 +9,18 @@ import Gallery from '../../component/Gallery/Gallery'
 import YoutubeVideo from '../../component/YoutubeVideo/YoutubeVideo'
 import Banner_2 from '../../component/Banner_2/Banner_2'
 
-
 const Home = () => {
   return (
     <div>
-        <Banner/>
-        <Banner_2/>
-        <Mission/>
-        <Work/>
-        <Project/>
-        <YoutubeVideo/>
-        <Partners/>
-        <Gallery/>  
-        <ShortBanner/>      
+      <Banner />
+      <Banner_2 />
+      <Mission />
+      <Work />
+      <Project />
+      <YoutubeVideo />
+      <Partners />
+      <Gallery />
+      <ShortBanner />
     </div>
   )
 }
