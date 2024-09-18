@@ -13,7 +13,7 @@ const YoutubeVideo = () => {
   }
 
   return (
-    <div className='youtube' style={{ padding: '40px' }}>
+    <div className='youtube' style={{ padding: '40px 0' }}>
       <div className='containeer'>
         <h1 style={{ textAlign: 'center' }}>Stories of Change: Our Work in Action</h1>
         <div style={{ width: '150px', height: '5px', background: 'var(--pri_color)', margin: '20px auto 40px auto', }}></div>

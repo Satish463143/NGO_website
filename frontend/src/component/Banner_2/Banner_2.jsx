@@ -7,7 +7,7 @@ import project_2 from '../../../src/assets/images/project_2.png';
 
 const Banner_2 = () => {
   return (
-    <div className='banner'>
+    <div className='banner banner_bg'>
       <img className="desktopImg" src={nepalvillage} alt="" />
       <img className="mobileImg" src={nepalvillage} alt="" />
       <div className='bananere_ovelay'></div>

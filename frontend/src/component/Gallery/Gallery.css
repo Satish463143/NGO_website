@@ -29,3 +29,13 @@
     font-weight: 600;   
     text-decoration: underline;
 }
+@media (max-width:800px){
+    .gallery_grid img {
+        width: calc(40% - 20px);
+    }
+}
+@media (max-width:600px){
+    .gallery_grid img {
+        width: calc(70% - 20px);
+    }
+}
