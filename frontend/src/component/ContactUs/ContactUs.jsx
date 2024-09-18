@@ -46,7 +46,7 @@ const ContactUs = () => {
                 </div>
                 <div>
                     <p>
-                        "At <span> Hiraya Samaj</span> , we are committed to making a difference, and we’d love to hear from you! Whether you’re interested in supporting our mission, have a question, or want to learn more about our programs, we’re here to help. Reach out to us via the form below or contact us directly through <a href='mailto:hirayasamaj@gmail.com'>hirayasamaj@gmail.com</a>. Together, we can create lasting change!"
+                        "At <span> Hiraya Samaj</span> , we are committed to making a difference, and we’d love to hear from you! Whether you’re interested in supporting our mission, have a question, or want to learn more about our programs, we’re here to help. Reach out to us via the form below or contact us directly through <a href='https://mail.google.com/mail/?view=cm&fs=1&to=hirayasamaj@gmail.com'>hirayasamaj@gmail.com</a>. Together, we can create lasting change!"
                     </p>
                 </div>
             </div>
@@ -112,9 +112,9 @@ const ContactUs = () => {
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                     <h3 className='email_margin'>Email Us</h3>
-                    <a href="mailto:hirayasamaj@gmail.com">hirayasamaj@gmail.com</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hirayasamaj@gmail.com" style={{textDecoration:'underline'}}>hirayasamaj@gmail.com</a>
                     <h3 className='email_margin'>Give Us a Call</h3>
-                    <a href="tel:9801151414">9801151414</a>
+                    <a href="tel:9801151414" style={{textDecoration:'underline'}}>9801151414</a>
                 </div>
             </div>
         </div>

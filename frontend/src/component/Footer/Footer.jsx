@@ -6,38 +6,42 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='container'>
-        <div className='footer_grid'>
-          <div className='logo_box'>
-            <h1>Hiraya Samaj Nepal</h1>
-            <p>
-              <span> Hiraya Foundation Nepal </span>  is a well-known non-governmental 
+      <div className='footer_grid'>
+        <div className='logo_box'>
+          <h1>Hiraya Samaj Nepal</h1>
+          <p>
+            <span>Hiraya Foundation Nepal</span> is a well-known non-governmental 
             organization with its main office located in Kathmandu, Nepal. The Hiraya Foundation, which 
             focuses on the environment, economics, and education, works to address and mitigate the 
-            significant challenges that these areas of Nepali society are currently facing. </p>
-          </div>
+            significant challenges that these areas of Nepali society are currently facing.
+          </p>
+        </div>
+        <div  className='links_grid'>
           <div className='links link_li'>
-            <ul><h3>Quick Links</h3>
+            <ul>
+              <h3>Quick Links</h3>
               <Link to="/"><li>Home</li></Link>
               <Link to="/WhatWeDo"><li>What We Do</li></Link>
               <Link to="/Our-Partners"><li>Our Partners</li></Link>
               <Link to="/WhoWEAre"><li>Who We Are</li></Link>
-              <Link><li>Our VIideos</li></Link>
+              <Link><li>Our Videos</li></Link>
               <Link to="/ourInitiative"><li>Our Initiative</li></Link>
               <Link to="/gallery"><li>Gallery</li></Link>
               <Link><li>Donate Us</li></Link>
             </ul>
           </div>
           <div className='links'>
-            <ul><h3>Contact Info</h3>
+            <ul>
+              <h3>Contact Info</h3>
               <li>MahadevSthan, Koteshwor</li>
               <li>Kathmandu, Nepal</li>
               <a href="callto:9801151414"><li>9801151414</li></a>
-              <a href="mailto:hirayasamaj@gmail.com"><li>hirayasamaj@gmail.com</li></a>
-              
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hirayasamaj@gmail.com" target='_blank'><li>hirayasamaj@gmail.com</li></a>
             </ul>
           </div>
-          
         </div>
+      </div>
+
         <hr />
         <div className='social_media '>
           <a href="https://www.instagram.com/mayawears.np/" target='_blank'>

@@ -7,15 +7,18 @@ import { getAllImages } from '../../api/GalleryApi'
 const Gallery = () => {
     const { data: GalleryList, loading, error } = getAllImages();
 
-    const sortedGallery = [...GalleryList].sort((a, b) => b.id - a.id);
-    const limitedGallery = sortedGallery.slice(0, 9);
+    const sortedProjects = GalleryList
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort by timeStamp (newest first)
+    .slice(0, 9);
+
+    
     return (
         <div className='gallery'>
             <div className=''>
                 <h1 style={{ textAlign: 'center', marginTop: '0px' }}>Gallery</h1>
                 <div style={{ width: '100px', height: '5px', background: 'var(--pri_color)', margin: '20px auto 20px auto', }}></div>
                 <div className='gallery_grid'>
-                    {limitedGallery.map((item, index) => {
+                    {sortedProjects.map((item, index) => {
                         return <img key={index} src={item.imagePath} alt="" />
                     })}
 

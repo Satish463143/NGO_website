@@ -25,5 +25,16 @@
   height: 300px;
   object-fit: cover;
 }
-
+.load_more_btn{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.load_more_btn button{
+  padding: 10px 30px;
+  background: var(--pri_color);
+  border: none;
+  border-radius: 20px;
+  text-decoration: underline;
+  font-weight: 600;
+}
   

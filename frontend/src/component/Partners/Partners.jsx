@@ -1,16 +1,14 @@
 import React, { useContext, useState, useEffect } from 'react'
 import './Partners.css'
 import { Link } from 'react-router-dom'
-import { StoreContext } from '../../context/StoreContext'
-import { BASE_URL } from '../../../utils/api'
 import { getAllPartners } from '../../api/PartnersApi'
 
 const Partners = () => {
     const { data: partnerList, loading, error } = getAllPartners();
 
-    const sortedPartner = partnerList
-        .sort((a, b) => new Date(b.timeStamp) - new Date(a.timeStamp)) // Sort by timeStamp (newest first)
-        .slice(0, 6);
+    const sortedProjects = partnerList
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort by timeStamp (newest first)
+    .slice(0, 6);
 
     return (
         <div className="youtube_bg" style={{padding: '0px 0 40px 0' }}>
@@ -20,11 +18,11 @@ const Partners = () => {
                 <div className='partner_grid'>
                     <div className='partner_desc'>
                         <h3>Because of our partners we are doing more good for more people!</h3>
-                        <Link style={{ display: 'flex', gap: '10px', alignItems: 'center' }}><button>Become Our Partner</button> <i class="fa-solid fa-arrow-right-long"></i></Link>
+                        <Link to='/Our-Partners' ><button>Become Our Partner <i class="fa-solid fa-arrow-right-long"></i></button> </Link>
                     </div>
 
                     <div className='partners'>
-                        {sortedPartner.map((partner, index) => (
+                        {sortedProjects.map((partner, index) => (
                             <Link>
                                 <img key={index} src={partner?.imagePath} alt={`Partner ${index}`} />
                             </Link>

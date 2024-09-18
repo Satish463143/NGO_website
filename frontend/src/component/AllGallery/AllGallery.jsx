@@ -1,11 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './AllGallery.css';
-import { BASE_URL } from "../../../utils/api";
 import { getAllImages } from '../../api/GalleryApi';
 
 const AllGallery = () => {
   const { data: images, loading, error } = getAllImages();
+  const [visibleCount, setVisibleCount] = useState(9);
 
+    // Sort projects by newest first
+    const sortedProjects = images
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+    // Function to load more images
+    const loadMore = () => {
+        setVisibleCount(prevCount => prevCount + 9); // Load 9 more each time
+    };
   return (
     <div id='allgallery' className='container'>
       <div className="allgallery">
@@ -22,7 +30,7 @@ const AllGallery = () => {
           ></div>
         </div>
         <div className='allgallery_grid'>
-          {images.map((item, index) => {
+          {sortedProjects.slice(0,visibleCount).map((item, index) => {
             return (
               <img key={index} src={item.imagePath} alt="" />
             )
@@ -30,6 +38,13 @@ const AllGallery = () => {
 
           }
         </div>
+        {visibleCount < sortedProjects.length && (
+            <div className='load_more_btn'>
+                <button onClick={loadMore}>
+                    Load More <i className="fa-solid fa-arrow-right-long"></i>
+                </button>
+            </div>
+        )}
       </div>
 
     </div>

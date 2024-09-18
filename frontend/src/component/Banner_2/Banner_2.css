@@ -40,3 +40,17 @@
     height: auto;
     position: relative;
 }
+@media (max-width:600px){
+    .banner_2_grid{
+        grid-template-columns: 100%;
+    }
+    .banner_2_grid p{
+        font-size: 13px;
+    }
+    .banner_2_img{
+        display: none;
+    }
+    .banner_2 h1{
+        font-size: 23px;
+    }
+}

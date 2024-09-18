@@ -14,10 +14,14 @@ const YoutubeVideo = () => {
         <div className="youtubeGrid">
         { YoutubeLIst.map((item,index)=>{
             return (
-                <iframe key={index}
-                        src={item.link}
-                        frameborder="0" allowfullscreen>
-                </iframe>
+              <iframe
+              key={index}
+              src={item.link}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              frameBorder="0"
+              title={`youtube-video-${index}`}
+            ></iframe>
             )
         })
         }
