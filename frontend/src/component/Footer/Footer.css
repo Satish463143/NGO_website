@@ -141,21 +141,19 @@ padding: 5px 0;
     }
     .logo_box{
         width: 100%;
+        text-align: center;
     
     }
-    .logo_box h1{
-        text-align: center;
-    }
     .links li{
-        font-size: 13px;
+        font-size: 15px;
         padding: 3px 0;
     }
     .links h3{
         font-size: 15px;
     }
     .links_grid{
-        width: 100%;
-        justify-content: start;
+        width: 80%;
+        justify-content: space-around;
         margin-top: 40px;
     }
     .links{

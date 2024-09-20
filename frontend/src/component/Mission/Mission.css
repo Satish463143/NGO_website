@@ -8,6 +8,9 @@
 .mission_title h1{
     text-align: center;
 }
+.mission_btn{
+    display: none;
+}
 .mission_title p{
     text-align: center;
     max-width: 700px;
@@ -29,7 +32,7 @@
     margin: 20px;
 }
 .mission_box p{
-    width: 350px;
+    /* width: 350px; */
     margin: auto;
     font-size: 15px;
 }
@@ -68,9 +71,15 @@
        font-size: 15px;
     }
     .mission_box p{
-        font-size: 12px;
+        font-size: 15px;
     }
     .mission_box span{
         text-align: center;
+    }
+    .mission_hidden{
+        display: none;
+    }
+    .mission_btn{
+        display: block;
     }
 }

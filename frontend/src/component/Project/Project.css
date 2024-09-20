@@ -53,15 +53,20 @@
     }
 
 }
-@media(max-width:450px){
+@media(max-width:500px){
     .project_grid{
         display: grid;
         grid-template-columns: 100%;
+        gap: 30px;
     }
     .deatils_div{
         display: flex;
         flex-direction: row;
         align-items:center !important;
         gap: 10px;
+    }
+    .project_box {
+        margin: auto;
+        width: 90% !important;        
     }
 }

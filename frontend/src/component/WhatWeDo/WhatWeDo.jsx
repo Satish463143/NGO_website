@@ -17,7 +17,6 @@ const WhatWeDo = () => {
             </div>
             <div className="what_we_do_title">
               <h1>Education Distribution</h1>
-              <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px 0 30px 0',}}></div>
             </div>
             <div className="what_we_do_cont">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eum, ipsa cupiditate sit totam recusandae iste quidem ut tenetur voluptates dolorem sequi possimus quae? Repudiandae culpa ipsa temporibus molestias libero!

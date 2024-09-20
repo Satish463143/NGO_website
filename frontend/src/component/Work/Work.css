@@ -2,9 +2,7 @@
     display: grid;
     grid-template-columns: 31% 31% 31%;   
     justify-content: space-around;
-    margin: 50px auto 100px auto;
-    
-
+    margin: 50px auto 100px auto; 
 }
 .work_box img {
     background-color: var(--pri_color);
@@ -15,8 +13,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    padding: 8px;
-    
+    padding: 8px;    
 }
 .work_box{
     position: relative;
@@ -28,7 +25,7 @@
 .we_are_title{
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: center;    
 }
 .work_box p{
     margin: 20px 0;
@@ -43,13 +40,15 @@
     padding-left: 10px;
 }
 .we_are_title_btn{
-position: absolute;
-bottom: 15px;
-
-left: 20px;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
 }
 @media(max-width:800px){
-
+    .workgrid{        
+        grid-template-columns: 50% 50%; 
+        gap: 20px; 
+        }
 }
 @media(max-width:600px){
     .workgrid{        
@@ -58,11 +57,14 @@ left: 20px;
     }
     .work_box{
         height: auto;
+        width: 90%;
+        margin: auto;
     }
-    .work_box{
+    .work_box p, .work_box h2 {
         height: auto;
+        text-align: center;
     }
-    .work_box p{
-        height: auto;
+    .workgrid{
+        margin-bottom: 0;
     }
 }

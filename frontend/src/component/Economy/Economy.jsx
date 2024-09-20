@@ -4,7 +4,7 @@ const Economy = () => {
   return (
     <div className="education" style={{ padding:'10px 0'}}>
         <div className='container'>
-            <div className="mission_title" style={{margin:'40px'}}>
+            <div className="mission_title" style={{margin:'40px 0'}}>
                 <h1 id='economy'>Economy</h1>  
                 <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px auto 20px auto',}}></div>
             </div>

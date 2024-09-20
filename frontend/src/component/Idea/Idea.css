@@ -11,6 +11,9 @@
 {
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .idea_photo img{
     width: 100%;
@@ -49,4 +52,14 @@
 .short_text{
     width: 90%;
     margin-left: 10%;
+}
+@media (max-width:600px){
+    .idea_grid{
+        grid-template-columns: 90%;
+        justify-content: center;
+    }
+    .short_text{
+        width: 100%;
+        margin: 0;
+    }
 }

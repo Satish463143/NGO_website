@@ -33,10 +33,39 @@
     align-items: center;
     justify-content: center;
     margin: 10px 0;
+    text-align: center;
 }
 .who_we_are_cont{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+@media(max-width:1100px){
+    .who_we_are_grid{
+        width: 100%;
+        grid-template-columns: 33% 33% 33%;
+        gap: 10px;
+
+    }
+}
+@media(max-width:850px){
+    .who_we_are_grid{
+        width: 100%;
+        grid-template-columns: 48% 48%;
+        gap: 30px;
+
+    }
+}
+@media(max-width:600px){
+    .who_we_are_grid{
+        width: 100%;
+        grid-template-columns: 90%;
+        justify-content: center;
+        gap: 30px;
+
+    }
+    .who_we_are_img{
+        height: 250px;
+    }
 }

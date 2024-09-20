@@ -65,3 +65,24 @@
 .email_margin{
     margin: 40px 0 0px 0;
 }
+@media (max-width:900px){
+    .contact_grid{
+        grid-template-columns: 100%;
+    }
+    .contact_grid h1{
+        font-size: 50px;
+        text-align: center;
+    }
+    .contact_form{
+        display: grid;
+        grid-template-columns: 48% 48%;
+    }
+}
+@media (max-width:600px){
+    .contact_form{
+        display: grid;
+        grid-template-columns: 90%;
+        justify-content: center;
+        gap: 40px;
+    }
+}
