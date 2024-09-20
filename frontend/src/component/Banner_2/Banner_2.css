@@ -11,18 +11,20 @@
     width: 100%;
     height: 100vh;
     min-height: 900px;
+
 }
 .banner_2_grid{
     display: grid;
     grid-template-columns: 45% 45%;
     justify-content: space-between;
-    /* place-items: center; */
+    align-items: center;
     width: 100%;
 }
 .banner_2_grid button{
     background: var(--pri_color);
     border: none;
     padding: 10px 20px;
+    margin-left: 20px;
     border-radius: 20px;
     text-decoration: underline;
     font-weight: 600;
@@ -80,5 +82,13 @@
     .banner_bg{
         min-height: 1000px;
     }
+    .banner_2_grid button{
+        margin-top: 00px;
+    }
     
+}
+@media (max-width:400px){
+    .banner_bg{
+        min-height: 1050px;
+    }
 }

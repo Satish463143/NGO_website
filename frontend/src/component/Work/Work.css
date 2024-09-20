@@ -44,7 +44,10 @@
     bottom: 15px;
     left: 20px;
 }
-@media(max-width:800px){
+.work_box_img{
+    width: 100%;
+}
+@media(max-width:900px){
     .workgrid{        
         grid-template-columns: 50% 50%; 
         gap: 20px; 
@@ -60,9 +63,21 @@
         width: 90%;
         margin: auto;
     }
-    .work_box p, .work_box h2 {
+    .work_box p{
         height: auto;
-        text-align: center;
+        
+    }
+    .work_box_img{
+        display: flex;
+        justify-content: center;
+    }
+    .we_are_title_h2{
+        justify-content: center !important;
+        text-align: center !important;
+        
+    }
+    .we_are_title_h2 h2{ 
+        font-size: 20px;
     }
     .workgrid{
         margin-bottom: 0;

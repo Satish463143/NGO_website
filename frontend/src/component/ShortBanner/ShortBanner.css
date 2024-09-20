@@ -58,4 +58,11 @@
     .ShortBanner_img img {
         width: 100%;
     }
+    .ShortBanner_details p,.ShortBanner_details button{
+        margin: 20px;
+    }
+    .ShortBanner_details h1{
+        text-align: center;
+        font-size: 23px;
+    }
 }

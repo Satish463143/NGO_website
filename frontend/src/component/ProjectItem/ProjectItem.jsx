@@ -11,7 +11,7 @@ const ProjectItem = ({ id, title, description, images, timeStamp }) => {
           <img src={images} alt={title} />
         </div>
         <div className='project_content' style={{ padding: '20px' }}>
-          <div style={{display:'contents',justifyContent:'start', alignItems:'center'}}>
+          <div style={{display:'flex',justifyContent:'start', alignItems:'center'}}>
             <h2>{title}</h2>
           </div>
           {/* <p>{description}</p> */}
@@ -23,7 +23,7 @@ const ProjectItem = ({ id, title, description, images, timeStamp }) => {
               </span>              
               <h5>{formatDate(timeStamp)}</h5>
             </div>
-            <Link style={{ display: 'flex', gap: '10px',justifyContent:'start',alignItems:'center' }}><button>View Details</button><i class="fa-solid fa-arrow-right-long"></i></Link>
+            <Link style={{ display: 'flex', justifyContent:'start',alignItems:'center' }}><button>View Details</button><i class="fa-solid fa-arrow-right-long"></i></Link>
           </div>
         </div>
       </div>

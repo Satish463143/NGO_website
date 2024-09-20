@@ -36,6 +36,11 @@
 }
 @media (max-width:600px){
     .gallery_grid img {
-        width: calc(70% - 20px);
+        width: calc(90% - 20px);
+        height: 250px;
+        object-fit: cover;
+    }
+    .gallery_grid{
+        margin-left: 20px;
     }
 }

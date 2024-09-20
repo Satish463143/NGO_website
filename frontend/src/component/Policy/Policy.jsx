@@ -4,7 +4,7 @@ import './Policy.css'
 const Policy = () => {
   return (
     <div className='container'>
-        <div className='team_title'>
+        <div className='team_title team_title_policy '>
             <h1>Hiraya's Policy</h1>
             <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px auto 50px auto',}}></div>
             <strong>Engaging Youth for Change: Developing Tomorrow’s Leaders Through Education, Training, and Opportunity</strong>

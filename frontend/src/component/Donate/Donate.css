@@ -48,9 +48,14 @@ margin: 30px 0;
     text-decoration: underline;
 
 }
+@media(max-width:800px){
+    .donate_banners_content h1, .donate_banners_content h2, .donate_banners_content p{
+        width: 90%;
+    }
+}
 @media(max-width:600px){
     .donate_banners_content h1, .donate_banners_content h2, .donate_banners_content p{
-        width: 100%;
+        width: 95%;
     }
     .donate_banners_content h1{
         font-size: 23px;

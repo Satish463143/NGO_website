@@ -81,8 +81,12 @@
 @media (max-width:600px){
     .contact_form{
         display: grid;
-        grid-template-columns: 90%;
+        grid-template-columns: 95%;
         justify-content: center;
         gap: 40px;
+    }
+    .contact_grid p{
+        width: 95%;
+        margin: auto;
     }
 }

@@ -13,8 +13,9 @@ const Work = () => {
         <div style={{width:'100px', height:'5px', background:'var(--pri_color)',margin:'20px auto 0 auto',}}></div>
         <div className="workgrid">
             <div className='work_box'>
-                <img src={enviroemnt} alt="" />
-                <div className='we_are_title'>
+                <div className='work_box_img'>
+                <img src={enviroemnt} alt="" /></div>
+                <div className='we_are_title we_are_title_h2'>
                 <h2>We Care for Our Environment</h2></div>
                 <div className='we_are_title'>
                     <p>We are committed to preserving our natural resources. Through initiatives like tree planting, river cleanups, and waste management, we actively contribute to environmental conservation and sustainability.</p>
@@ -23,8 +24,9 @@ const Work = () => {
                 <Link to='/WhatWeDo#environment'><button>Read More <i class="fa-solid fa-arrow-right-long"></i></button></Link></div>
             </div>
             <div className='work_box'>
-                <img src={education} alt="" />
-                <div className='we_are_title'>
+            <div className='work_box_img'>
+                <img src={education} alt="" /></div>
+                <div className='we_are_title we_are_title_h2'>
                 <h2>We Educate & Inspire</h2></div>
                 <div className='we_are_title'>
                     <p>We believe in the power of education to drive change. Through educational programs and awareness campaigns, we promote environmental conservation, sustainable practices, and social responsibility</p>
@@ -34,8 +36,10 @@ const Work = () => {
                 </div>
             </div>
             <div className='work_box'>
-                <img src={economy} alt="" />
-                <div className='we_are_title'>
+                <div className='work_box_img'>
+                    <img src={economy} alt="" />
+                </div>
+                <div className='we_are_title we_are_title_h2'>
                     <h2>We Empower & Strengthen</h2>
                 </div>
                 <div className='we_are_title'>

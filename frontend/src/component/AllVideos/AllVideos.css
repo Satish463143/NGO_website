@@ -19,3 +19,22 @@
     align-items: center;
     border-radius: 20px;
 }
+@media(max-width:1100px){
+    .videos_grid{
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        gap: 20px;
+
+    }
+    .videos_grid iframe{
+        width: 100% !important;
+    }
+}
+@media(max-width:800px){
+    .videos_grid{
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 20px;
+
+    }
+}
