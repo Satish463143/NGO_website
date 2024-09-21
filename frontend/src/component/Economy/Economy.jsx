@@ -28,30 +28,45 @@ const Economy = () => {
             <div className="educaation_full_details">
                 <h2>Objectives:</h2>
                 <div className='educaation_full_details_cont'>
-                    <p>Enhance Financial Literacy: </p>
-                    <li> Provide comprehensive financial education programs to rural residents of Nepal.</li>
-                    <li>  Increase awareness about savings, investments, and financial planning.</li>
-                    <li>  Support women and marginalized groups in acquiring financial and digital skills. 
+                    <p>Entrepreneurship Development: </p>
+                    <li>Provide training and mentorship programs for aspiring entrepreneurs, especially in rural areas.</li>
+                    <li>  Offer micro-financing opportunities to support small businesses and startups.</li>
+                </div>
+                <div className='educaation_full_details_cont'>
+                    <p>Market Access and Trade:</p>
+                    <li> Facilitate access to local, national, and international markets for rural producers. 
+                    </li>
+                    <li>  Support fair trade practices and help small businesses reach wider markets through cooperative networks.
                     </li>
                 </div>
                 <div className='educaation_full_details_cont'>
-                    <p>Skill Development:</p>
-                    <li>  Identify key skills needed in the local job market and design training programs accordingly. 
-                    </li>
-                    <li>  Offer vocational training to uneducated individuals to improve their employment 
-                    prospects.
+                    <p>Sustainable Business Practices: </p>
+                    <li>  Promote the adoption of sustainable business practices to reduce environmental impact.</li>
+                    <li>  Offer workshops and resources on eco-friendly production methods and circular economy models.
                     </li>
                 </div>
                 <div className='educaation_full_details_cont'>
-                    <p>Digital Media Training: </p>
-                    <li>  Conduct workshops on digital literacy and the use of social media platforms </li>
-                    <li>  Train individuals on leveraging digital tools for marketing and business development. 
+                    <p>Women’s Economic Empowerment: </p>
+                    <li>   Establish women-led cooperatives and enterprises to boost income and self-reliance. </li>
+                    <li>    Provide capacity-building programs to enhance women’s economic participation and leadership in business.
                     </li>
                 </div>
                 <div className='educaation_full_details_cont'>
-                    <p>Job Creation: </p>
-                    <li>   Conduct workshops on digital literacy and the use of social media platforms. </li>
-                    <li>    Train individuals on leveraging digital tools for marketing and business development.
+                    <p>Youth Employment:</p>
+                    <li>  Develop targeted job training and placement programs for youth in high-demand industries.</li>
+                    <li> Collaborate with private sectors and government to create internship and apprenticeship opportunities for young people.
+                    </li>
+                </div>
+                <div className='educaation_full_details_cont'>
+                    <p>Digital Economy Integration: </p>
+                    <li>  Encourage the use of e-commerce platforms for rural businesses to reach broader markets.</li>
+                    <li>    Train rural entrepreneurs on digital payment systems, online marketing, and remote business management.
+                    </li>
+                </div>
+                <div className='educaation_full_details_cont'>
+                    <p>Sustainable Tourism: </p>
+                    <li>Promote eco-tourism and community-based tourism initiatives to create jobs and preserve cultural heritage. </li>
+                    <li>Train local communities in hospitality, tourism management, and environmental stewardship.
                     </li>
                 </div>
             </div>

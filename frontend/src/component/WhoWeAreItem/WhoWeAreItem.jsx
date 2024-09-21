@@ -15,10 +15,12 @@ const WhoWeAreItem = () => {
                         <img src={project_2} alt="" />
                     </div>
                     <div className="who_we_are_title">
-                        <h2>The Environment</h2>
+                        <h2>
+                        Rural Communities
+                        </h2>
                     </div>
                     <div className="who_we_are_cont">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia repellat sed iure, odio, voluptates nesciunt porro deleniti deserunt quasi nostrum magni, veniam harum ipsam autem expedita rerum soluta quisquam!
+                    We have a very strong passion about supporting rural, underserved populations who often lack adequate access to education and economic development tools. Such an approach is aimed at supporting these communities and raising them to a better level of life while ensuring they know how to do this without destroying their habitat. 
                     </div>
                 </div>
                 <div className="who_we_are_box">
@@ -26,10 +28,13 @@ const WhoWeAreItem = () => {
                         <img src={project_2} alt="" />
                     </div>
                     <div className="who_we_are_title">
-                        <h2>Vulnerability Threat</h2>
+                        <h2>
+
+                        Women and Girls
+                        </h2>
                     </div>
                     <div className="who_we_are_cont">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia repellat sed iure, odio, voluptates nesciunt porro deleniti deserunt quasi nostrum magni, veniam harum ipsam autem expedita rerum soluta quisquam!
+                    Women and girls’ rights are central to our mission with a special emphasis on the rural community. Thus, we are fighting for girls’ right to education, as well as providing women with opportunities to acquire professional skills and become financially independent. We hold the view that any society where the wives and mothers are educated and empowered they act as a catalyst for change in the households as well as societies in large.
                     </div>
                 </div>
                 <div className="who_we_are_box">
@@ -37,10 +42,12 @@ const WhoWeAreItem = () => {
                         <img src={project_2} alt="" />
                     </div>
                     <div className="who_we_are_title">
-                        <h2>Women Economic Status Status</h2>
+                        <h2>
+                        Youth 
+                        </h2>
                     </div>
                     <div className="who_we_are_cont">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia repellat sed iure, odio, voluptates nesciunt porro deleniti deserunt quasi nostrum magni, veniam harum ipsam autem expedita rerum soluta quisquam!
+                    Youth are our community of tomorrow and children and youths are endowed with prospects for education, vocational training, and leadership. Thus, imparting knowledge and skills to young people, it can be certain that they are capable of meeting the conditions of the modern world and become active members of society, the nation. 
                     </div>
                 </div>
                 <div className="who_we_are_box">
@@ -48,12 +55,93 @@ const WhoWeAreItem = () => {
                         <img src={project_2} alt="" />
                     </div>
                     <div className="who_we_are_title">
-                        <h2>Well-being</h2>
+                        <h2>
+                        Marginalized Groups
+                        </h2>
                     </div>
                     <div className="who_we_are_cont">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia repellat sed iure, odio, voluptates nesciunt porro deleniti deserunt quasi nostrum magni, veniam harum ipsam autem expedita rerum soluta quisquam!
+                    We stand for the protection of the voiceless, the discrimination of the minorities, the disabled and other economically vulnerable groups in society. We endeavor to promote Equity so that nobody is locked out from education, employment and environmental conservation. 
                     </div>
                 </div>
+                <div className="who_we_are_box">
+                    <div className="who_we_are_img">
+                        <img src={project_2} alt="" />
+                    </div>
+                    <div className="who_we_are_title">
+                        <h2>
+                        Farmers and Agricultural Workers 
+                        </h2>
+                    </div>
+                    <div className="who_we_are_cont">
+                    Understanding the position farmers and agricultural workforce hold in the economy of the country, we train farmers in intensive sustainable agriculture, organic farming and environmentally friendly methodologies. Thus, enhancing people’s livelihoods and supporting sustainability, world resources are preserved, and food safety is secured.
+                    </div>
+                </div>
+                <div className="who_we_are_box">
+                    <div className="who_we_are_img">
+                        <img src={project_2} alt="" />
+                    </div>
+                    <div className="who_we_are_title">
+                        <h2>
+                        Natural Disaster Survivors 
+                        </h2>
+                    </div>
+                    <div className="who_we_are_cont">
+                    We are there for communities that have been devastated by natural disasters as a short-term and a long-term solution provider. Regardless of whether it is the process of reconstructing an area or rebuilding a subject’s life, our focus is to provide for the needs of those who have been affected to help them overcome the adversities of life and the next disasters that are yet to happen. 
+                    </div>
+                </div>
+                <div className="who_we_are_box">
+                    <div className="who_we_are_img">
+                        <img src={project_2} alt="" />
+                    </div>
+                    <div className="who_we_are_title">
+                        <h2>
+                        Environmentally Impacted Communities 
+                        </h2>
+                    </div>
+                    <div className="who_we_are_cont">
+                    Climate change and environmental degradation are adverse effects experienced by the society and particularly affects some groups of persons in the society. We work with the affected people, especially those that are directly dealing with the effects of climate change in their day-to-day activities; to mitigate the effects of climate change and also to promote sustainable management of ecosystems in their areas. 
+                    </div>
+                </div>
+                <div className="who_we_are_box">
+                    <div className="who_we_are_img">
+                        <img src={project_2} alt="" />
+                    </div>
+                    <div className="who_we_are_title">
+                        <h2>
+                        Uneducated and Underprivileged Individuals
+                        </h2>
+                    </div>
+                    <div className="who_we_are_cont">
+                    Education to us is quite an important right and we ensure that people who have never gone to school are given the chance to go to school. They cover areas such as non-formal education, adult literacy and vocational training hence helping them to receive a better quality of life and better chances of employment. 
+                    </div>
+                </div>
+                <div className="who_we_are_box">
+                    <div className="who_we_are_img">
+                        <img src={project_2} alt="" />
+                    </div>
+                    <div className="who_we_are_title">
+                        <h2>
+                        Local Businesspeople and Small Business Persons
+                        </h2>
+                    </div>
+                    <div className="who_we_are_cont">
+                    We also have a social responsibility of helping local businessmen and small businesses to acquire skills, capital and market outlets that would help them grow. Empowering such people assists in the creation of employment opportunities and economic growth at the regional level thus promoting community sustainability. 
+                    </div>
+                </div>
+                <div className="who_we_are_box">
+                    <div className="who_we_are_img">
+                        <img src={project_2} alt="" />
+                    </div>
+                    <div className="who_we_are_title">
+                        <h2>
+                        Environmental Stewards 
+                        </h2>
+                    </div>
+                    <div className="who_we_are_cont">
+                    It is, therefore, geared towards reaching out to individuals and communities with interest in environmental conservation so as to enable them make the necessary efforts to conserve, preserve or rehabilitate their environment. In this way, we assist the environment care takers in order that future generations will have the ability of inheriting a healthy environment.
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

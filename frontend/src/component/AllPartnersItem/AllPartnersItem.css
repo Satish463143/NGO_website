@@ -11,15 +11,50 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    border: 2px solid gray;
+    height: 150px;
     
 }
 .partner_logo  img {
-    width: 80%;
-    height: auto;
-    border: 2px solid gray;
-    padding: 30px 50px;
-
+    width: 100px ;
+    height: auto;    
 }
 .partner_details h2{
     margin: 20px 0;
+}
+@media(max-width:1000px){
+    .allpartners p{
+        font-size: 35px;
+        max-width: 100%;
+    }
+    .allpartner_grid{
+
+        display: grid;
+        grid-template-columns: 20% 75%;
+
+        
+    }
+}
+@media(max-width:600px){
+    .allpartner_grid{
+        grid-template-columns: 90%;
+        justify-content: center;
+        
+    }
+    .partner_logo {
+        border: none;
+        margin-bottom: 20px;
+    }
+    .partner_logo  img {
+        padding: 20px;
+        width: 140px;
+        border:  2px solid gray;
+    }
+    .allpartners p{
+        font-size: 25px;
+    }
+    .partner_details h3, .partner_details h2{
+        text-align: center;
+    }
+   
 }

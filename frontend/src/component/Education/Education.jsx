@@ -28,31 +28,107 @@ const Education = () => {
             <div className="educaation_full_details">
                 <h2>Objectives:</h2>
                 <div className='educaation_full_details_cont'>
-                    <p>Focus on Education for Girls: </p>
-                    <li>  Provide scholarships and financial support to encourage girls' education. 
+                    <p>
+                    STEM Education Initiatives:
+                    </p>
+                    <li>  
+                    Introduce science, technology, engineering, and mathematics (STEM) programs in rural schools to foster innovation.
                     </li>
-                    <li> Improve school infrastructure, including safe and hygienic sanitation facilities, to create a 
-                    conducive learning environment for girls. 
-                    </li>
-                </div>
-                <div className='educaation_full_details_cont'>
-                    <p>Women Empowerment: </p>
-                    <li>  Offer leadership and vocational training programs specifically for women. 
- 
-                    </li>
-                    <li> Create support networks and mentorship opportunities to improve women's personal and 
-                    professional growth.  
+                    <li> 
+                    Provide resources and mentorship for students pursuing careers in STEM fields.
                     </li>
                 </div>
                 <div className='educaation_full_details_cont'>
-                    <p>Digitalization in Education: </p>
-                    <li>   Implement digital learning tools and platforms to enhance educational access and quality. 
- 
+                    <p>
+                    Early Childhood Education:
+                    </p>
+                    <li>  
+
+                    Promote the importance of early childhood education in rural areas.
+
                     </li>
-                    <li> Train teachers and students in the use of digital technologies for learning and development. 
- 
+                    <li> 
+                    Provide teacher training and resources to improve learning outcomes for young children.
                     </li>
                 </div>
+                <div className='educaation_full_details_cont'>
+                    <p>
+                    Inclusive Education:
+                    </p>
+                    <li>  
+                    Ensure access to education for children with disabilities through specialized support and adaptive learning tools.
+                    </li>
+                    <li> 
+                    Promote inclusive classrooms that accommodate students of all abilities.
+                    </li>
+                </div>
+                <div className='educaation_full_details_cont'>
+                    <p>
+                    Teacher Training and Development:
+                    </p>
+                    <li>  
+                    Conduct ongoing professional development workshops for teachers to enhance their teaching skills.
+                    </li>
+                    <li> 
+                    Provide training on student-centered and innovative teaching methodologies, including digital literacy.
+                    </li>
+                </div>
+                <div className='educaation_full_details_cont'>
+                    <p>
+                    Community Learning Centers:
+                    </p>
+                    <li>  
+                    Establish community-based learning centers to provide non-formal education for out-of-school children and adults.
+                    </li>
+                    <li> 
+                    Offer adult literacy programs to improve reading, writing, and numeracy skills in rural areas.
+                    </li>
+                </div>
+                <div className='educaation_full_details_cont'>
+                    <p>
+                    Leadership and Life Skills Development:
+                    </p>
+                    <li>  
+                    Integrate leadership, critical thinking, and life skills training into school curriculums to prepare students for future challenges.
+                    </li>
+                    <li> 
+                    Conduct workshops that foster teamwork, communication, and problem-solving abilities among students.
+                    </li>
+                </div>
+                <div className='educaation_full_details_cont'>
+                    <p>
+                    Access to Learning Materials:
+                    </p>
+                    <li>  
+                    Distribute textbooks, learning materials, and digital resources to schools in underserved areas.
+                    </li>
+                    <li> 
+                    Provide libraries or mobile libraries to promote a culture of reading and learning in rural communities.
+                    </li>
+                </div>
+                <div className='educaation_full_details_cont'>
+                    <p>
+                    Vocational Education:
+                    </p>
+                    <li>  
+                    Develop vocational training programs that align with local employment needs and industry demand.
+                    </li>
+                    <li> 
+                    Offer skill-specific courses, such as carpentry, tailoring, and craftsmanship, to enhance employability in rural regions.
+                    </li>
+                </div>
+                <div className='educaation_full_details_cont'>
+                    <p>
+                    Parental and Community Engagement:
+                    </p>
+                    <li>  
+                    Organize workshops to educate parents about the value of education and ways to support their children’s learning.
+                    </li>
+                    <li> 
+                    Promote community involvement in school activities and decision-making processes to foster a supportive learning environment.
+                    </li>
+                </div>
+                
                 
             </div>
         </div>

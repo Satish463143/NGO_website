@@ -5,8 +5,10 @@ const AllPartnersItem = ({id,name,title,description,logo}) => {
   return (
     <>
     <div className='allpartner_grid'>
+        <div style={{display:'flex', alignItems:'center'}}>
         <div className="partner_logo">
             <img src={logo} alt="" />
+        </div>
         </div>
         <div className="partner_details">
             <h3>{name}</h3>

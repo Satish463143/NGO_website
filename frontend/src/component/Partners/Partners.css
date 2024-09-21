@@ -59,9 +59,10 @@
         max-width: 100%;
     }
     .partners{
-        grid-template-columns: 100px 100px 100px;
+        grid-template-columns: 30% 30% 30%;
         margin-top: 40px;
         justify-content: space-around;
+        gap: 20px;
     }
     .partners img{   
         width: 80px;
