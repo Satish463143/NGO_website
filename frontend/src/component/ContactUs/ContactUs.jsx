@@ -112,9 +112,9 @@ const ContactUs = () => {
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                     <h3 className='email_margin'>Email Us</h3>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hirayasamaj@gmail.com" style={{textDecoration:'underline'}}>hirayasamaj@gmail.com</a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hirayasamaj@gmail.com" style={{ textDecoration: 'underline' }}>hirayasamaj@gmail.com</a>
                     <h3 className='email_margin'>Give Us a Call</h3>
-                    <a href="tel:9801151414" style={{textDecoration:'underline'}}>9801151414</a>
+                    <a href="tel:9801151414" style={{ textDecoration: 'underline' }}>9801151414</a>
                 </div>
             </div>
         </div>

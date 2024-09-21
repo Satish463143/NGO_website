@@ -1,0 +1,29 @@
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the iframe cover the full width */
+    height: 100%;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transform: scale(1.6); /* Optional: Adjust scaling if needed */
+    transform-origin: top left;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
