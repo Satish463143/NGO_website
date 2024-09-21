@@ -44,7 +44,7 @@ const AllVideos = () => {
           }
         </div>
 
-        {visible < formatSrc.length && (
+        {visible < YoutubeList.length && (
           <div className='load_more_btn'>
           <button onClick={loadMore}>
               Load More <i className="fa-solid fa-arrow-right-long"></i>

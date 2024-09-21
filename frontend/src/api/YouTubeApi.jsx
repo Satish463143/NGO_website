@@ -10,7 +10,7 @@ export const getAllVideos = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=UUbJH3ToKkkayePw4fjm20EA&key=AIzaSyAPGAMbr3I2kxPd9XwQNB66CUmOztZmQIo');
+                const response = await fetch('https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=UUbJH3ToKkkayePw4fjm20EA&key=AIzaSyAPGAMbr3I2kxPd9XwQNB66CUmOztZmQIo');
 
                 if (!response.ok) {
                     throw new Error("Failed to fetch");
