@@ -44,9 +44,12 @@ const App = () => {
       else if (pathname === '/WhatWeDo' && !hash) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+      else if (pathname === '/project' && !hash) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }, [hash, pathname]);
   
-    return null; // This component is only used for the side-effect (scrolling)
+    return null; 
   };
   return (
     <div>

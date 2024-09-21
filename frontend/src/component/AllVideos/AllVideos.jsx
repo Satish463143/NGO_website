@@ -1,15 +1,20 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './AllVideos.css'
 import { StoreContext } from '../../context/StoreContext'
 import { getAllVideos } from '../../api/YouTubeApi'
 
 const AllVideos = () => {
   const { data: YoutubeList, error, loading } = getAllVideos();
+  const [visible, setVisible] = useState(3)
 
   const formatSrc = (videoId) => {
     const ytUrl = `https://www.youtube.com/embed/${videoId}`;
     return ytUrl;
   };
+
+  const loadMore =()=>{
+    setVisible(pervCount => pervCount + 3)
+  }
 
   return (
     <div className="allvideos">
@@ -28,7 +33,7 @@ const AllVideos = () => {
         </div>
 
         <div className='videos_grid'>
-          {YoutubeList.map((item, index) => {
+          {YoutubeList.slice(0,visible).map((item, index) => {
             return (
               <iframe key={index}
                 src={formatSrc(item.snippet.resourceId.videoId)}
@@ -38,6 +43,14 @@ const AllVideos = () => {
           })
           }
         </div>
+
+        {visible < formatSrc.length && (
+          <div className='load_more_btn'>
+          <button onClick={loadMore}>
+              Load More <i className="fa-solid fa-arrow-right-long"></i>
+          </button>
+        </div>
+        )}
 
 
       </div>

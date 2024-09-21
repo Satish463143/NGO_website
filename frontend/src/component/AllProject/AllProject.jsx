@@ -22,7 +22,7 @@ const AllProject = () => {
 
         })}
       </div>
-      {visible < setVisible.length && (
+      {visible < sortedProjects.length && (
         <div className='load_more_btn'>
           <button onClick={loadMore}>
               Load More <i className="fa-solid fa-arrow-right-long"></i>

@@ -1,11 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { StoreContext } from '../../context/StoreContext'
-import { useParams, Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import './ProjectDetails.css';
-import { BASE_URL } from '../../../utils/api';
 import parse from 'html-react-parser';
 import { getAllProjects } from "../../api/ProjectApi";
-
+import BannersItem from '../BannersItem/BannersItem';
+import nepalvillage from '../../../src/assets/images/banner-04.jpg';
 const ProjectDetails = () => {
     const { id } = useParams();
 
@@ -24,7 +23,8 @@ const ProjectDetails = () => {
 
     return (
         <div>
-            <h2>{project.title}</h2>
+            <BannersItem title={project.title} image={nepalvillage}/>
+            <div className="container">
             <div key={project._id}>
                 {project.description}
 
@@ -48,6 +48,7 @@ const ProjectDetails = () => {
                     {project.image6 ? <li><img src={project.image6} /></li> : ""}
                 </ul>
 
+            </div>
             </div>
         </div>
     )

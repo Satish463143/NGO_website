@@ -6,13 +6,13 @@ import { getAllPartners } from '../../api/PartnersApi'
 
 const AllPartners = () => {
   const { data: partnerList, error, loading } = getAllPartners();
-  const [visible, setVisible] = useState(9);
+  const [visible, setVisible] = useState(5);
 
   const sortedPartner = partnerList
   .sort((a,b) => new Date(b.createdAt) - new Date (a.createdAt))
 
   const loadMore= ()=>{
-    setVisible(pervCOunt => pervCOunt + 9)
+    setVisible(pervCount => pervCount + 5)
   }
   return (
     <div className='container'>
@@ -20,13 +20,13 @@ const AllPartners = () => {
         <p>These Are the Heroes with the Passion to Transform Their Communities</p>
         <hr />
       </div>
-      {partnerList.map((item, index) => {
+      {sortedPartner.slice(0,visible).map((item, index) => {
         return (
           <AllPartnersItem key={index} id={item.id} logo={item.imagePath} title={item.title} name={item.name} description={item.description} />
         )
       })}
-      {visible < setVisible.length && (
-        <div className='load_more_btn'>
+      {visible < sortedPartner.length && (
+        <div className='load_more_btn' style={{marginTop:'40px'}}>
         <button onClick={loadMore}>
             Load More <i className="fa-solid fa-arrow-right-long"></i>
         </button>
