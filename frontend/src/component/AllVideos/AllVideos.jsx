@@ -12,7 +12,7 @@ const AllVideos = () => {
     return ytUrl;
   };
 
-  const loadMore =()=>{
+  const loadMore = () => {
     setVisible(pervCount => pervCount + 3)
   }
 
@@ -33,7 +33,7 @@ const AllVideos = () => {
         </div>
 
         <div className='videos_grid'>
-          {YoutubeList.slice(0,visible).map((item, index) => {
+          {YoutubeList.slice(0, visible).map((item, index) => {
             return (
               <iframe key={index}
                 src={formatSrc(item.snippet.resourceId.videoId)}
@@ -46,10 +46,10 @@ const AllVideos = () => {
 
         {visible < YoutubeList.length && (
           <div className='load_more_btn'>
-          <button onClick={loadMore}>
+            <button onClick={loadMore}>
               Load More <i className="fa-solid fa-arrow-right-long"></i>
-          </button>
-        </div>
+            </button>
+          </div>
         )}
 
 
