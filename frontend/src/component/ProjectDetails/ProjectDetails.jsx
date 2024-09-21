@@ -15,7 +15,6 @@ const ProjectDetails = () => {
 
     useEffect(() => {
         const foundProject = projectList.find(item => item._id === id);
-        console.log(foundProject);
         setProject(foundProject);
     }, [id, projectList]);
 
