@@ -1,6 +1,6 @@
 import React from 'react'
 import nepalvillage from '../../../src/assets/images/banner-04.jpg';
-import project_2 from '../../../src/assets/images/project_2.png';
+import project_2 from '../../../src/assets/images/home who we are.jpg';
 const WhoWeAreBanner_2 = () => {
   return (
     <div className='banner banner_bg'>

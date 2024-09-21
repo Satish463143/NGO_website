@@ -21,31 +21,31 @@ const App = () => {
         const sectionId = hash.replace('#', '');
         const element = document.getElementById(sectionId);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView();
         }
       } else if (pathname === '/' && !hash) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0 });
       }
       else if (pathname === '/gallery' && !hash) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0 });
       }
       else if (pathname === '/ourInitiative' && !hash) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0 });
       }
       else if (pathname === '/Our-Partners' && !hash) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0 });
       }
       else if (pathname === '/contact' && !hash) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0 });
       }
       else if (pathname === '/WhoWEAre' && !hash) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0 });
       }
       else if (pathname === '/WhatWeDo' && !hash) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0 });
       }
       else if (pathname === '/project' && !hash) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0 });
       }
     }, [hash, pathname]);
   

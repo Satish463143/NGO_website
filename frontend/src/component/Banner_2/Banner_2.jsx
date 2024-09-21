@@ -3,7 +3,7 @@ import './Banner_2.css'
 import { Link } from 'react-router-dom';
 
 import nepalvillage from '../../../src/assets/images/banner-04.jpg';
-import project_2 from '../../../src/assets/images/project_2.png';
+import project_2 from '../../../src/assets/images/home who we are.jpg';
 
 const Banner_2 = () => {
   return (
@@ -21,7 +21,7 @@ const Banner_2 = () => {
             <div className="banner_2_grid">
                 <div>
                     <p> <span> Hiraya Samaj Nepal</span> is a well-known non-governmental 
-                        organization with its main office located in Kathmandu, Nepal.<br /> <br />  The Hiraya Foundation, which 
+                        organization with its main office located in Kathmandu, Nepal.<br /> <br />  The Hiraya Samaj, which 
                         focuses on the environment, economics, and education, works to address and mitigate the 
                         significant challenges that these areas of Nepali society are currently facing. The foundation works 
                         to create creative programs and sustainable solutions that support economic development, 

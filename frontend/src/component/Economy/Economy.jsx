@@ -1,5 +1,5 @@
 import React from 'react'
-import project_2 from '../../../src/assets/images/project_2.png';
+import project_2 from '../../../src/assets/images/hiraya economy.jpg';
 const Economy = () => {
   return (
     <div className="education" style={{ padding:'10px 0'}}>

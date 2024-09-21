@@ -43,9 +43,9 @@ const Navbar = () => {
             <div className='container'>
                 <div className='navbar_grid'>
                     <div className='logo_img'>
-                    <Link to="/#banner">
-                        <img src="/logo.png" alt="Logo" />
-                        </Link>
+                    <Link to="/">
+                        <h3>Hiraya Samaj.</h3>
+                    </Link>
                     </div>
                     <div className='navs'>
                         <nav>

@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+
 }
 @media(max-width:1100px){
     .who_we_are_grid{

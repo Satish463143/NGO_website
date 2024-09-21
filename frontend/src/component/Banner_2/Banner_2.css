@@ -33,6 +33,7 @@
 }
 .banner_2_grid p{
     color: var(--white);
+    text-align: justify;
 }
 .banner_2_grid p span{
     font-weight: 700;

@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 9999;
   top: 0%;
-  transition: top 0.5s ease, background-color 0.5s ease;
+
 }
 
 .mobile_nav .nav_grid {
@@ -16,10 +16,13 @@
   .mobile_nav_menu {
     background: none;
   }
+  .menu_logo h3{
+    color: #36d2d7;
+  }
   
   .background_nav {
     transition: 0.5s;
-    background: var(--sec_color);
+    background: var(--white);
   }
   
     .no-scroll {
@@ -70,10 +73,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    
-    .menu_logo img{
-      width: 100px;
+      z-index: 999999;
     }
     .nav_btn{
       z-index: 11;
@@ -82,9 +82,9 @@
     }
   
     .end_menu{
-      padding: 15px 0;
       display: flex;
       justify-content: end;
+      align-items: center;
     }
     .end_menu ul{
       display: flex;
@@ -146,7 +146,7 @@
       font-size: 20px;
       display: inline-block;
   }
-@media (max-width:800px){
+@media (max-width:1050px){
     .mobile_nav{
         display: block;
     }

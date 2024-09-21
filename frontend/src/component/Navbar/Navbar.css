@@ -21,7 +21,7 @@
     justify-content: space-around;
     align-items: center; */
     display: grid;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 15% 75% 10%;
     justify-content: center;
     align-items: center;
 }
@@ -31,10 +31,8 @@
 .donate_btn li{
     list-style: none;
 }
-.logo_img img{
-    width: 80px;
-    height: auto;
-
+.logo_img h3{
+    color: #36d2d7;
 }
 .navs{
     text-align: center;
@@ -44,9 +42,14 @@
     padding: 0 12px;
 }
 .activeMenu{
-    color: var(--pri_color);
+    color: #36d2d7;
 }
-@media (max-width:800px){
+@media (max-width:1150px){
+    .navs ul li{
+        padding: 0 8px;
+    }
+}
+@media (max-width:1050px){
     .navbar{
         display: none;
     }

@@ -1,6 +1,15 @@
 import React from 'react'
 import './WhoWeAreItem.css'
-import project_2 from '../../../src/assets/images/project_2.png';
+import project_2 from '../../../src/assets/images/hiraya rural.jpg';
+import project_3 from '../../../src/assets/images/hiraya women.webp';
+import project_4 from '../../../src/assets/images/hiraya youth.jpg';
+import project_5 from '../../../src/assets/images/hiraya Marginalized.jpg';
+import project_6 from '../../../src/assets/images/hiraya Farmers.jpg';
+import project_8 from '../../../src/assets/images/hiraya disaster.jpg';
+import project_9 from '../../../src/assets/images/hiraya Environmentally Impacted Communities.jpg';
+import project_10 from '../../../src/assets/images/hiraya Uneducated.jpg';
+import project_7 from '../../../src/assets/images/hiraya Local Business people and Small Business Persons.jpg';
+import project_11 from '../../../src/assets/images/hiraya Stewards.jpg';
 const WhoWeAreItem = () => {
   return (
     <div className=' who_we_are'>
@@ -25,7 +34,7 @@ const WhoWeAreItem = () => {
                 </div>
                 <div className="who_we_are_box">
                     <div className="who_we_are_img">
-                        <img src={project_2} alt="" />
+                        <img src={project_3} alt="" />
                     </div>
                     <div className="who_we_are_title">
                         <h2>
@@ -39,7 +48,7 @@ const WhoWeAreItem = () => {
                 </div>
                 <div className="who_we_are_box">
                     <div className="who_we_are_img">
-                        <img src={project_2} alt="" />
+                        <img src={project_4} alt="" />
                     </div>
                     <div className="who_we_are_title">
                         <h2>
@@ -52,7 +61,7 @@ const WhoWeAreItem = () => {
                 </div>
                 <div className="who_we_are_box">
                     <div className="who_we_are_img">
-                        <img src={project_2} alt="" />
+                        <img src={project_5} alt="" />
                     </div>
                     <div className="who_we_are_title">
                         <h2>
@@ -65,7 +74,7 @@ const WhoWeAreItem = () => {
                 </div>
                 <div className="who_we_are_box">
                     <div className="who_we_are_img">
-                        <img src={project_2} alt="" />
+                        <img src={project_6} alt="" />
                     </div>
                     <div className="who_we_are_title">
                         <h2>
@@ -78,7 +87,7 @@ const WhoWeAreItem = () => {
                 </div>
                 <div className="who_we_are_box">
                     <div className="who_we_are_img">
-                        <img src={project_2} alt="" />
+                        <img src={project_8} alt="" />
                     </div>
                     <div className="who_we_are_title">
                         <h2>
@@ -91,7 +100,7 @@ const WhoWeAreItem = () => {
                 </div>
                 <div className="who_we_are_box">
                     <div className="who_we_are_img">
-                        <img src={project_2} alt="" />
+                        <img src={project_9} alt="" />
                     </div>
                     <div className="who_we_are_title">
                         <h2>
@@ -104,7 +113,7 @@ const WhoWeAreItem = () => {
                 </div>
                 <div className="who_we_are_box">
                     <div className="who_we_are_img">
-                        <img src={project_2} alt="" />
+                        <img src={project_10} alt="" />
                     </div>
                     <div className="who_we_are_title">
                         <h2>
@@ -117,11 +126,11 @@ const WhoWeAreItem = () => {
                 </div>
                 <div className="who_we_are_box">
                     <div className="who_we_are_img">
-                        <img src={project_2} alt="" />
+                        <img src={project_7} alt="" />
                     </div>
                     <div className="who_we_are_title">
                         <h2>
-                        Local Businesspeople and Small Business Persons
+                        Local Business people and Small Business Persons
                         </h2>
                     </div>
                     <div className="who_we_are_cont">
@@ -130,7 +139,7 @@ const WhoWeAreItem = () => {
                 </div>
                 <div className="who_we_are_box">
                     <div className="who_we_are_img">
-                        <img src={project_2} alt="" />
+                        <img src={project_11} alt="" />
                     </div>
                     <div className="who_we_are_title">
                         <h2>
