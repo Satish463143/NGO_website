@@ -43,6 +43,43 @@ exports.addPartner = async (req, res) => {
     }
 };
 
+exports.editPartner = async (req, res) => {
+    try {
+        const { name, description } = req.body;
+        const { partnerID } = req.params;
+
+        //image upload with buffer
+        new Promise((resolve) => {
+            cloudinary.uploader.upload_stream({
+                folder: "Hiraya",
+                unique_filename: true,
+                overwrite: false,
+            }, (error, uploadResult) => {
+                return resolve(uploadResult);
+            }).end(req.file.buffer);
+        }).then(async (uploadResult) => {
+            await Partners.findByIdAndUpdate(
+                partnerID, {
+                name: name,
+                description: description,
+                imagePath: uploadResult.secure_url,
+            });
+        });
+
+        res.status(200).json({
+            success: true,
+            message: "Partner info updated succesfully.",
+        });
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: "Failed to edit."
+        });
+    }
+};
+
 exports.getAllPartners = async (req, res) => {
     try {
         const partners = await Partners.find({});
