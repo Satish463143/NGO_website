@@ -82,7 +82,7 @@ exports.editPartner = async (req, res) => {
 
 exports.getAllPartners = async (req, res) => {
     try {
-        const partners = await Partners.find({});
+        const partners = await Partners.find({}).sort({ "createdAt": -1 });
         res.status(200).json({
             success: true,
             message: "Partners fetched successfully.",
