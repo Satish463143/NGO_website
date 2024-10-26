@@ -10,10 +10,10 @@ import AddImages from './pages/AddImages/AddImages';
 import UserList from './pages/UserList/UserList'
 import Experts from './pages/Partners/Partners'
 import AddPartner from './pages/AddPartner/AddPartner';
-import EditExperts from './pages/EditExperts/EditExperts'
+import EditPartner from './pages/EditPartner/EditPartner';
 import Project from './pages/Project/Project'
 import AddProject from './pages/AddProject/AddProject'
-import EditProperty from './pages/EditProperty/EditProperty'
+import EditProject from './pages/EditProject/EditProject'
 import Inquery from './pages/Inquery/Inquery'
 import Contact from './pages/Contact/Contact'
 import MobileNavItem from './component/MobileNavItem/MobileNavItem'
@@ -51,10 +51,10 @@ const App = () => {
                   <Route path='/userList' element={<ProtectedRoute><UserList /></ProtectedRoute>} />
                   <Route path='/partnerList' element={<ProtectedRoute><Experts /></ProtectedRoute>} />
                   <Route path='/addPartner' element={<ProtectedRoute><AddPartner /></ProtectedRoute>} />
-                  <Route path='/editPartner/:id' element={<ProtectedRoute><EditExperts /></ProtectedRoute>} />
+                  <Route path='/editPartner/:id' element={<ProtectedRoute><EditPartner /></ProtectedRoute>} />
                   <Route path='/project' element={<ProtectedRoute><Project /></ProtectedRoute>} />
                   <Route path='/addProject' element={<ProtectedRoute><AddProject /></ProtectedRoute>} />
-                  <Route path='/editProperty' element={<ProtectedRoute><EditProperty /></ProtectedRoute>} />
+                  <Route path='/editProject/:id' element={<ProtectedRoute><EditProject /></ProtectedRoute>} />
                   <Route path='/inquery' element={<ProtectedRoute><Inquery /></ProtectedRoute>} />
                   <Route path='/contact' element={<ProtectedRoute><Contact /></ProtectedRoute>} />
                 </Routes>

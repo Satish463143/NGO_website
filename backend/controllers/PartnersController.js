@@ -48,23 +48,32 @@ exports.editPartner = async (req, res) => {
         const { name, description } = req.body;
         const { partnerID } = req.params;
 
-        //image upload with buffer
-        new Promise((resolve) => {
-            cloudinary.uploader.upload_stream({
-                folder: "Hiraya",
-                unique_filename: true,
-                overwrite: false,
-            }, (error, uploadResult) => {
-                return resolve(uploadResult);
-            }).end(req.file.buffer);
-        }).then(async (uploadResult) => {
+        if (req.file) {
+            //image upload with buffer
+            new Promise((resolve) => {
+                cloudinary.uploader.upload_stream({
+                    folder: "Hiraya",
+                    unique_filename: true,
+                    overwrite: false,
+                }, (error, uploadResult) => {
+                    return resolve(uploadResult);
+                }).end(req.file.buffer);
+            }).then(async (uploadResult) => {
+                await Partners.findByIdAndUpdate(
+                    partnerID, {
+                    name: name,
+                    description: description,
+                    imagePath: uploadResult.secure_url,
+                });
+            });
+        }
+        else {
             await Partners.findByIdAndUpdate(
                 partnerID, {
                 name: name,
                 description: description,
-                imagePath: uploadResult.secure_url,
             });
-        });
+        }
 
         res.status(200).json({
             success: true,
@@ -94,6 +103,26 @@ exports.getAllPartners = async (req, res) => {
         res.status(500).json({
             success: false,
             message: "Failed to fetch partners."
+        });
+    }
+};
+
+exports.getPartner = async (req, res) => {
+    const { partnerID } = req.params;
+    try {
+        const partner = await Partners.findById(partnerID)
+
+        res.status(200).json({
+            success: true,
+            message: "Partner fetched successfully.",
+            data: partner
+        });
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: "Failed to fetch partner."
         });
     }
 };

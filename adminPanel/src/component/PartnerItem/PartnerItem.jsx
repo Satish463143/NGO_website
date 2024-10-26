@@ -76,9 +76,11 @@ const PartnerItem = () => {
                     <td className='table_title'>{partner.name}</td>
                     <td className='table_content'>{truncateContent(partner.description, 50)}</td>
                     <td style={{ textAlign: 'center', width: '150px' }}>
-                      {/* <Link to={`/editpartner/${partner._id}`}>
+
+                      <Link to={`/editpartner/${partner._id}`}>
                         <button className='edit_btn'>Edit</button>
-                      </Link> */}
+                      </Link>
+
                       <button className='delete_btn' onClick={() => handleDelete(partner._id)}>Delete</button>
                     </td>
                   </tr>
