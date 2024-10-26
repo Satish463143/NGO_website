@@ -1,12 +1,12 @@
 import React from 'react'
-import EditPropertyItem from '../../component/EditPropertyItem/EditPropertyItem'
+import EditProjectItem from '../../component/EditProjectItem/EditProjectItem'
 
-const EditProperty = () => {
+const EditProject = () => {
   return (
-    <div style={{padding:'20px'}}>
-        <EditPropertyItem/>
+    <div style={{ padding: '20px' }}>
+      <EditProjectItem />
     </div>
   )
 }
 
-export default EditProperty
+export default EditProject

@@ -9,45 +9,7 @@ cloudinary.config({
 
 exports.createProject = async (req, res) => {
     try {
-        const { title, reportURL, description } = req.body;
-
-        //image upload with buffer
-        new Promise((resolve) => {
-            cloudinary.uploader.upload_stream({
-                folder: "Hiraya",
-                unique_filename: true,
-                overwrite: false,
-            }, (error, uploadResult) => {
-                return resolve(uploadResult);
-            }).end(req.file.buffer); //change this
-        }).then((uploadResult) => {
-            const newProject = new Project({
-                title: title,
-                description: description,
-                reportURL: reportURL,
-                imageURL: uploadResult.secure_url,
-            });
-            newProject.save();
-        });
-
-        res.status(200).json({
-            success: true,
-            message: "New project added succesfully."
-        });
-    }
-    catch (err) {
-        console.error(err);
-        res.status(500).json({
-            success: false,
-            message: "Failed to add project.",
-        });
-    }
-};
-
-exports.editProject = async (req, res) => {
-    try {
-        const { title, reportURL, description } = req.body;
-        const { projectID } = req.body;
+        const { title, description, reportUrl } = req.body;
 
         //image upload with buffer
         new Promise((resolve) => {
@@ -58,15 +20,62 @@ exports.editProject = async (req, res) => {
             }, (error, uploadResult) => {
                 return resolve(uploadResult);
             }).end(req.file.buffer);
-        }).then(async (uploadResult) => {
+        }).then((uploadResult) => {
+            const newProject = new Project({
+                title: title,
+                description: description,
+                reportURL: reportUrl,
+                imageURL: uploadResult.secure_url,
+            });
+            newProject.save();
+        });
+
+        res.status(200).json({
+            success: true,
+            message: "New partner added succesfully."
+        });
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: "Failed to add."
+        });
+    }
+};
+
+exports.editProject = async (req, res) => {
+    try {
+        const { title, reportURL, description } = req.body;
+        const { projectID } = req.params;
+
+        if (req.file) {
+            new Promise((resolve) => {
+                cloudinary.uploader.upload_stream({
+                    folder: "Hiraya",
+                    unique_filename: true,
+                    overwrite: false,
+                }, (error, uploadResult) => {
+                    return resolve(uploadResult);
+                }).end(req.file.buffer);
+            }).then(async (uploadResult) => {
+                await Project.findByIdAndUpdate(
+                    projectID, {
+                    title: title,
+                    description: description,
+                    reportURL: reportURL,
+                    imageURL: uploadResult.secure_url,
+                });
+            });
+        }
+        else {
             await Project.findByIdAndUpdate(
                 projectID, {
                 title: title,
                 description: description,
                 reportURL: reportURL,
-                imageURL: uploadResult.secure_url,
             });
-        });
+        }
 
         res.status(200).json({
             success: true,
@@ -96,6 +105,26 @@ exports.getAllProjects = async (req, res) => {
         res.status(500).json({
             success: false,
             message: "Failed to fetch projects."
+        });
+    }
+};
+
+//get single project with id
+exports.getProject = async (req, res) => {
+    const { projectID } = req.params;
+    try {
+        const project = await Project.findById(projectID)
+        res.status(200).json({
+            success: true,
+            message: "Project fetched successfully.",
+            data: project
+        });
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: "Failed to fetch project."
         });
     }
 };

@@ -52,7 +52,7 @@ const ProjectItem = () => {
   };
 
   const handleUpdate = (id) => {
-    navigate(`/editProject/`);
+    navigate(`/editProject/${id}`);
   };
 
   const filteredProperties = properties.filter((project) => {
@@ -165,9 +165,9 @@ const ProjectItem = () => {
                     </ul>
                   </td>
                   <td style={{ textAlign: 'center', width: '150px' }}>
-                    {/* <button onClick={() => handleUpdate(project._id)} className="edit_btn">
+                    <button onClick={() => handleUpdate(project._id)} className="edit_btn">
                       Edit
-                    </button> */}
+                    </button>
                     <button onClick={() => handleDelete(project._id)} className="delete_btn">
                       Delete
                     </button>
