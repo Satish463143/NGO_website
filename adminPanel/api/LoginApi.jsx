@@ -10,7 +10,7 @@ export const adminLogin = async (payload) => {
         if (!response.ok) {
             return false;
         }
-        localStorage.setItem('userInfo', JSON.stringify(payload));
+        localStorage.setItem('userInfo', "admin logged in");
         return true;
     } catch (error) {
         console.error(error);

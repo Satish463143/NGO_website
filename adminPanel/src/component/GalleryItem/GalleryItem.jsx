@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './BlogsItem.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { deleteImage, getAllImages } from '../../../../frontend/src/api/GalleryApi';
+import { deleteImage, getAllImages } from '../../../api/GalleryApi';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

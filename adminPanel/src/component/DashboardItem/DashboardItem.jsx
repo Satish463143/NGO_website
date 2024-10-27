@@ -12,18 +12,7 @@ const DashboardItem = () => {
         Contact: 0,
         inquiry: 0,
     });
-    useEffect(() => {
-        const fetchCounts = async () => {
-            try {
-                const response = await axios.get('http://localhost:4000/api/count/all-counts');
-                setCounts(response.data.data);
-            } catch (error) {
-                console.error('Error fetching counts:', error);
-            }
-        };
 
-        fetchCounts();
-    }, []);
     return (
         <div className='banner_box'>
             <div className='back_link'>
