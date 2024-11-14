@@ -23,29 +23,15 @@ const App = () => {
         if (element) {
           element.scrollIntoView();
         }
-      } else if (pathname === '/' && !hash) {
-        window.scrollTo({ top: 0 });
-      }
-      else if (pathname === '/gallery' && !hash) {
-        window.scrollTo({ top: 0 });
-      }
-      else if (pathname === '/ourInitiative' && !hash) {
-        window.scrollTo({ top: 0 });
-      }
-      else if (pathname === '/Our-Partners' && !hash) {
-        window.scrollTo({ top: 0 });
-      }
-      else if (pathname === '/contact' && !hash) {
-        window.scrollTo({ top: 0 });
-      }
-      else if (pathname === '/WhoWEAre' && !hash) {
-        window.scrollTo({ top: 0 });
-      }
-      else if (pathname === '/WhatWeDo' && !hash) {
-        window.scrollTo({ top: 0 });
-      }
-      else if (pathname === '/project' && !hash) {
-        window.scrollTo({ top: 0 });
+      } else {
+        // List of paths where you want to scroll to the top
+        const scrollToTopPaths = ['/', '/gallery', '/ourInitiative', '/Our-Partners', '/contact', '/WhoWEAre', '/WhatWeDo'];
+  
+        if (scrollToTopPaths.includes(pathname)) {
+          window.scrollTo({ top: 0 });
+        } else if (pathname.startsWith('/project/')) {
+          window.scrollTo({ top: 0 });
+        }
       }
     }, [hash, pathname]);
   

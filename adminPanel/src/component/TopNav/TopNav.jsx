@@ -13,7 +13,6 @@ const TopNav = ({ isMenuActive, toggleMenu }) => {
 
         setTimeout(() => navigate('/'), 3000);
     }
-
     return (
         <div className='top_nav'>
             <ToastContainer />
