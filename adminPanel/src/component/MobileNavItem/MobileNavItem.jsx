@@ -30,7 +30,7 @@ const MobileNavItem = ({ isMenuActive, toggleMenu }) => {
       setMenu('partnerList');
     } else if (path.startsWith('/project')) {
       setMenu('project');
-    } else if (path.startsWith('/editProperty')) {
+    } else if (path.startsWith('/editProject')) {
       setMenu('property');
     } else if (path.startsWith('/addProject')) {
       setMenu('project');

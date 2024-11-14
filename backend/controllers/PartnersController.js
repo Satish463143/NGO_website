@@ -43,9 +43,55 @@ exports.addPartner = async (req, res) => {
     }
 };
 
+exports.editPartner = async (req, res) => {
+    try {
+        const { name, description } = req.body;
+        const { partnerID } = req.params;
+
+        if (req.file) {
+            //image upload with buffer
+            new Promise((resolve) => {
+                cloudinary.uploader.upload_stream({
+                    folder: "Hiraya",
+                    unique_filename: true,
+                    overwrite: false,
+                }, (error, uploadResult) => {
+                    return resolve(uploadResult);
+                }).end(req.file.buffer);
+            }).then(async (uploadResult) => {
+                await Partners.findByIdAndUpdate(
+                    partnerID, {
+                    name: name,
+                    description: description,
+                    imagePath: uploadResult.secure_url,
+                });
+            });
+        }
+        else {
+            await Partners.findByIdAndUpdate(
+                partnerID, {
+                name: name,
+                description: description,
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            message: "Partner info updated succesfully.",
+        });
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: "Failed to edit."
+        });
+    }
+};
+
 exports.getAllPartners = async (req, res) => {
     try {
-        const partners = await Partners.find({});
+        const partners = await Partners.find({}).sort({ "createdAt": -1 });
         res.status(200).json({
             success: true,
             message: "Partners fetched successfully.",
@@ -57,6 +103,26 @@ exports.getAllPartners = async (req, res) => {
         res.status(500).json({
             success: false,
             message: "Failed to fetch partners."
+        });
+    }
+};
+
+exports.getPartner = async (req, res) => {
+    const { partnerID } = req.params;
+    try {
+        const partner = await Partners.findById(partnerID)
+
+        res.status(200).json({
+            success: true,
+            message: "Partner fetched successfully.",
+            data: partner
+        });
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: "Failed to fetch partner."
         });
     }
 };

@@ -1,147 +1,96 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './AddPropertyItem.css';
-import axios from 'axios';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css'; // For React-Quill styles
-import { toast, ToastContainer } from "react-toastify";
+import { useNavigate, Link } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { addProject } from '../../../api/ProjectApi';
+import { addProject } from "../../../api/ProjectApi"
 
 const AddProjectItem = () => {
-  const [formData, setFormData] = useState({
-    title: '',
-    description: '',
-    description1: '',
-    description2: '',
-    description3: '',
-    description4: '',
-    description5: '',
-    description6: '',
-  });
-  const [files, setFiles] = useState({
-    image1: null,
-    image2: null,
-    image3: null,
-    image4: null,
-    image5: null,
-    image6: null,
-  });
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [coverImage, setCoverImage] = useState(null);
+  const [reportUrl, setReportUrl] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const handleFileChange = (e) => {
-    const { name, files } = e.target;
-    setFiles((prevFiles) => ({
-      ...prevFiles,
-      [name]: files[0],
-    }));
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleQuillChange = (value, name) => {
-    setFormData({ ...formData, [name]: value });
+  const handleImageChange = (e) => {
+    setCoverImage(e.target.files[0]);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formDataToSend = new FormData();
-    Object.keys(formData).forEach(key => {
-      formDataToSend.append(key, formData[key]);
-    });
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('description', description);
+    formData.append('file', coverImage);
+    formData.append('reportUrl', reportUrl);
 
-    [files.image1, files.image2, files.image3, files.image4, files.image5, files.image6].forEach((image, index) => {
-      if (image) {
-        formDataToSend.append('files', image); // Append each image under the same key "files"
-      }
-    });
-
-    console.log("Form Data to Send:", formDataToSend);  // Log the FormData object
-
-    // Send the data
     try {
-      addProject(formDataToSend)
-      toast.success('Project added successfully!');
-
+      await addProject(formData);
+      // setTitle('');
+      // setDescription('');
+      // setCoverImage(null);
+      // setReportUrl('');
+      toast.success('Project added successfully.');
+      // navigate('/project');
     } catch (error) {
-      console.error('Error adding project:', error);
-      toast.error('An error occurred while adding the project.');
+      toast.error('Error occurred while adding project.');
+      console.error('Error:', error);
     }
   };
-
-
 
   return (
     <div className="banner_box">
       <ToastContainer />
       <div className="back_link">
-        <h4> &gt;&gt; </h4>
-        <Link to="/dashboard">
-          <h4>Dashboard </h4>
-        </Link>
+        <h4>&gt;&gt;</h4>
+        <Link to="/dashboard"><h4>Dashboard</h4></Link>
         <h4>/</h4>
-        <Link to="/project">
-          <h4> Property</h4>
-        </Link>
+        <Link to="/project"><h4>Projects</h4></Link>
         <h4>/</h4>
-        <h4>Add Property</h4>
+        <h4>Add Project</h4>
       </div>
       <hr />
       <div className="Dashboard_title">
-        <h1>Add Property</h1>
+        <h1>Add Project</h1>
       </div>
-      <div className="property_form">
-        <form action="" method="post" onSubmit={handleSubmit}>
-          <h4>Details</h4>
-          <div>
-            <label htmlFor="title">Title</label>
-            <span>*</span><br />
-            <input type="text" name="title" placeholder="Enter Title" value={formData.title} onChange={handleChange} required /><br />
-          </div>
+      <div className="banner_form">
+        <form onSubmit={handleSubmit} method="post">
+          <label htmlFor="coverImage">Select Cover Image</label><br />
+          <input type="file" name="coverImage" onChange={handleImageChange} required /><br />
 
-          <h4>Main Description</h4>
+          <label htmlFor="title">Title</label><br />
+          <input
+            type="text"
+            name="title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          /><br />
+
+          <label htmlFor="description">Description</label><br />
           <textarea
             name="description"
-            placeholder="Enter main description"
-            value={formData.description}
-            onChange={handleChange}
-          ></textarea>
+            id="description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          ></textarea><br />
 
-          <h4>Images & Descriptions</h4>
-          <div className="details_grid">
-            <div>
-              {/* Image inputs */}
-              {['image1', 'image2', 'image3', 'image4', 'image5', 'image6'].map((imageField, index) => (
-                <div key={index}>
-                  <label htmlFor={imageField}>{`Image ${index + 1}`}</label>
-                  <input type="file" name={imageField} onChange={handleFileChange} />
-                </div>
-              ))}
-            </div>
-
-            <div>
-              {/* React-Quill for descriptions */}
-              {['description1', 'description2', 'description3', 'description4', 'description5', 'description6'].map(
-                (descriptionField, index) => (
-                  <div key={index}>
-                    <label htmlFor={descriptionField}>{`Description ${index + 1}`}</label>
-                    <ReactQuill
-                      value={formData[descriptionField]}
-                      onChange={(value) => handleQuillChange(value, descriptionField)}
-                    />
-                  </div>
-                )
-              )}
-            </div>
-          </div>
+          <label htmlFor="reportUrl">Report URL</label><br />
+          <input
+            type="text"
+            name="reportUrl"
+            value={reportUrl}
+            onChange={(e) => setReportUrl(e.target.value)}
+            required
+          /><br />
 
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <input type="submit" value="Add Project" />
+            <input type="submit" value="Add Project" name="addProject" />
           </div>
         </form>
+        {error && <p className="error-message">{error}</p>}
       </div>
     </div>
   );

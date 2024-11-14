@@ -52,7 +52,7 @@ const ProjectItem = () => {
   };
 
   const handleUpdate = (id) => {
-    navigate(`/editProject/`);
+    navigate(`/editProject/${id}`);
   };
 
   const filteredProperties = properties.filter((project) => {
@@ -129,13 +129,15 @@ const ProjectItem = () => {
         <div className="error">{error}</div>
       ) : (
         <div className="blog_table">
-          <table border="2">
+          <table border="2" style={{ tableLayout: 'auto', width: "100%" }}>
             <thead>
               <tr>
-                <th>S.N</th>
-                <th>Title</th>
-                <th>Descriptions</th>
-                <th>Images</th>
+                <th style={{ width: '5%' }}>S.N</th>
+                <th style={{ width: '15%' }}>Title</th>
+                <th style={{ width: '45%' }}>Description</th>
+                <th style={{ width: '10%' }}>Cover Image</th>
+                <th style={{ width: '15%' }}>Report Link</th>
+                <th style={{ width: '10%' }}>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -143,31 +145,26 @@ const ProjectItem = () => {
                 <tr key={project._id}>
                   <td>{index + 1}</td>
                   <td>{project.title}</td>
-                  <td>
-                    <ul style={{ listStyle: 'none', flex: 'col', textAlign: 'justify', justifyContent: 'space-between' }}>
-                      <li>{project.description}</li>
-                      {project.description1 ? <li>{parse(project.description1)}</li> : ""}
-                      {project.description2 ? <li>{parse(project.description2)} </li> : ""}
-                      {project.description3 ? <li>{parse(project.description3)} </li> : ""}
-                      {project.description4 ? <li>{parse(project.description4)} </li> : ""}
-                      {project.description5 ? <li>{parse(project.description5)} </li> : ""}
-                      {project.description6 ? <li>{parse(project.description6)} </li> : ""}
-                    </ul>
-                  </td>
+                  <td>{project.description}</td>
                   <td className='table_img'>
-                    <ul style={{ listStyle: 'none' }}>
-                      <li>{project.image1 ? <img src={project.image1} /> : ""}</li>
-                      <li>{project.image2 ? <img src={project.image2} /> : ""}</li>
-                      <li>{project.image3 ? <img src={project.image3} /> : ""}</li>
-                      <li>{project.image4 ? <img src={project.image4} /> : ""}</li>
-                      <li>{project.image5 ? <img src={project.image5} /> : ""}</li>
-                      <li>{project.image6 ? <img src={project.image6} /> : ""}</li>
-                    </ul>
+                    {<img src={project.imageURL} />}
+                  </td>
+                  <td>
+                    {<a href={project.reportURL}>
+                      <span style={{
+                        textDecoration: 'underline',
+                        color: 'blueviolet',
+                        display: 'block',
+                        wordBreak: 'break-word',
+                      }} >
+                        {project.reportURL}
+                      </span>
+                    </a>}
                   </td>
                   <td style={{ textAlign: 'center', width: '150px' }}>
-                    {/* <button onClick={() => handleUpdate(project._id)} className="edit_btn">
+                    <button onClick={() => handleUpdate(project._id)} className="edit_btn">
                       Edit
-                    </button> */}
+                    </button>
                     <button onClick={() => handleDelete(project._id)} className="delete_btn">
                       Delete
                     </button>

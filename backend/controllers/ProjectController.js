@@ -9,57 +9,87 @@ cloudinary.config({
 
 exports.createProject = async (req, res) => {
     try {
-        let { title, description, description1, description2, description3, description4, description5, description6 } = req.body;
+        const { title, description, reportUrl } = req.body;
 
-        let imageURLs = [];
+        //image upload with buffer
+        new Promise((resolve) => {
+            cloudinary.uploader.upload_stream({
+                folder: "Hiraya",
+                unique_filename: true,
+                overwrite: false,
+            }, (error, uploadResult) => {
+                return resolve(uploadResult);
+            }).end(req.file.buffer);
+        }).then((uploadResult) => {
+            const newProject = new Project({
+                title: title,
+                description: description,
+                reportURL: reportUrl,
+                imageURL: uploadResult.secure_url,
+            });
+            newProject.save();
+        });
 
-        await Promise.all(req.files.map((image, index) => {
-            return new Promise((resolve, reject) => {
+        res.status(200).json({
+            success: true,
+            message: "New partner added succesfully."
+        });
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: "Failed to add."
+        });
+    }
+};
+
+exports.editProject = async (req, res) => {
+    try {
+        const { title, reportURL, description } = req.body;
+        const { projectID } = req.params;
+
+        if (req.file) {
+            new Promise((resolve) => {
                 cloudinary.uploader.upload_stream({
                     folder: "Hiraya",
                     unique_filename: true,
                     overwrite: false,
                 }, (error, uploadResult) => {
-                    if (error) {
-                        return reject(error); // Handle error during upload
-                    }
-                    imageURLs[index] = uploadResult.secure_url;
-                    resolve(uploadResult); // Resolve the promise with upload result
-                }).end(image.buffer); // Pass the image buffer for streaming upload
+                    return resolve(uploadResult);
+                }).end(req.file.buffer);
+            }).then(async (uploadResult) => {
+                await Project.findByIdAndUpdate(
+                    projectID, {
+                    title: title,
+                    description: description,
+                    reportURL: reportURL,
+                    imageURL: uploadResult.secure_url,
+                });
             });
-        }));
-
-        const newProject = new Project({
-            title,
-            description,
-            image1: imageURLs[0],
-            image2: imageURLs[1],
-            image3: imageURLs[2],
-            image4: imageURLs[3],
-            image5: imageURLs[4],
-            image6: imageURLs[5],
-            description1,
-            description2,
-            description3,
-            description4,
-            description5,
-            description6,
-        });
-        await newProject.save();
+        }
+        else {
+            await Project.findByIdAndUpdate(
+                projectID, {
+                title: title,
+                description: description,
+                reportURL: reportURL,
+            });
+        }
 
         res.status(200).json({
             success: true,
-            message: "New project added successfully.",
+            message: "Project updated succesfully."
         });
-    } catch (err) {
+    }
+    catch (err) {
         console.error(err);
         res.status(500).json({
             success: false,
-            message: "Failed to add project.",
+            message: "Failed to edit project.",
         });
     }
 };
-
 
 exports.getAllProjects = async (req, res) => {
     try {
@@ -79,6 +109,26 @@ exports.getAllProjects = async (req, res) => {
     }
 };
 
+//get single project with id
+exports.getProject = async (req, res) => {
+    const { projectID } = req.params;
+    try {
+        const project = await Project.findById(projectID)
+        res.status(200).json({
+            success: true,
+            message: "Project fetched successfully.",
+            data: project
+        });
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json({
+            success: false,
+            message: "Failed to fetch project."
+        });
+    }
+};
+
 //delete from cloudinary pending
 exports.deleteProject = async (req, res) => {
     const projectID = req.params.projectID;
@@ -88,7 +138,7 @@ exports.deleteProject = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: "Projects delete successfully.",
+            message: "Projects deleted successfully.",
         });
     }
     catch (err) {

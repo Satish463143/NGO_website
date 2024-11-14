@@ -17,7 +17,8 @@ const Login = () => {
 
         const formData = new FormData();
         formData.append("email", email);
-        formData.append("password", password);
+        formData.append("password", password)
+
         try {
             const login = adminLogin(formData);
             if (!await login) {

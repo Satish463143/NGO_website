@@ -6,7 +6,6 @@ import { getAllProjects } from "../../api/ProjectApi";
 
 const Project = () => {
   const { data: projectList, loading, error } = getAllProjects();
-
   const sortedProjects = projectList
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // Sort by timeStamp (newest first)
     .slice(0, 6); // to display only six
@@ -33,7 +32,7 @@ const Project = () => {
                 id={item._id}
                 title={item.title}
                 description={item.description}
-                images={item.image1}
+                image={item.imageURL}
                 timeStamp={item.createdAt}
               />
             );
