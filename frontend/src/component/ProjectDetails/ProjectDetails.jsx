@@ -18,23 +18,27 @@ const ProjectDetails = () => {
         setProject(foundProject);
     }, [id, projectList]);
 
+    const convertGoogleDocsUrl = (url) => { 
+        const regex = /\/d\/([a-zA-Z0-9_-]+)/; 
+        const match = url.match(regex); 
+        if (match && match[1]) { 
+            return `https://docs.google.com/document/d/${match[1]}/pub?embedded=true`; 
+        } 
+        return null;  
+        };
+
     if (loading) return <div>Loading ...</div>;
     if (!project) return <div>Project Not Found</div>;
 
     return (
         <div>
             <BannersItem title={project.title} image={nepalvillage} />
-            <div className="detail_container">
-                <div key={project._id}>
-                    {project.description}
-                </div>
-                <div className="iframe-container">
-                    <iframe
-                        src={`${project.reportURL}?embedded=true`}
-                        title="Project Document"
-                    />
-                </div>
+            <div>
+            <div className="iframe-container">
+                <iframe src={convertGoogleDocsUrl(project.reportURL)}></iframe>
             </div>
+            </div>
+            
         </div>
     );
 }

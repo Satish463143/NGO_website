@@ -1,39 +1,23 @@
-/* General Styles */
+/* Iframe Container Styles */
 .iframe-container {
     display: flex;
-    align-items: center;
-    justify-items: center;
     justify-content: center;
-    margin: 20px 0;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    /* overflow: hidden; */
-}
-
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transform: scale(1.2); /* Default scaling for large screens */
-    transform-origin: top left;
-}
-
-/* Container for project details */
-.detail_container {
+    align-items: center;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Centers the iframe container */
+    max-width: 900px; /* Optional max width for better layout on large screens */
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
+/* Responsive Iframe */
+.iframe-container iframe {
     width: 100%;
-    height: 100%;
+    height:100vh; /* Adjust height dynamically based on viewport */
+    position: relative;
+    border: none;
 }
 
 /* Media Queries for Responsiveness */
@@ -41,19 +25,21 @@ body, html {
 /* For Tablets (768px and below) */
 @media (max-width: 768px) {
     .iframe-container {
-        height: 80vh; /* Adjust height for smaller screens */
+        width: 90%;
+        padding: 15px;
     }
     .iframe-container iframe {
-        transform: scale(1); /* Reduce scaling to fit the smaller screen */
+        height: calc(100vh - 120px); /* Slightly reduced height for tablets */
     }
 }
 
 /* For Mobile Devices (480px and below) */
 @media (max-width: 480px) {
     .iframe-container {
-        height: 70vh; /* Further reduce height for mobile */
+        width: 95%;
+        padding: 10px;
     }
     .iframe-container iframe {
-        transform: scale(0.9); /* Adjust scaling to fit smaller screens */
+        height: calc(100vh - 100px); /* Further reduced height for mobiles */
     }
 }
